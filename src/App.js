@@ -20,10 +20,7 @@ class App extends Component {
         const target = event.target;
         const name = target.name;
         var value;
-        if (target.type === 'radio') {
-            value = target.value;
-        }
-        else if (target.type === 'input') {
+        if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
             value = target.value;
         }
         else if (target.type === 'checkbox') {
