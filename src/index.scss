@@ -1,0 +1,18 @@
+@import "./variables.scss";
+@import "./Sections/SectionOne/SectionOne.scss";
+
+html {
+    body {
+        min-width: 1360px;
+        background-color: white;
+    }
+}
+
+label {
+    font-weight: normal;
+}
+
+.clear-both {
+    clear: both;
+}
+
