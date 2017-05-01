@@ -14,8 +14,8 @@ class SaveArea extends Component {
     }
     render() {
         return (
-            <div className="save-area">
-                <button　onClick={this.save} className="save-button">保存</button>
+            <div className={this.props.class}>
+                <button　onClick={this.save} className="save">{this.props.buttonName}</button>
             </div>
         );
     }

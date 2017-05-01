@@ -157,21 +157,21 @@ class SectionOne extends Component {
                             <div className="box-7-1">
                                 <div className="box-title">原发肿瘤部位(部位尽可能具体),如果是脑肿瘤,请详细说明脑肿瘤的位置</div>
                                 <div className="box-content">
-                                    <input type="text" name="originalPosition"/>
+                                    <input type="text" name="originalPosition" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-7-2">
                                 <div className="box-title">原发肿瘤的组织学-请详细说明您所填写肿瘤的组织学分类</div>
                                 <div className="box-content">
-                                    <input type="text" name="histology"/>
+                                    <input type="text" name="histology" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-7-3">
                                 <div className="box-title">当前正在指导该肿瘤病人所在的科室</div>
                                 <div className="box-content">
-                                    <input type="text" name="doctorId"/>
+                                    <input type="text" name="doctorId" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                         </div>
@@ -180,22 +180,22 @@ class SectionOne extends Component {
                                 <div className="box box-8-1-1">
                                     <div className="box-8-1-1-1">
                                         <div className="box-title">公司填写</div>
-                                        <div className="box-content"><input type="text" name="company1"/></div>
+                                        <div className="box-content"><input type="text" name="company1" onChange={this.handleInputChange}/></div>
                                     </div>
                                     <div className="space"></div>
                                     <div className="box-8-1-1-2">
                                        <div className="box-title">公司填写</div>
-                                        <div className="box-content"><input type="text" name="company2"/></div>
+                                        <div className="box-content"><input type="text" name="company2" onChange={this.handleInputChange}/></div>
                                     </div>
                                 </div>
                                 <div className="box box-8-1-2">
                                     <div className="box-title">如果是肺癌，请详细说明类型</div>
                                     <div className="box-content">
                                         <div className="box-col">
-                                            <input type="radio" name="keyCancer" value="SCLC"/> SCLC小细胞肺癌
+                                            <input type="radio" name="keyCancer" value="SCLC" onChange={this.handleInputChange}/> SCLC小细胞肺癌
                                         </div>
                                         <div className="box-col">
-                                            <input type="radio" name="keyCancer" value="NSCLC"/> NSCLC非小细胞肺癌
+                                            <input type="radio" name="keyCancer" value="NSCLC" onChange={this.handleInputChange}/> NSCLC非小细胞肺癌
                                         </div>
                                     </div>
                                 </div>
@@ -203,77 +203,77 @@ class SectionOne extends Component {
                                     <div className="box-title">转移部位及淋巴结侵犯程度</div>
                                     <div className="box-content">
                                         <div className="box-col">
-                                            <div><input type="radio" name="derivedCancerStage" value="局部淋巴结"/>局部淋巴结</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="子宫"/>子宫</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="肝"/>肝</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="局部淋巴结" onChange={this.handleInputChange}/>局部淋巴结</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="子宫" onChange={this.handleInputChange}/>子宫</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="肝" onChange={this.handleInputChange}/>肝</div>
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="radio" name="derivedCancerStage" value="远端淋巴结"/>远端淋巴结</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="远端淋巴结" onChange={this.handleInputChange}/>远端淋巴结</div>
 
-                                            <div><input type="radio" name="derivedCancerStage" value="肾"/>肾</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="肺"/>肺</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="肾" onChange={this.handleInputChange}/>肾</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="肺" onChange={this.handleInputChange}/>肺</div>
                                         </div>
                                         <div className="box-col">
-
-                                        </div>
-                                        <div className="box-col">
-                                            <div><input type="radio" name="derivedCancerStage" value="胸膜"/>胸膜</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="胃"/>胃</div>
-                                             <div><input type="radio" name="derivedCancerStage" value="皮肤"/>皮肤</div>
 
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="radio" name="derivedCancerStage" value="腹膜/大网膜"/>腹膜/大网膜</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="骨"/>骨</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="脑"/>脑</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="胸膜" onChange={this.handleInputChange}/>胸膜</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="胃" onChange={this.handleInputChange}/>胃</div>
+                                             <div><input type="radio" name="derivedCancerStage" value="皮肤" onChange={this.handleInputChange}/>皮肤</div>
 
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="radio" name="derivedCancerStage" value="无"/>无</div>
-                                            <div><input type="radio" name="derivedCancerStage" value="其他"/>其他</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="腹膜/大网膜" onChange={this.handleInputChange}/>腹膜/大网膜</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="骨" onChange={this.handleInputChange}/>骨</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="脑" onChange={this.handleInputChange}/>脑</div>
+
+                                        </div>
+                                        <div className="box-col">
+                                            <div><input type="radio" name="derivedCancerStage" value="无" onChange={this.handleInputChange}/>无</div>
+                                            <div><input type="radio" name="derivedCancerStage" value="其他" onChange={this.handleInputChange}/>其他</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="box box-8-2">
                                 <div>家庭收入</div>
-                                <div><input type="radio" name="familyIncome" value="low"/>低</div>
-                                <div><input type="radio" name="familyIncome" value="medium"/>中</div>
-                                <div><input type="radio" name="familyIncome" value="high"/>高</div>
+                                <div><input type="radio" name="familyIncome" value="low" onChange={this.handleInputChange}/>低</div>
+                                <div><input type="radio" name="familyIncome" value="medium" onChange={this.handleInputChange}/>中</div>
+                                <div><input type="radio" name="familyIncome" value="high" onChange={this.handleInputChange}/>高</div>
                             </div>
                         </div>
                         <div className="box box-9">
                             <div className="box-title">影响癌症治疗的并发症</div>
                             <div className="box-content">
                                 <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities"/>哮喘</div>
-                                    <div><input type="radio" name="co-morbidities"/>房颤</div>
-                                    <div><input type="radio" name="co-morbidities"/>自身免疫疾病</div>
+                                    <div><input type="radio" name="co-morbidities" value="哮喘" onChange={this.handleInputChange}/>哮喘</div>
+                                    <div><input type="radio" name="co-morbidities" value="房颤" onChange={this.handleInputChange}/>房颤</div>
+                                    <div><input type="radio" name="co-morbidities" value="自身免疫疾病" onChange={this.handleInputChange}/>自身免疫疾病</div>
                                 </div>
                                  <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities"/>骨病</div>
-                                    <div><input type="radio" name="co-morbidities"/>心功不全</div>
-                                    <div><input type="radio" name="co-morbidities"/>COPD</div>
+                                    <div><input type="radio" name="co-morbidities" value="骨病" onChange={this.handleInputChange}/>骨病</div>
+                                    <div><input type="radio" name="co-morbidities" value="心功不全" onChange={this.handleInputChange}/>心功不全</div>
+                                    <div><input type="radio" name="co-morbidities" value="COPD" onChange={this.handleInputChange}/>COPD</div>
                                 </div>
                                  <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities" value="糖尿病"/>糖尿病</div>
-                                    <div><input type="radio" name="co-morbidities" value="周围神经病变"/>周围神经病变</div>
-                                    <div><input type="radio" name="co-morbidities" value="肝功不全"/>肝功不全</div>
+                                    <div><input type="radio" name="co-morbidities" value="糖尿病" onChange={this.handleInputChange}/>糖尿病</div>
+                                    <div><input type="radio" name="co-morbidities" value="周围神经病变" onChange={this.handleInputChange}/>周围神经病变</div>
+                                    <div><input type="radio" name="co-morbidities" value="肝功不全" onChange={this.handleInputChange}/>肝功不全</div>
                                 </div>
                                  <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities" value="人类乳头瘤病毒，HPV"/>人类乳头瘤病毒，HPV</div>
-                                    <div><input type="radio" name="co-morbidities" value="静脉血栓栓塞，VTE"/>静脉血栓栓塞，VTE</div>
+                                    <div><input type="radio" name="co-morbidities" value="人类乳头瘤病毒，HPV" onChange={this.handleInputChange}/>人类乳头瘤病毒，HPV</div>
+                                    <div><input type="radio" name="co-morbidities" value="静脉血栓栓塞，VTE" onChange={this.handleInputChange}/>静脉血栓栓塞，VTE</div>
 
-                                    <div><input type="radio" name="co-morbidities" value="帕金森氏病"/>帕金森氏病</div>
+                                    <div><input type="radio" name="co-morbidities" value="帕金森氏病" onChange={this.handleInputChange}/>帕金森氏病</div>
                                 </div>
                                  <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities" value="血小板减少症"/>血小板减少症</div>
-                                    <div><input type="radio" name="co-morbidities" value="肾功不全"/>肾功不全</div>
-                                    <div><input type="radio" name="co-morbidities" value="其他"/>其他</div>
+                                    <div><input type="radio" name="co-morbidities" value="血小板减少症" onChange={this.handleInputChange}/>血小板减少症</div>
+                                    <div><input type="radio" name="co-morbidities" value="肾功不全" onChange={this.handleInputChange}/>肾功不全</div>
+                                    <div><input type="radio" name="co-morbidities" value="其他" onChange={this.handleInputChange}/>其他</div>
                                 </div>
                                  <div className="box-col">
-                                    <div><input type="radio" name="co-morbidities" value="无"/>无</div>
-                                    <div id="long"><input type="radio" name="co-morbidities" value="肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)<"/>肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)</div>
+                                    <div><input type="radio" name="co-morbidities" value="无" onChange={this.handleInputChange}/>无</div>
+                                    <div id="long"><input type="radio" name="co-morbidities" value="肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)" onChange={this.handleInputChange} />肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)</div>
                                 </div>
                             </div>
                         </div>
