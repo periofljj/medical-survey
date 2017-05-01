@@ -9,7 +9,9 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.save = this.save.bind(this);
+        this.finish = this.finish.bind(this);
+        this.load = this.load.bind(this);
+        // this.setValue = this.setValue(this);
 
         // this.state = {
         //     hasAnswered: ""
@@ -18,16 +20,17 @@ class App extends Component {
 
     componentDidMount() {
         var localStorage = window.localStorage;
+        if (localStorage.length === 0) {
+            return;
+        }
         var states = JSON.parse(localStorage['medical-survey']);
+        this.state = states;
         var elements, target;
         for (var key in states) {
             if (states[key]) {
                 elements = document.getElementsByName(key);
                 if (elements.length === 1 && (elements[0].type === 'text' || elements[0].type === 'number')) {
                     elements[0].value = states[key];
-                    this.setState({
-                        [key]: states[key]
-                    });
                 }
                 else {
                     for (var i = 0; i < elements.length; i++) {
@@ -35,9 +38,6 @@ class App extends Component {
                             target = elements[i];
                             if (target.type === 'radio' || target.type === 'checkbox') {
                                 target.checked = true;
-                                this.setState({
-                                    [key]: states[key]
-                                });
                             }
                             console.log(elements[i].type);
                         }
@@ -45,7 +45,6 @@ class App extends Component {
                 }
             }
         }
-        console.log(states);
     }
 
     handleInputChange(event) {
@@ -62,7 +61,22 @@ class App extends Component {
         this.setState({
             [name]: value
         });
-        console.log(this.state);
+        var states = this.state;
+        if (!states) {
+            states = {};
+        }
+        states[name] = value;
+        console.log("save");
+        if(!window.localStorage){
+            alert("浏览器不支持localstorage");
+            return false;
+        }else{
+            console.log(this.state);
+            var storage = window.localStorage;
+            var result = JSON.stringify(states);
+            storage.setItem('medical-survey', result);
+            console.log(storage['medical-survey']);
+        }
     }
 
     finish() {
@@ -88,27 +102,79 @@ class App extends Component {
         localStorage.removeItem("medical-survey");
     }
 
-    save() {
-        console.log("save");
-        if(!window.localStorage){
-            alert("浏览器不支持localstorage");
-            return false;
-        }else{
-            console.log(this.state);
-            var storage = window.localStorage;
-            var result = JSON.stringify(this.state);
-            storage.setItem('medical-survey', result);
-            console.log(storage['medical-survey']);
+    setValue() {
+        console.log("load value");
+        var elements, target;
+        var states = this.state;
+        for (var key in states) {
+            if (states[key]) {
+                elements = document.getElementsByName(key);
+                if (elements.length === 1 && (elements[0].type === 'text' || elements[0].type === 'number')) {
+                    elements[0].value = states[key];
+                }
+                else {
+                    for (var i = 0; i < elements.length; i++) {
+                        if (elements[i].value === states[key]) {
+                            target = elements[i];
+                            if (target.type === 'radio' || target.type === 'checkbox') {
+                                target.checked = true;
+                            }
+                            console.log(elements[i].type);
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    load(input) {
+        console.log("load");
+        console.log(input.target.value);
+        if (window.FileReader) {  
+            var file = input.target.files[0];  
+            // var filename = file.name.split(".")[0];
+            Papa.parse(file, {
+                complete: function(result) {
+                    console.log(result);
+                    var keys = result.data[0];
+                    var values = result.data[1];
+                    var states = {};
+                    for (var i = 0; i < keys.length; i++) {
+                        states[keys[i]] = values[i];
+                    }
+                    console.log(this);
+                    this.state = states;
+                    this.setValue();
+                }.bind(this)
+            });
+        }   
+        //支持IE 7 8 9 10  
+        // else if (typeof window.ActiveXObject != 'undefined'){  
+        //     var xmlDoc;   
+        //     xmlDoc = new ActiveXObject("Microsoft.XMLDOM");   
+        //     xmlDoc.async = false;   
+        //     xmlDoc.load(input.value);   
+        //     alert(xmlDoc.xml);   
+        // }   
+        // //支持FF  
+        // else if (document.implementation && document.implementation.createDocument) {   
+        //     var xmlDoc;   
+        //     xmlDoc = document.implementation.createDocument("", "", null);   
+        //     xmlDoc.async = false;   
+        //     xmlDoc.load(input.value);   
+        //     alert(xmlDoc.xml);  
+        // } else {   
+        //     alert('error');   
+        // }
     }
 
 	render() {
 		return (
 			<div className="medical-survey">
                 <PageTitle></PageTitle>
+                <input className="load-button" type="file" onChange={this.load}/>
                 <SectionOne sectionOneChange={this.handleInputChange}></SectionOne>
-                <SaveArea class="save-button" saveSubmit={this.save} buttonName='保存'></SaveArea>
-                <SaveArea class="finish-button" finish={this.finish} buttonName='完成问卷'></SaveArea>
+                <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>
 			</div>
 		);
 	}
