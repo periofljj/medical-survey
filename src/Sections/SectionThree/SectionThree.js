@@ -18,7 +18,7 @@ class SectionThree extends Component {
                     <span className="title">第三部分 关键的诊断试验/检测结果</span>
                     <label>
                         <span>该患者未做任何基因或染色体检测</span>
-                        <input type="checkbox" />
+                        <input onChange={this.handleInputChange} type="checkbox" />
                     </label>
                 </div>
 
@@ -37,37 +37,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>PD1/PDL1/PDL2</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -76,37 +76,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>HPV人乳头瘤病毒</span>
                                             <label>
-                                                <input type="radio" name="hpv" />
+                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="hpv" />
+                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="hpv" />
+                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="hpv" />
+                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -115,37 +115,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>CD20</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -154,37 +154,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>CD30</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -193,37 +193,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>CD38</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -232,37 +232,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>雌激素受体ER</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -271,37 +271,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>孕激素受体PR</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -310,37 +310,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>HER2</span>
                                             <label>
-                                                <input type="radio" name="her2" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="her2-tests" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2-tests" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2-tests" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="her2-tests" />
+                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -349,37 +349,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>RET重排</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -388,37 +388,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>ROS-1基因突变</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阳性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>阴性</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -427,37 +427,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>N-RAS</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -466,37 +466,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>K-RAS</span>
                                             <label>
-                                                <input type="radio" name="k-ras" />
+                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="k-ras" />
+                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="k-ras" />
+                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="k-ras" />
+                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -505,37 +505,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>BRAF</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -544,37 +544,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>ALK</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -583,37 +583,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>C-MET</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -622,37 +622,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>C-KIT</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -660,37 +660,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>FGFR</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -699,37 +699,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>ZAP-70</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -738,37 +738,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>血清B2M</span>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>升高</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>降低</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="" />
+                                                <input onChange={this.handleInputChange} type="radio" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -777,37 +777,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>Mitotic Index</span>
                                             <label>
-                                                <input type="radio" name="mitotic-index" />
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
                                                 <span>高</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="mitotic-index" />
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
                                                 <span>低</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="mitotic-index" />
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="mitotic-index" />
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -816,37 +816,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>CTC循环肿瘤细胞</span>
                                             <label>
-                                                <input type="radio" name="ctc" />
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
                                                 <span>预后良好</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="ctc" />
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
                                                 <span>预后不良</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="ctc" />
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="ctc" />
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -855,37 +855,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>VEGF</span>
                                             <label>
-                                                <input type="radio" name="vegf" />
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
                                                 <span>升高</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="vegf" />
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
                                                 <span>正常/低</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="vegf" />
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name="vegf" />
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -894,37 +894,37 @@ class SectionThree extends Component {
                                         <td>
                                             <span>FLT3</span>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>是-突变</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>否-野生型</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>正在等结果</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -932,27 +932,27 @@ class SectionThree extends Component {
                                     <tr>
                                         <td>
                                             <span>KI-67抗体水平</span>
-                                            <input className="input-text" type="text" name=""/>
+                                            <input onChange={this.handleInputChange} className="input-text" type="text" name=""/>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -964,19 +964,19 @@ class SectionThree extends Component {
                                 <div className="box">
                                     <span>EGFR</span>
                                     <label>
-                                        <input type="radio" name="egfr" />
+                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
                                         <span>是-突变</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="egfr" />
+                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
                                         <span>否-野生型</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="egfr" />
+                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
                                         <span>正在等结果</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name="egfr" />
+                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
                                         <span>未检测</span>
                                     </label>
                                 </div>
@@ -985,23 +985,23 @@ class SectionThree extends Component {
                                 </div>
                                 <div className="box">
                                     <label>
-                                        <input type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name=""/>
                                         <span>L858R</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name=""/>
                                         <span>T790M</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name=""/>
                                         <span>外显子19缺失</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name=""/>
                                         <span>其他</span>
                                     </label>
                                     <label>
-                                        <input type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name=""/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
@@ -1012,21 +1012,21 @@ class SectionThree extends Component {
                                     <div className="box-row">
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </div>
@@ -1039,38 +1039,38 @@ class SectionThree extends Component {
                                     <div className="box-row">
                                         <span>BRCA1</span>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>是-突变</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>否-野生型</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>正在等结果</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>未检测</span>
                                         </label>
                                     </div>
                                     <div className="box-row">
                                         <span>BRCA2</span>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>是-突变</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>否-野生型</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>正在等结果</span>
                                         </label>
                                         <label>
-                                            <input type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name=""/>
                                             <span>未检测</span>
                                         </label>
                                     </div>
@@ -1080,41 +1080,41 @@ class SectionThree extends Component {
                                         </div>
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>遗传性的(生殖系细胞来源的)</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>Denovo(体细胞来源的)</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>两者都有</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>不知道</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name=""/>
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </div>
@@ -1130,19 +1130,19 @@ class SectionThree extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
                                         已做过
                                     </label>
                                     <label>
-                                        <input type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
                                         适合做但没做过, 也不计划做
                                     </label>
                                     <label>
-                                        <input type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
                                         适合做但没做过, 计划做
                                     </label>
                                     <label>
-                                        <input type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
                                         未做, 因为不适合
                                     </label>
                                 </div>
@@ -1160,45 +1160,45 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>Del 11q</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>Del 17p</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>Trisomy12</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>Del 13q</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>TP53</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>lGvh</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="chromosomal-abnormalities-in-cll" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1206,21 +1206,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1241,29 +1241,29 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>Ph</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>T315i</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1271,21 +1271,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1306,33 +1306,33 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>Del 13q</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>T(4;14)</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>Del 5q</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1340,21 +1340,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1375,41 +1375,41 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>T(8;21)</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>T(15;17)</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>inv(3)</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>inv(6)</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>无</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>Del 11q23</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1417,21 +1417,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1452,21 +1452,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>高 (至少2/5的特定微卫星标记物显示不稳定)</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>低</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1474,21 +1474,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" />
+                                                    <input onChange={this.handleInputChange} type="radio" />
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1509,23 +1509,23 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>EGFR-扩增(没有EGFR VIII重排)</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>EGFR-VIII重排 (没有扩增)</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>EGFR-既有扩增,也有VIII重排</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1533,21 +1533,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1572,17 +1572,17 @@ class SectionThree extends Component {
                                         <td className="col-1">
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="castration-resistant" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="castration-resistant" />
                                                     <span>是</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="castration-resistant" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="castration-resistant" />
                                                     <span>不知道</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="castration-resistant" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="castration-resistant" />
                                                     <span>否</span>
                                                 </label>
                                             </div>
@@ -1590,25 +1590,25 @@ class SectionThree extends Component {
                                         <td className="col-2">
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="platinum-tatus" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
                                                     <span>铂类难控制</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="platinum-tatus" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
                                                     <span>铂类敏感</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="platinum-tatus" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
                                                     <span>不知道(一线铂类治疗中)</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>铂类耐受</span>
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="" />
                                                     <span>不知道</span>
                                                 </label>
                                             </div>
@@ -1627,27 +1627,27 @@ class SectionThree extends Component {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input type="text" name="psa-current" />
+                                            <input onChange={this.handleInputChange} type="text" name="psa-current" />
                                             <label>
-                                                <input type="checkbox" name="psa-current" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-current" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>
@@ -1662,27 +1662,27 @@ class SectionThree extends Component {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="gleasonscore" />
+                                            <input onChange={this.handleInputChange} type="text" name="gleasonscore" />
                                             <label>
-                                                <input type="checkbox" name="gleasonscore" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleasonscore" />
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>确诊时</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input type="checkbox" name="" />
+                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
                                                 <span>前一次治疗之前</span>
                                             </label>
                                         </td>

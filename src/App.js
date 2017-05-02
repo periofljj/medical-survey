@@ -18,6 +18,7 @@ class App extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.finish = this.finish.bind(this);
         this.load = this.load.bind(this);
+        this.clearLocalStorage = this.clearLocalStorage.bind(this);
         // this.setValue = this.setValue(this);
 
         // this.state = {
@@ -134,6 +135,11 @@ class App extends Component {
         }
     }
 
+    clearLocalStorage() {
+        var localStorage = window.localStorage;
+        localStorage.removeItem("medical-survey");
+    }
+
     load(input) {
         console.log("load");
         console.log(input.target.value);
@@ -183,11 +189,12 @@ class App extends Component {
                 <SectionOne sectionOneChange={this.handleInputChange}></SectionOne>
                 <SectionTwo sectionTwoChange={this.handleInputChange}></SectionTwo>
                 <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
-                <SectionFour sectionThreeChange={this.handleInputChange}></SectionFour>
-                <SectionFive sectionThreeChange={this.handleInputChange}></SectionFive>
-                <SectionSix sectionThreeChange={this.handleInputChange}></SectionSix>
-                <SectionSeven sectionThreeChange={this.handleInputChange}></SectionSeven>
-                <SectionEight sectionThreeChange={this.handleInputChange}></SectionEight>
+                <SectionFour sectionFourChange={this.handleInputChange}></SectionFour>
+                <SectionFive sectionFiveChange={this.handleInputChange}></SectionFive>
+                <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
+                <SectionSeven sectionSevenChange={this.handleInputChange}></SectionSeven>
+                <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
+                <SaveArea class="clear-button" saveSubmit={this.clearLocalStorage} buttonName='清空问卷'></SaveArea>
                 <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>
 			</div>
 		);

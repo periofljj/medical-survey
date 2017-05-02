@@ -28,6 +28,12 @@ label {
 }
 input[name=""]{
     border:1px solid #ff0000;
+    &:before {
+    	color: red;
+    	position: relative;
+    	margin-right: 10px;
+    	content: "*";
+    }
 }
 input[type="radio"]{
     border:1px solid #ff0000;
