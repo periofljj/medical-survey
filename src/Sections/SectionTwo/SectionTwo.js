@@ -343,24 +343,24 @@ class SectionTwo extends Component {
                                         <div className="box-col">
                                             <div className="col-left">
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L1期</div>
+                                                    <div><input type="radio" name="" /> L1期</div>
                                                 </div>
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L2期</div>
+                                                    <div><input type="radio" name="" /> L2期</div>
                                                 </div>
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L3期</div>
+                                                    <div><input type="radio" name="" /> L3期</div>
                                                 </div>
                                             </div>
                                             <div className="col-right">
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L1期</div>
+                                                    <div><input type="radio" name="" /> L1期</div>
                                                 </div>
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L2期</div>
+                                                    <div><input type="radio" name="" /> L2期</div>
                                                 </div>
                                                 <div className="col-content">
-                                                    <div><input type="radio" name="" />L3期</div>
+                                                    <div><input type="radio" name="" /> L3期</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -517,23 +517,24 @@ class SectionTwo extends Component {
                                     <div>1.AML with recurrent genetic abnormalities</div>
                                 </div>
                                 <div className="box-col">
-                                    <div><input type="radio" name="" /> 2.AML伴 髓增生异常相关改变</div>
+                                    <div><input type="radio" name="" /> 2.AML伴骨髓增生异常相关改变</div>
                                     <div>2.AML with myelodysplasia-related change</div>
                                 </div>
                                 <div className="box-col">
-                                    <div><input type="radio" name="" /> 4.AML非  特定类型(NOS)</div>
+                                    <div><input type="radio" name="" /> 4.AML非特定类型(NOS)</div>
                                     <div>4.AML, not otherwise specified</div>
                                 </div>
                                 <div className="col-list">
                                     <ul>
                                         <li><input type="radio" name="" /> AML 微分化型</li>
-                                        <li><input type="radio" name="" /> AML  伴成熟型</li>
+                                        <li><input type="radio" name="" /> AML 不伴成熟型</li>
+                                        <li><input type="radio" name="" /> AML 伴成熟型</li>
                                         <li><input type="radio" name="" /> 急性粒单核细胞白血病</li>
                                         <li><input type="radio" name="" /> 急性全髓增殖伴骨髓纤维化</li>
                                         <li><input type="radio" name="" /> 急性原始单核细胞白血病/急性单核细胞白血病</li>
-                                        <li><input type="radio" name="" />纯红系细胞白血病</li>
-                                        <li><input type="radio" name="" />急性原始巨核细胞白血病</li>
-                                        <li><input type="radio" name="" />急性嗜碱性粒细胞白血病</li>
+                                        <li><input type="radio" name="" /> 纯红系细胞白血病</li>
+                                        <li><input type="radio" name="" /> 急性原始巨核细胞白血病</li>
+                                        <li><input type="radio" name="" /> 急性嗜碱性粒细胞白血病</li>
                                     </ul>
                                 </div>
                                 <div className="box-col">
@@ -541,7 +542,7 @@ class SectionTwo extends Component {
                                     <div>5.Myeloid sarcoma</div>
                                 </div>
                                 <div className="box-col">
-                                    <div><input type="radio" name="" /> 6. 唐 综合征相关的髓系增殖</div>
+                                    <div><input type="radio" name="" /> 6. 唐氏综合征相关的髓系增殖</div>
                                     <div>6.Myeloid proliferations related to Down syndrome</div>
                                 </div>
                                 <div className="box-col">
@@ -554,7 +555,7 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="col-list">
                                     <ul>
-                                        <li><input type="radio" name="" />  急性未分化型白血病</li>
+                                        <li><input type="radio" name="" /> 急性未分化型白血病</li>
                                         <li><input type="radio" name="" /> 混合表型急性白血病</li>
                                     </ul>
                                 </div>
@@ -578,13 +579,14 @@ class SectionTwo extends Component {
                                 <div className="col-list">
                                     <ul>
                                         <li><input type="radio" name="" /> AML 微分化型</li>
-                                        <li><input type="radio" name="" /> AML  伴成熟型</li>
+                                        <li><input type="radio" name="" /> AML 不伴成熟型</li>
+                                        <li><input type="radio" name="" /> AML 伴成熟型</li>
                                         <li><input type="radio" name="" /> 急性粒单核细胞白血病</li>
                                         <li><input type="radio" name="" /> 急性全髓增殖伴骨髓纤维化</li>
                                         <li><input type="radio" name="" /> 急性原始单核细胞白血病/急性单核细胞白血病</li>
-                                        <li><input type="radio" name="" />纯红系细胞白血病</li>
-                                        <li><input type="radio" name="" />急性原始巨核细胞白血病</li>
-                                        <li><input type="radio" name="" />急性嗜碱性粒细胞白血病</li>
+                                        <li><input type="radio" name="" /> 纯红系细胞白血病</li>
+                                        <li><input type="radio" name="" /> 急性原始巨核细胞白血病</li>
+                                        <li><input type="radio" name="" /> 急性嗜碱性粒细胞白血病</li>
                                     </ul>
                                 </div>
                                 <div className="box-col">
@@ -592,7 +594,7 @@ class SectionTwo extends Component {
                                     <div>5.Myeloid sarcoma</div>
                                 </div>
                                 <div className="box-col">
-                                    <div><input type="radio" name="" /> 6. 唐 综合征相关的髓系增殖</div>
+                                    <div><input type="radio" name="" /> 6. 唐氏综合征相关的髓系增殖</div>
                                     <div>6.Myeloid proliferations related to Down syndrome</div>
                                 </div>
                                 <div className="box-col">
@@ -605,7 +607,7 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="col-list">
                                     <ul>
-                                        <li><input type="radio" name="" />  急性未分化型白血病</li>
+                                        <li><input type="radio" name="" /> 急性未分化型白血病</li>
                                         <li><input type="radio" name="" /> 混合表型急性白血病</li>
                                     </ul>
                                 </div>
