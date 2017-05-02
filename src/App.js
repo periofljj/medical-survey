@@ -3,6 +3,13 @@ import './App.css';
 import PageTitle from './Components/PageTitle/PageTitle';
 import SaveArea from './Components/SaveArea/SaveArea';
 import SectionOne from './Sections/SectionOne/SectionOne';
+import SectionTwo from './Sections/SectionTwo/SectionTwo';
+import SectionThree from './Sections/SectionThree/SectionThree';
+import SectionFour from './Sections/SectionFour/SectionFour';
+import SectionFive from './Sections/SectionFive/SectionFive';
+import SectionSix from './Sections/SectionSix/SectionSix';
+import SectionSeven from './Sections/SectionSeven/SectionSeven';
+import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
 
 class App extends Component {
@@ -174,6 +181,13 @@ class App extends Component {
                 <PageTitle></PageTitle>
                 <input className="load-button" type="file" onChange={this.load}/>
                 <SectionOne sectionOneChange={this.handleInputChange}></SectionOne>
+                <SectionTwo sectionTwoChange={this.handleInputChange}></SectionTwo>
+                <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
+                <SectionFour sectionThreeChange={this.handleInputChange}></SectionFour>
+                <SectionFive sectionThreeChange={this.handleInputChange}></SectionFive>
+                <SectionSix sectionThreeChange={this.handleInputChange}></SectionSix>
+                <SectionSeven sectionThreeChange={this.handleInputChange}></SectionSeven>
+                <SectionEight sectionThreeChange={this.handleInputChange}></SectionEight>
                 <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>
 			</div>
 		);

@@ -280,6 +280,7 @@ class SectionOne extends Component {
                     </div>
                 </div>
                 <div className="clear-both"></div>
+                <div className="block"></div>
             </div>
         );
     }
