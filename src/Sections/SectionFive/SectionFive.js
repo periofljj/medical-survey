@@ -66,28 +66,28 @@ class SectionFive extends Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio"/></td>
+                                                <td><input type="text" name=""/></td>
+                                                <td><input type="radio" name=""/></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio" /></td>
+                                                <td><input type="text"  name=""/></td>
+                                                <td><input type="radio"  name=""/></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio" /></td>
+                                                <td><input type="text"  name=""/></td>
+                                                <td><input type="radio"  name=""/></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio" /></td>
+                                                <td><input type="text"  name=""/></td>
+                                                <td><input type="radio"  name=""/></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio" /></td>
+                                                <td><input type="text"  name=""/></td>
+                                                <td><input type="radio" name=""/></td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" /></td>
-                                                <td><input type="radio" /></td>
+                                                <td><input type="text"  name=""/></td>
+                                                <td><input type="radio"  name=""/></td>
                                             </tr>
                                         </tbody>
                                     </table>

@@ -24,11 +24,11 @@ class SectionFour extends Component {
                         <div className="row-title">
                             <span>4.1 针对其肿瘤，该患者是否做过手术治疗</span>
                             <label>
-                                <input type="radio" />
+                                <input type="radio" name=""/>
                                 <span>是</span>
                             </label>
                             <label>
-                                <input type="radio" />
+                                <input type="radio" name=""/>
                                 <span>否</span>
                             </label>
                         </div>
@@ -40,21 +40,21 @@ class SectionFour extends Component {
                             <div className="box">
                                 <div>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>可以手术切除</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>不能手术切除</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>可能可以手术切除</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
@@ -70,7 +70,7 @@ class SectionFour extends Component {
                                     <span>第一次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text" />
+                                    <input type="text" name=""/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -78,7 +78,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -86,7 +86,7 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text" />
+                                    <input type="text" name=""/>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ class SectionFour extends Component {
                                     <span>第一次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text" />
+                                    <input type="text" name=""/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -104,7 +104,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -112,7 +112,7 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text" />
+                                    <input type="text" name=""/>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ class SectionFour extends Component {
                                     <span>第一次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text"  />
+                                    <input type="text"  name=""/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -130,7 +130,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -138,7 +138,7 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input type="text" />
+                                    <input type="text" name=""/>
                                 </div>
                             </div>
                         </div>
@@ -147,11 +147,11 @@ class SectionFour extends Component {
                         <div className="row-title">
                             <span>4.2 针对其肿瘤，该患者是否做过放射治疗</span>
                             <label>
-                                <input type="radio" />
+                                <input type="radio" name=""/>
                                 <span>是</span>
                             </label>
                             <label>
-                                <input type="radio" />
+                                <input type="radio" name=""/>
                                 <span>否</span>
                             </label>
                         </div>
@@ -167,7 +167,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-1">
@@ -175,7 +175,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -184,11 +184,11 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div>
-                                        <input type="text" />
+                                        <input type="text" name=""/>
                                         <span>每日GY</span>
                                     </div>
                                     <div>
-                                        <input type="text" />
+                                        <input type="text" name=""/>
                                         <span>总计GY</span>
                                     </div>
                                 </div>
@@ -203,13 +203,13 @@ class SectionFour extends Component {
                                 <div clsas="box-content">
                                     <div>
                                         <label>
-                                            <input type="radio" />
+                                            <input type="radio" name=""/>
                                             <span>内放疗</span>
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            <input type="radio" />
+                                            <input type="radio" name=""/>
                                             <span>外放疗</span>
                                         </label>
                                     </div>
@@ -221,15 +221,15 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>与化疗同步</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>与化疗序贯进⾏</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>独⽴作为姑息或者单独治疗</span>
                                     </label>
                                 </div>
@@ -243,7 +243,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-1">
@@ -251,7 +251,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input className="date-input" type="number" /><input className="date-input" type="number" /><input className="date-input" type="number" />
+                                    <input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/><input className="date-input" type="number" name=""/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -260,11 +260,11 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div>
-                                        <input type="text" />
+                                        <input type="text" name=""/>
                                         <span>每日GY</span>
                                     </div>
                                     <div>
-                                        <input type="text" />
+                                        <input type="text" name=""/>
                                         <span>总计GY</span>
                                     </div>
                                 </div>
@@ -279,13 +279,13 @@ class SectionFour extends Component {
                                 <div clsas="box-content">
                                     <div>
                                         <label>
-                                            <input type="radio" />
+                                            <input type="radio" name=""/>
                                             <span>内放疗</span>
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            <input type="radio" />
+                                            <input type="radio" name=""/>
                                             <span>外放疗</span>
                                         </label>
                                     </div>
@@ -297,15 +297,15 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>与化疗同步</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>与化疗序贯进⾏</span>
                                     </label>
                                     <label>
-                                        <input type="radio" />
+                                        <input type="radio" name=""/>
                                         <span>独⽴作为姑息或者单独治疗</span>
                                     </label>
                                 </div>

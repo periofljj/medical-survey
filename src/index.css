@@ -1908,11 +1908,6 @@
   margin-top: 10px;
   margin-right: 16px; }
 
-.block {
-  clear: both;
-  width: 100%;
-  height: 80px; }
-
 .section-eight {
   clear: both; }
 
@@ -2282,3 +2277,14 @@ label {
 
 .clear-both {
   clear: both; }
+
+input[name=""] {
+  border: 1px solid #ff0000; }
+
+input[type="radio"] {
+  border: 1px solid #ff0000; }
+
+.block {
+  clear: both;
+  width: 100%;
+  height: 80px; }
