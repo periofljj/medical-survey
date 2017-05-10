@@ -18,7 +18,7 @@ class SectionThree extends Component {
                     <span className="title">第三部分 关键的诊断试验/检测结果</span>
                     <label>
                         <span>该患者未做任何基因或染色体检测</span>
-                        <input onChange={this.handleInputChange} type="checkbox" />
+                        <input onChange={this.handleInputChange} type="checkbox" name="none-gene-test" value="yes"/>
                     </label>
                 </div>
 
@@ -1206,21 +1206,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1241,29 +1241,29 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>Ph</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>T315i</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1271,21 +1271,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1306,33 +1306,33 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>Del 13q</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>T(4;14)</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>Del 5q</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1340,21 +1340,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="mm-recent-inspection"/>
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="mm-recent-inspection"/>
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="mm-recent-inspection"/>
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="mm-recent-inspection"/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>

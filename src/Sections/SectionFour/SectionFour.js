@@ -24,11 +24,11 @@ class SectionFour extends Component {
                         <div className="row-title">
                             <span>4.1 针对其肿瘤，该患者是否做过手术治疗</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="surgery" value="yes"/>
                                 <span>是</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="surgery" value="no"/>
                                 <span>否</span>
                             </label>
                         </div>
@@ -78,7 +78,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -104,7 +104,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -130,7 +130,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="third-start-date"/><input onChange={this.handleInputChange} className="third-input" type="number" name="first-start-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -147,11 +147,11 @@ class SectionFour extends Component {
                         <div className="row-title">
                             <span>4.2 针对其肿瘤，该患者是否做过放射治疗</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="radio" value="yes"/>
                                 <span>是</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="radio" value="no"/>
                                 <span>否</span>
                             </label>
                         </div>

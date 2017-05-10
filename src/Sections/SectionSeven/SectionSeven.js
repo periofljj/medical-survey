@@ -28,7 +28,7 @@ class SectionSeven extends Component {
                                 <div>(年/月/日)</div>
                             </div>
                             <div className="box-content text-center">
-                                <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                <input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/>
                             </div>
                         </div>
                         <div className="box width-15 box-2">
@@ -38,9 +38,9 @@ class SectionSeven extends Component {
                             </div>
                             <div className="box-content text-center">
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-end-date" value="doing"/>
                                         <span>进行中</span>
                                     </label>
                                 </div>
@@ -51,7 +51,7 @@ class SectionSeven extends Component {
                                 <span>方案名称</span>
                             </div>
                             <div className="box-content text-center">
-                                <input onChange={this.handleInputChange} type="text" name=""/>
+                                <input onChange={this.handleInputChange} type="text" name="cyto-regimen"/>
                             </div>
                         </div>
                         <div className="box width-15 box-4">
@@ -61,19 +61,19 @@ class SectionSeven extends Component {
                             <div className="box-content">
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="refractory"/>
                                         <span>难治性的 Refractory</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="relapsed"/>
                                         <span>复发的 Relapsed</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="none"/>
                                         <span>两者都不是</span>
                                     </label>
                                 </div>
@@ -145,41 +145,41 @@ class SectionSeven extends Component {
                             <div className="box-content text-center">
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="Induction"/>
                                         <span>诱导</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="1st"/>
                                         <span>一线</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="Consolidation"/>
                                         <span>巩固</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="2nd"/>
                                         <span>二线</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="Maintenance"/>
                                         <span>维持</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="3rd"/>
                                         <span>三线</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="Not suitable"/>
                                         <span>不适用</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="" value="4th"/>
                                         <span>四线及以上</span>
                                     </label>
                                 </div>
@@ -192,25 +192,25 @@ class SectionSeven extends Component {
                             <div className="box-content">
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="medical-insurance-status"  value="Medical Insurance"/>
                                         <span>医保/公费</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="medical-insurance-status" value="Private Treatment"/>
                                         <span>自费</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="medical-insurance-status" value="Don't know"/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="medical-insurance-status" value="XNH"/>
                                         <span>新农合(XNH)</span>
                                     </label>
                                 </div>
@@ -222,46 +222,46 @@ class SectionSeven extends Component {
                         <div className="box">
                             <span>哪个科室医生制定了此方案</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator"  value="Medical Oncologist"/>
                                 <span>肿瘤内科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Radiotherapist"/>
                                 <span>放疗科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Haematologist"/>
                                 <span>血液科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Gastroenterologist"/>
                                 <span>消化科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Dermatologist"/>
                                 <span>皮肤科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Pulmonologist"/>
                                 <span>呼吸科/肺内科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Urologist"/>
                                 <span>泌尿科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Gynecologist"/>
                                 <span>妇科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="Surgeon"/>
                                 <span>外科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" />
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator"/>
                                 <span>其它科室医生(请注明)</span>
                             </label>
-                            <input onChange={this.handleInputChange} className="other" type="text" name=""/>
+                            <input onChange={this.handleInputChange} className="other" type="text" name="" name="therapy-initiator"/>
                         </div>
                     </div>
 
@@ -269,23 +269,23 @@ class SectionSeven extends Component {
                         <div className="box">
                             <span>患者在开始本治疗时, 体能状态描述( ECOG评级)</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="meno-status" />
+                                <input onChange={this.handleInputChange} type="radio" name="ECOG-performance-status" value="Asymptomatic"/>
                                 <span>0.无症状</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="meno-status" />
+                                <input onChange={this.handleInputChange} type="radio" name="ECOG-performance-status" value="Symptomatic fully ambulatory"/>
                                 <span>1.有症状但完全可以活动</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="meno-status" />
+                                <input onChange={this.handleInputChange} type="radio" name="ECOG-performance-status" value="symptomatic in bed<50% of the day"/>
                                 <span>2.有症状, 每日日卧床时间&lt;50%</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="meno-status" />
+                                <input onChange={this.handleInputChange} type="radio" name="ECOG-performance-status" value="Symptomatic in bed>50% of the day"/>
                                 <span>3.有症状, 每日日卧床>50%, 但不不是卧床不不起</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="meno-status" />
+                                <input onChange={this.handleInputChange} type="radio" name="ECOG-performance-status" value="Bedridden"/>
                                 <span>4.卧床不不起</span>
                             </label>
                         </div>
@@ -295,27 +295,27 @@ class SectionSeven extends Component {
                         <div className="box">
                             <span>这个是临床试验或病人准入方案的一部分吗?</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="Yes_ Phase II"/>
                                 <span>临床试验II期</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="Yes_ Phase III"/>
                                 <span>临床试验III期</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="Part of a Compassionate Program"/>
                                 <span>爱心用药计划(特许使用)所用药物为仍在研发阶段尚未获批的药物</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="Patient Assistance Program"/>
                                 <span>患者援助计划 所用用药物为已批准上市的药物,包括买赠等</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="No_ Neither Clinical Trial nor COMP"/>
                                 <span>都不是</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="clinical-trials" value="N/APP"/>
                                 <span>不知道</span>
                             </label>
                         </div>
@@ -326,20 +326,20 @@ class SectionSeven extends Component {
                             <span>仅限前列列腺癌填写</span>
                             <span>本次治疗前PSA水平</span>
                             <span>(ng/ml)</span>
-                            <input onChange={this.handleInputChange} className="num-input" type="num" />
+                            <input onChange={this.handleInputChange} className="num-input" type="num" name="PSA-at-diag"/>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="PSA-at-diag"/>
                                 <span>不知道</span>
                             </label>
                         </div>
                         <div className="box">
                             <span>治疗目的</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="treatment-intent" value="Radical cure"/>
                                 <span>根治</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                <input onChange={this.handleInputChange} type="radio" name="treatment-intent"/>
                                 <span>姑息</span>
                             </label>
                         </div>
@@ -353,147 +353,147 @@ class SectionSeven extends Component {
                             <div className="box-content">
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="ATE"/>
                                         <span>ATE动脉血栓栓塞</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="VTE"/>
                                         <span>VTE 静脉血栓栓塞</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Neutropenia"/>
                                         <span>中性粒细胞减少</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Weight change"/>
                                         <span>体重变化</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Constipation"/>
                                         <span>便秘</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Anorexia"/>
                                         <span>厌食/食欲减退</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Fever"/>
                                         <span>发热</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Stomatitis"/>
                                         <span>口腔炎</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Cardiac insufficiency"/>
                                         <span>心功不全</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Sexual dysfunction"/>
                                         <span>性功能障碍</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="other"/>
                                         <span>其他</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Nausea and vomiting"/>
                                         <span>恶心呕吐</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Cachexia"/>
                                         <span>恶病质</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Infection"/>
                                         <span>感染</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Hand-foot syndrome"/>
                                         <span>手足综合症</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="abnormal menstruation"/>
                                         <span>月经不调</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="edema"/>
                                         <span>水肿</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Hot / hot flashes"/>
                                         <span>潮热/热潮红</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="pain"/>
                                         <span>疼痛</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="erythra"/>
                                         <span>皮疹</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Neuropathy"/>
                                         <span>神经病变</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Mucositis"/>
                                         <span>粘膜炎</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="hepatosis"/>
                                         <span>肝功能障碍</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="gastric-intestinal perforation"/>
                                         <span>胃肠穿孔</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Alopecia"/>
                                         <span>脱发</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="diarrhea"/>
                                         <span>腹泻</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Thrombocytopenia"/>
                                         <span>血小板减少</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Blurred vision or other visual changes"/>
                                         <span>视力模糊或其他视力变化</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="anemia"/>
                                         <span>贫血</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Increased appetite"/>
                                         <span>食欲增加</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="hyperuricemia"/>
                                         <span>高尿酸血症</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Hypertension"/>
                                         <span>高血压</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Gynaecomastia"/>
                                         <span>男性乳房发育</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="none"/>
                                         <span>无</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="checkbox" name=""/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Don't know"/>
                                         <span>从病人病历不可知</span>
                                     </label>
                                 </div>
@@ -528,13 +528,13 @@ class SectionSeven extends Component {
                                             </tr>
                                             <tr>
                                                 <td>满意程度</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="1"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="2"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="3"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="4"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="5"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="6"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="satisfaction" value="7"/></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -546,11 +546,11 @@ class SectionSeven extends Component {
                                     <div className="sub-box-1">
                                         <span>该患者是否接受序贯治疗(仅限乳腺癌,肺癌)</span>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" vaule="yes"/>
                                             <span>是</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
+                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" vaule="no"/>
                                             <span>否</span>
                                         </label>
                                     </div>
@@ -574,29 +574,29 @@ class SectionSeven extends Component {
                                     <tr>
                                         <td>
                                             <span>替换方案1</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <span>替换方案2</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <span>替换方案3</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="替换方案" value="unusable"/>
                                                 <span>没有可以替换的药物</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="替换方案" value="Don't anwser"/>
                                                 <span>不予回答</span>
                                             </label>
                                         </td>
@@ -619,27 +619,27 @@ class SectionSeven extends Component {
                                             <span>方案中药物1(商品名,否则请标注厂家或产地) 可以是细胞毒、内分泌、靶向、免疫增强剂</span>
                                         </div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="brand"/>
                                             <div className="wrapper">
                                                 <div>
                                                     <span>给药方方式</span>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Cycles"/>
                                                         <span>周期</span>
                                                     </label>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Continued"/>
                                                         <span>持续</span>
                                                     </label>
                                                 </div>
                                                 <div>
                                                     <span>是否作为维持治疗</span>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="maintenance-therapy" value="yes"/>
                                                         <span>是</span>
                                                     </label>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="maintenance-therapy" value="no"/>
                                                         <span>否</span>
                                                     </label>
                                                 </div>
@@ -651,17 +651,17 @@ class SectionSeven extends Component {
                                             <span>开始日期 如果开始日期与上面的不同 年/月/日</span>
                                         </div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} className="date-input" type="text" name=""/><input onChange={this.handleInputChange} className="date-input" type="text" name=""/><input onChange={this.handleInputChange} className="date-input" type="text" name=""/>
+                                            <input onChange={this.handleInputChange} className="date-input" type="text" name="start-date"/><input onChange={this.handleInputChange} className="date-input" type="text" name="start-date"/><input onChange={this.handleInputChange} className="date-input" type="text" name="start-date"/>
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-3">
                                         <div className="sub-box-3-row-1">
                                             <span>每周期给药天数</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="days-per-cycle"/>
                                         </div>
                                         <div className="sub-box-3-row-2">
                                             <span>周期总天数(含间歇期)</span>
-                                            <input onChange={this.handleInputChange} type="text" name="" />
+                                            <input onChange={this.handleInputChange} type="text" name="length-of-cycle" />
                                         </div>
                                     </div>
                                 </div>
@@ -672,7 +672,7 @@ class SectionSeven extends Component {
                                             <span>剂量如有变化请分栏填写</span>
                                         </div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="dose-quantity"/>
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-2">
@@ -682,53 +682,53 @@ class SectionSeven extends Component {
                                         <div className="box-content">
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mg/m 2"/>
                                                     <span>mg/m 2</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mg"/>
                                                     <span>mg</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio"name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio"name="dose-unit" value="MU"/>
                                                     <span>MU</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="AUC"/>
                                                     <span>AUC</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mcg/m2"/>
                                                     <span>mcg/m2</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="kBq/kg"/>
                                                     <span>kBq/kg</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mg/kg"/>
                                                     <span>mg/kg</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mcg"/>
                                                     <span>mcg</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="IU"/>
                                                     <span>IU</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="ml"/>
                                                     <span>ml</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="mcg/kg"/>
                                                     <span>mcg/kg</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="dose-unit" value="other"/>
                                                     <span>其他</span>
                                                 </label>
                                             </div>
@@ -739,7 +739,7 @@ class SectionSeven extends Component {
                                             <span>每次给药次数</span>
                                         </div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="dose-per-day"/>
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-4">
@@ -747,23 +747,23 @@ class SectionSeven extends Component {
                                             <span>结束日期 如果结束日期与上面的不同 年/月/日</span>
                                         </div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} className="date-input" type="text" name=""/><input onChange={this.handleInputChange} className="date-input" type="text" name=""/><input onChange={this.handleInputChange} className="date-input" type="text" name=""/>
+                                            <input onChange={this.handleInputChange} className="date-input" type="text" name="end-date"/><input onChange={this.handleInputChange} className="date-input" type="text" name="end-date"/><input onChange={this.handleInputChange} className="date-input" type="text" name="end-date"/>
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-5">
                                         <div className="sub-box-5-row-1">
                                             <span>当前周期数</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="given-cycles"/>
                                         </div>
                                         <div className="sub-box-5-row-2">
                                             <span>计划周期数</span>
-                                            <input onChange={this.handleInputChange} type="text" name=""/>
+                                            <input onChange={this.handleInputChange} type="text" name="cycles-planned"/>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned"/>
                                                 <span>不知道</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned"/>
                                                 <span>至进展</span>
                                             </label>
                                         </div>
@@ -778,71 +778,71 @@ class SectionSeven extends Component {
                                     <div className="box-content">
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Oral"/>
                                                 <span>口服</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intrathecal"/>
                                                 <span>鞘内注射</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="IV Bolus"/>
                                                 <span>静脉推注</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intratumoural"/>
                                                 <span>瘤内注射</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intramuscular"/>
                                                 <span>肌肉注射</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intravesical"/>
                                                 <span>膀胱灌注</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Subcutaneous"/>
                                                 <span>皮下注射</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intraperitoneal"/>
                                                 <span>腹膜/腹腔内注射</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Topical"/>
                                                 <span>局部</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="TACE"/>
                                                 <span>TACE</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="IV  Infusion"/>
                                                 <span>静脉输液</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Intra-arterial injection"/>
                                                 <span>动脉注射</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="Cont IV Infusion"/>
                                                 <span>持续静脉输液</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="product-route-of-administration" value="other"/>
                                                 <span>其他</span>
                                             </label>
                                         </div>
@@ -855,14 +855,14 @@ class SectionSeven extends Component {
                                         </div>
                                         <div className="box-content">
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name=""/><span>天</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency" value="days"/><span>天</span>
                                             </div>
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name=""/><span>周</span>
-                                                <input onChange={this.handleInputChange} className="times" type="number" name=""/><span>次数</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency" value="weeks"/><span>周</span>
+                                                <input onChange={this.handleInputChange} className="times" type="number" name="admin-frequency" value="times"/><span>次数</span>
                                             </div>
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name=""/><span>个月</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency" value="months"/><span>个月</span>
                                             </div>
                                         </div>
                                     </div>
@@ -872,21 +872,21 @@ class SectionSeven extends Component {
                                         </div>
                                         <div className="box-content">
                                             <div>
-                                                <input onChange={this.handleInputChange} type="number" name=""/>
+                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="weeks"/>
                                                 <span>周</span>
 
                                                 <span>或</span>
 
-                                                <input onChange={this.handleInputChange} type="number" name=""/>
+                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="years"/>
                                                 <span>年</span>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="doing"/>
                                                     <span>直至进展</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="unknown"/>
                                                     <span>不知道</span>
                                                 </label>
                                             </div>

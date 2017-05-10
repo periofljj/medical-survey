@@ -28,23 +28,23 @@ class SectionFive extends Component {
                                 <div className="box box-1-1-1">
                                     <div className="box-title">方案开始日期</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="" />
-                                        <input onChange={this.handleInputChange} type="text" name="" />
-                                        <input onChange={this.handleInputChange} type="text" name="" />
+                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-2">
                                     <div className="box-title">方案结束日期</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="" />
-                                        <input onChange={this.handleInputChange} type="text" name="" />
-                                        <input onChange={this.handleInputChange} type="text" name="" />
+                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">
                                      <div className="box-title">治疗方案名称(如果是序贯 案，请标明序贯顺序)</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="" />
+                                        <input onChange={this.handleInputChange} type="text" name="cyto-regimen" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-4">
