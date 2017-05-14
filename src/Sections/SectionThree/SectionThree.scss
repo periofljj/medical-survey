@@ -31,12 +31,22 @@ $smFont: 12px;
                 float: left;
 
                 .table-1 {
+                    background-color: #d8d7d4;
                     th {
                         width: 50%;
                     }
 
                     td {
                         width: 50%;
+                        .test-name{
+                           display: inline-block;
+                           width: 90px;
+                        }
+                        label{
+                            font-weight: normal;
+                            margin-right: 3px;
+                            vertical-align: top;
+                        }
                         input {
                             vertical-align: sub;
                         }
@@ -57,7 +67,13 @@ $smFont: 12px;
                         background-color: #d8d7d4;
                         margin-bottom: 6px;
                         padding-left: 6px;
-
+                        .test-name{
+                           margin-right: 10px;
+                        }
+                        label{
+                            font-weight: normal;
+                             margin-right: 10px;
+                        }
                         input {
                             vertical-align: sub;
                         }
@@ -84,7 +100,13 @@ $smFont: 12px;
                         background-color: #d8d7d4;
                         margin-bottom: 6px;
                         padding-left: 6px;
-
+                        .test-name{
+                           margin-right: 10px;
+                        }
+                        label{
+                            font-weight: normal;
+                            margin-right: 10px;
+                        }
                         input {
                             vertical-align: sub;
                         }
@@ -104,6 +126,7 @@ $smFont: 12px;
                 .box {
                     background-color: #d8d7d4;
                     border: 1px solid #ccc;
+                    margin-bottom: 20px;
 
                     .box-title {
                         padding-left: 10px;
@@ -117,6 +140,7 @@ $smFont: 12px;
                         padding-left: 10px;
                         label {
                             margin-right: 10px;
+                            font-weight: normal;
                             input {
                                 vertical-align: sub;
                             }
@@ -125,12 +149,17 @@ $smFont: 12px;
                 }
 
                 .table-2 {
+                    background-color: #d8d7d4;
                     th {
                         width: 60%;
                     }
 
                     td {
                         width: 40%;
+                        label{
+                            font-weight: normal;
+                            margin-right: 10px;
+                        }
                         input {
                             vertical-align: sub;
                         }
@@ -142,6 +171,7 @@ $smFont: 12px;
                 }
 
                 .table-3 {
+                    background-color: #d8d7d4;
                     td {
                         input {
                             vertical-align: sub;
@@ -155,6 +185,8 @@ $smFont: 12px;
                             width: 100%;
                             label {
                                 width: 40%;
+                                margin-right: 10px;
+                                font-weight:normal;
                             }
                         }
                     }
@@ -162,6 +194,10 @@ $smFont: 12px;
                     .col-2 {
                         div {
                             padding-left: 10px;
+                            label {
+                                margin-right: 10px;
+                                font-weight:normal;
+                            }
                         }
                         width: 60%;
                     }
@@ -172,6 +208,11 @@ $smFont: 12px;
                 }
 
                 .table-4 {
+                    background-color: #d8d7d4;
+                    label {
+                        margin-right: 10px;
+                        font-weight:normal;
+                    }
                     .text-center {
                         text-align: center;
                     }

@@ -6,6 +6,10 @@ $smFont: 12px;
     .section-title {
         width: 100%;
         padding: 0;
+        label{
+            margin-right: 10px;
+            font-weight:normal;
+        }
         .title {
             margin-left: 0px;
             font-size: $mdFont;
@@ -167,6 +171,15 @@ $smFont: 12px;
             .box-6-1{
                 height:80px;
                 border: 1px solid #ccc;
+                .box-content{
+                    text-align: center;
+                    input{
+                        margin-top: 10px;
+                        display: inline-block;
+                        width: 45px;
+                        margin-right: 3px;
+                    }
+                }
             }
             .box-6-2{
                 border: 1px solid #ccc;
@@ -277,6 +290,20 @@ $smFont: 12px;
                 }
             }
 
+        }
+        .box-10{
+            padding-left: 10px;
+            padding-top:8px;
+            width: 100%;
+            height: 40px;
+            div{
+                display: inline-block;
+                margin-right: 20px;
+                label{
+                    margin-right: 40px;
+                    font-weight:normal;
+                }
+            }
         }
     }
 }

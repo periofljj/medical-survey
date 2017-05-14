@@ -35,925 +35,925 @@ class SectionThree extends Component {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <span>PD1/PDL1/PDL2</span>
+                                            <span className="test-name">PD1/PDL1/PDL2</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>HPV人乳头瘤病毒</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
-                                                <span>阳性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
-                                                <span>阴性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="hpv" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PD-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>CD20</span>
+                                            <span className="test-name">HPV人乳头瘤病毒</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>CD30</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HPV-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>CD38</span>
+                                            <span className="test-name">CD20</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>雌激素受体ER</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD20-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>孕激素受体PR</span>
+                                            <span className="test-name">CD30</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>HER2</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
-                                                <span>阳性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
-                                                <span>阴性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="her2-tests" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD30-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>RET重排</span>
+                                            <span className="test-name">CD38</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>ROS-1基因突变</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阳性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>阴性</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="CD38-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>N-RAS</span>
+                                            <span className="test-name">雌激素受体ER</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>K-RAS</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
-                                                <span>是-突变</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
-                                                <span>否-野生型</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="k-ras" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ER-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>BRAF</span>
+                                            <span className="test-name">孕激素受体PR</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>ALK</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="PR-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>C-MET</span>
+                                            <span className="test-name">HER2</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="HER2-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>C-KIT</span>
+                                            <span className="test-name">RET重排</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="RET-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">ROS-1基因突变</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-gene-mutation-test" value="Positive"/>
+                                                <span> 阳性</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-gene-mutation-test" value="Negative"/>
+                                                <span> 阴性</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-gene-mutation-test" value="Waitting Result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">N-RAS</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">K-RAS</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">BRAF</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">ALK</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ALK-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">C-MET</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">C-KIT</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr><tr>
                                         <td>
-                                            <span>FGFR</span>
+                                            <span className="test-name">FGFR</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>ZAP-70</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>是-突变</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>否-野生型</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>血清B2M</span>
+                                            <span className="test-name">ZAP-70</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>升高</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>降低</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="" />
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>Mitotic Index</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
-                                                <span>高</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
-                                                <span>低</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>CTC循环肿瘤细胞</span>
+                                            <span className="test-name">血清B2M</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
-                                                <span>预后良好</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-mutation-test" value="Rise"/>
+                                                <span> 升高</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
-                                                <span>预后不良</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-mutation-test" value="Reduce"/>
+                                                <span> 降低</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ctc" />
-                                                <span>未检测</span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span>VEGF</span>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
-                                                <span>升高</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
-                                                <span>正常/低</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
-                                                <span>正在等结果</span>
-                                            </label>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="vegf" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>FLT3</span>
+                                            <span className="test-name">Mitotic Index</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>是-突变</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-mutation-test" value="High"/>
+                                                <span> 高</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>否-野生型</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-mutation-test" value="Low"/>
+                                                <span> 低</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>正在等结果</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <span>KI-67抗体水平</span>
-                                            <input onChange={this.handleInputChange} className="input-text" type="text" name=""/>
+                                            <span className="test-name">CTC循环肿瘤细胞</span>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-mutation-test" value="Good"/>
+                                                <span> 预后良好</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-mutation-test" value="Not Good"/>
+                                                <span> 预后不良</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">VEGF</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-mutation-test" value="Rise"/>
+                                                <span> 升高</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-mutation-test" value="Low"/>
+                                                <span> 正常/低</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">FLT3</span>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-mutation-test" value="yes"/>
+                                                <span> 是-突变</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-mutation-test" value="no"/>
+                                                <span> 否-野生型</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-mutation-test" value="Waitting result"/>
+                                                <span> 正在等结果</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-mutation-test" value="Don't have test"/>
+                                                <span> 未检测</span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">KI-67抗体水平</span>
+                                            <input onChange={this.handleInputChange} className="input-test" type="test" name="KI-67-gene-mutation-test"/>&nbsp;&nbsp;
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-mutation-test" value="Don't have test"/>
                                                 <span>未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
@@ -962,46 +962,46 @@ class SectionThree extends Component {
 
                             <div className="left-box-container">
                                 <div className="box">
-                                    <span>EGFR</span>
+                                    <span className="test-name">EGFR</span>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
-                                        <span>是-突变</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-test" value="yes"/>
+                                        <span> 是-突变</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
-                                        <span>否-野生型</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-test" value="no"/>
+                                        <span> 否-野生型</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
-                                        <span>正在等结果</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-test" value="Waitting result"/>
+                                        <span> 正在等结果</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="egfr" />
-                                        <span>未检测</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-test" value="Don't have test"/>
+                                        <span> 未检测</span>
                                     </label>
                                 </div>
                                 <div className="box">
-                                    <span>如果EGFR发生突变，请知名突变位点</span>
+                                    <span>如果EGFR发生突变，请指明突变位点</span>
                                 </div>
                                 <div className="box">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>L858R</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="L858R"/>
+                                        <span> L858R</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>T790M</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="T790M"/>
+                                        <span> T790M</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>外显子19缺失</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Lost Exon19"/>
+                                        <span> 外显子19缺失</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>其他</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Other"/>
+                                        <span> 其他</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Unknow"/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
@@ -1012,22 +1012,20 @@ class SectionThree extends Component {
                                     <div className="box-row">
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </div>
                                     </div>
@@ -1037,41 +1035,41 @@ class SectionThree extends Component {
                             <div className="right-box-container">
                                 <div className="box">
                                     <div className="box-row">
-                                        <span>BRCA1</span>
+                                        <span className="test-name">BRCA1</span>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>是-突变</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA1-gene-mutation-test" value="yes"/>
+                                            <span> 是-突变</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>否-野生型</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA1-gene-mutation-test" value="no"/>
+                                            <span> 否-野生型</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>正在等结果</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA1-gene-mutation-test" value="Waitting result"/>
+                                            <span> 正在等结果</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>未检测</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA1-gene-mutation-test" value="Don't have test"/>
+                                            <span> 未检测</span>
                                         </label>
                                     </div>
                                     <div className="box-row">
-                                        <span>BRCA2</span>
+                                        <span className="test-name">BRCA2</span>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>是-突变</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA2-gene-mutation-test" value="yes"/>
+                                            <span> 是-突变</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>否-野生型</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA2-gene-mutation-test" value="no"/>
+                                            <span> 否-野生型</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>正在等结果</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA2-gene-mutation-test" value="Waitting result"/>
+                                            <span> 正在等结果</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>未检测</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="BRCA2-gene-mutation-test" value="Don't have test"/>
+                                            <span> 未检测</span>
                                         </label>
                                     </div>
                                     <div className="box-row">
@@ -1080,42 +1078,42 @@ class SectionThree extends Component {
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-mutation-origin" value="Hereditary"/>
                                                 <span>遗传性的(生殖系细胞来源的)</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-mutation-origin" value="Denovo"/>
                                                 <span>Denovo(体细胞来源的)</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-mutation-origin" value="Both"/>
                                                 <span>两者都有</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-mutation-origin" value="Unknow"/>
                                                 <span>不知道</span>
                                             </label>
                                         </div>
                                         <div>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-recent-inspection-time" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-recent-inspection-time" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-recent-inspection-time" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name=""/>
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="radio" name="BRAF1orBRAF2-gene-recent-inspection-time" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </div>
                                     </div>
@@ -1130,19 +1128,19 @@ class SectionThree extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="asct" value="Did"/>
                                         已做过
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="asct" value="Suitable,didn't do,don't plan to"/>
                                         适合做但没做过, 也不计划做
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="asct" value="Suitable,didn't do,plan to"/>
                                         适合做但没做过, 计划做
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="sct-eligible" />
+                                        <input onChange={this.handleInputChange} type="radio" name="asct" value="Not suitable"/>
                                         未做, 因为不适合
                                     </label>
                                 </div>
@@ -1160,46 +1158,46 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>Del 11q</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="Del 11q"/>
+                                                    <span> Del 11q</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>Del 17p</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="Del 17p"/>
+                                                    <span> Del 17p</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>Trisomy12</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="Trisomy12"/>
+                                                    <span> Trisomy12</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>其他</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="other"/>
+                                                    <span> 其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>无变异</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="no-abnormalities"/>
+                                                    <span> 无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>Del 13q</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="Del 13q"/>
+                                                    <span> Del 13q</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>TP53</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="TP53"/>
+                                                    <span> TP53</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>lGvh</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="lgVH"/>
+                                                    <span> lgVH</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>正在等结果</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="waitting result"/>
+                                                    <span> 正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" />
-                                                    <span>未检测</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="don't have test"/>
+                                                    <span> 未检测</span>
                                                 </label>
                                             </div>
                                         </td>
@@ -1207,21 +1205,21 @@ class SectionThree extends Component {
                                             <div>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
-                                                    <span>确诊时</span>
+                                                    <span> 确诊时</span>
                                                 </label>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
-                                                    <span>当前治疗之前</span>
+                                                    <span> 当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
-                                                    <span>当前治疗期间</span>
+                                                    <span> 当前治疗期间</span>
                                                 </label>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cll-recent-inspection" />
-                                                    <span>前一次治疗之前</span>
+                                                    <span> 前一次治疗之前</span>
                                                 </label>
                                             </div>
                                         </td>
@@ -1241,30 +1239,30 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>Ph</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="Ph"/>
+                                                    <span> Ph</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>其他</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="other"/>
+                                                    <span> 其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>无变异</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="no-abnormalities"/>
+                                                    <span> 无变异</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>T315i</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="T315i"/>
+                                                    <span> T315i</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>正在等结果</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="waitting result"/>
+                                                    <span> 正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml"/>
-                                                    <span>未检测</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="don't have test"/>
+                                                    <span> 未检测</span>
                                                 </label>
                                             </div>
                                         </td>
@@ -1272,21 +1270,21 @@ class SectionThree extends Component {
                                             <div>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection" />
-                                                    <span>确诊时</span>
+                                                    <span> 确诊时</span>
                                                 </label>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
-                                                    <span>当前治疗之前</span>
+                                                    <span> 当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
-                                                    <span>当前治疗期间</span>
+                                                    <span> 当前治疗期间</span>
                                                 </label>
                                                 <label>
                                                     <input onChange={this.handleInputChange} type="radio" name="cml-recent-inspection"/>
-                                                    <span>前一次治疗之前</span>
+                                                    <span> 前一次治疗之前</span>
                                                 </label>
                                             </div>
                                         </td>
@@ -1375,41 +1373,41 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>T(8;21)</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>T(15;17)</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>inv(3)</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>inv(6)</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>无</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>Del 11q23</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1417,21 +1415,21 @@ class SectionThree extends Component {
                                         <td>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="aml-recent-inspection" />
                                                     <span>确诊时</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="aml-recent-inspection" />
                                                     <span>当前治疗之前</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="aml-recent-inspection" />
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
+                                                    <input onChange={this.handleInputChange} type="radio" name="aml-recent-inspection" />
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1488,7 +1486,7 @@ class SectionThree extends Component {
                                                     <span>当前治疗期间</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" />
+                                                    <input onChange={this.handleInputChange} type="radio" name=""/>
                                                     <span>前一次治疗之前</span>
                                                 </label>
                                             </div>
@@ -1590,26 +1588,26 @@ class SectionThree extends Component {
                                         <td className="col-2">
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
-                                                    <span>铂类难控制</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-sensitive" />
+                                                    <span> 铂类难控制</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
-                                                    <span>铂类敏感</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-sensitive" />
+                                                    <span> 铂类敏感</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-tatus" />
-                                                    <span>不知道(一线铂类治疗中)</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-sensitive" />
+                                                    <span> 不知道(一线铂类治疗中)</span>
                                                 </label>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
-                                                    <span>铂类耐受</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-sensitive" />
+                                                    <span> 铂类耐受</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="" />
-                                                    <span>不知道</span>
+                                                    <input onChange={this.handleInputChange} type="radio" name="platinum-sensitive" />
+                                                    <span> 不知道</span>
                                                 </label>
                                             </div>
                                         </td>
@@ -1627,28 +1625,28 @@ class SectionThree extends Component {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input onChange={this.handleInputChange} type="text" name="psa-current" />
+                                            <input onChange={this.handleInputChange} type="test" name="psa-level" />
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-current" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-level" />
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>
@@ -1662,28 +1660,28 @@ class SectionThree extends Component {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input onChange={this.handleInputChange} type="text" name="gleasonscore" />
+                                            <input onChange={this.handleInputChange} type="test" name="gleason-grade" />
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="gleasonscore" />
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade" />
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>确诊时</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade-recent-inspection" />
+                                                <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>当前治疗期间</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade-recent-inspection" />
+                                                <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>当前治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade-recent-inspection" />
+                                                <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="" />
-                                                <span>前一次治疗之前</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade-recent-inspection" />
+                                                <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
                                     </tr>

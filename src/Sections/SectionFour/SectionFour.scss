@@ -18,11 +18,17 @@ $smFont: 12px;
     }
     .section-content {
         .left-container {
-            width: 55%;
+            width: 45%;
             float: left;
 
             input[type="radio"] {
                 vertical-align: sub;
+            }
+            .row-title{
+                label{
+                    margin-right: 10px;
+                    font-weight: normal;
+                }
             }
 
             .row-content {
@@ -113,10 +119,16 @@ $smFont: 12px;
         }
 
         .right-container {
-            width: 43%;
+            width: 53%;
             float: left;
             input[type="radio"] {
                 vertical-align: sub;
+            }
+            .row-title{
+                label{
+                    margin-right: 10px;
+                    font-weight: normal;
+                }
             }
 
             .row-content {
@@ -195,8 +207,10 @@ $smFont: 12px;
                     text-align: center;
 
                     .box-content {
-                        height: 40px;
-                        line-height: 40px;
+                        height: 50px;
+                        label{
+                            font-weight: normal;
+                        }
                     }
                 }
 
@@ -211,6 +225,9 @@ $smFont: 12px;
                     .box-content {
                         height: 48px;
                         line-height: 48px;
+                        label{
+                            font-weight: normal;
+                        }
                     }
                 }
             }

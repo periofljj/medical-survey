@@ -38,14 +38,14 @@ class SectionTwo extends Component {
                                         <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅳb"/>Ⅳb</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅰa</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅰc</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅱa</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅱc</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅲa</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅲc</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅳa</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" />Ⅳc</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅰa"/>Ⅰa</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅰc"/>Ⅰc</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅱa"/>Ⅱa</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅱc"/>Ⅱc</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅲa"/>Ⅲa</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅲc"/>Ⅲc</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅳa"/>Ⅳa</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-stage" value="Ⅳc"/>Ⅳc</div>
                                     </div>
                                 </div>
                             </div>
@@ -204,14 +204,14 @@ class SectionTwo extends Component {
                                     </div>
                                     <div className="box-content3">
                                         <div className="box-left">
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" /> 低度恶性/惰性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" /> 中度恶性/侵袭性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" />  度恶性/ 侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="Low"/> 低度恶性/惰性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="Medium"/> 中度恶性/侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="High"/> 高度恶性/ 侵袭性</div>
                                         </div>
                                         <div className="box-right">
-                                             <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" /> 低度恶性/惰性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" /> 中度恶性/侵袭性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" />  度恶性/ 侵袭性</div>
+                                             <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="Low"/> 低度恶性/惰性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="Medium"/> 中度恶性/侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="High"/> 高度恶性/ 侵袭性</div>
                                         </div>
                                     </div>
                                 </div>
@@ -520,15 +520,15 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="col-list">
                                     <ul>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> AML 微分化型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> AML 不伴成熟型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> AML 伴成熟型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性粒单核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性全髓增殖伴骨髓纤维化</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性原始单核细胞白血病/急性单核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 纯红系细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性原始巨核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性嗜碱性粒细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="AML微分化型"/> AML微分化型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="AML不伴成熟型"/> AML不伴成熟型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="AML伴成熟型"/> AML伴成熟型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性粒单核细胞白血病"/> 急性粒单核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性全髓增殖伴骨髓纤维化"/> 急性全髓增殖伴骨髓纤维化</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性原始单核细胞白血病/急性单核细胞白血病"/> 急性原始单核细胞白血病/急性单核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="纯红系细胞白血病"/> 纯红系细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性原始巨核细胞白血病"/> 急性原始巨核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性嗜碱性粒细胞白血病"/> 急性嗜碱性粒细胞白血病</li>
                                     </ul>
                                 </div>
                                 <div className="box-col">
@@ -544,13 +544,13 @@ class SectionTwo extends Component {
                                     <div>7.Blastic plasmacytoid dendritic cell neoplasm</div>
                                 </div>
                                 <div className="box-col">
-                                    <div><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 系列未明急性白血病</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="系列未明急性白血病"/> 系列未明急性白血病</div>
                                     <div></div>
                                 </div>
                                 <div className="col-list">
                                     <ul>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 急性未分化型白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value=""/> 混合表型急性白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="急性未分化型白血病"/> 急性未分化型白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-first-diagnosis" value="混合表型急性白血病"/> 混合表型急性白血病</li>
                                     </ul>
                                 </div>
                             </div>
@@ -576,15 +576,15 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="col-list">
                                     <ul>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> AML 微分化型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> AML 不伴成熟型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> AML 伴成熟型</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 急性粒单核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 急性全髓增殖伴骨髓纤维化</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 急性原始单核细胞白血病/急性单核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 纯红系细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 急性原始巨核细胞白血病</li>
-                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value=""/> 急性嗜碱性粒细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="AML微分化型"/> AML微分化型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="AML不伴成熟型"/> AML不伴成熟型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="AML伴成熟型"/> AML伴成熟型</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="急性粒单核细胞白血病"/> 急性粒单核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="急性全髓增殖伴骨髓纤维化"/> 急性全髓增殖伴骨髓纤维化</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="急性原始单核细胞白血病/急性单核细胞白血病"/> 急性原始单核细胞白血病/急性单核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="纯红系细胞白血病"/> 纯红系细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="急性原始巨核细胞白血病"/> 急性原始巨核细胞白血病</li>
+                                        <li><input onChange={this.handleInputChange} type="radio" name="AML-WHO-type-current" value="急性嗜碱性粒细胞白血病"/> 急性嗜碱性粒细胞白血病</li>
                                     </ul>
                                 </div>
                                 <div className="box-col">

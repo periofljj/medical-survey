@@ -25,11 +25,11 @@ class SectionFour extends Component {
                             <span>4.1 针对其肿瘤，该患者是否做过手术治疗</span>
                             <label>
                                 <input onChange={this.handleInputChange} type="radio" name="surgery" value="yes"/>
-                                <span>是</span>
+                                <span> 是</span>
                             </label>
                             <label>
                                 <input onChange={this.handleInputChange} type="radio" name="surgery" value="no"/>
-                                <span>否</span>
+                                <span> 否</span>
                             </label>
                         </div>
                         <div className="row-content">
@@ -40,21 +40,21 @@ class SectionFour extends Component {
                             <div className="box">
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="yes"/>
                                         <span>可以手术切除</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="no"/>
                                         <span>不能手术切除</span>
                                     </label>
                                 </div>
                                 <div>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="maybe"/>
                                         <span>可能可以手术切除</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
+                                        <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="unknown"/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
@@ -70,7 +70,7 @@ class SectionFour extends Component {
                                     <span>第一次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name=""/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -78,7 +78,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-start-date"/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -86,17 +86,17 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name=""/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-company"/>
                                 </div>
                             </div>
                         </div>
                         <div className="box-row">
                             <div className="box-1">
                                 <div className="box-title">
-                                    <span>第一次治疗性手术(名称、部位范围、方式等)</span>
+                                    <span>第二次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name=""/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -104,7 +104,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-start-date"/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -112,17 +112,17 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name=""/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-company"/>
                                 </div>
                             </div>
                         </div>
                         <div className="box-row">
                             <div className="box-1">
                                 <div className="box-title">
-                                    <span>第一次治疗性手术(名称、部位范围、方式等)</span>
+                                    <span>第三次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text"  name=""/>
+                                    <input onChange={this.handleInputChange} type="text"  name="third-surgery-name"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -130,7 +130,9 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="third-start-date"/><input onChange={this.handleInputChange} className="third-input" type="number" name="first-start-date"/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
                                 </div>
                             </div>
                             <div className="box-3">
@@ -138,7 +140,7 @@ class SectionFour extends Component {
                                     <span>公司填写</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name=""/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-company"/>
                                 </div>
                             </div>
                         </div>
@@ -147,12 +149,12 @@ class SectionFour extends Component {
                         <div className="row-title">
                             <span>4.2 针对其肿瘤，该患者是否做过放射治疗</span>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="radio" value="yes"/>
-                                <span>是</span>
+                                <input onChange={this.handleInputChange} type="radio" name="radical" value="yes"/>
+                                <span> 是</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="radio" value="no"/>
-                                <span>否</span>
+                                <input onChange={this.handleInputChange} type="radio" name="radical" value="no"/>
+                                <span> 否</span>
                             </label>
                         </div>
 
@@ -167,7 +169,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/>
                                 </div>
                             </div>
                             <div className="box-1">
@@ -175,7 +177,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -184,12 +186,12 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div>
-                                        <input onChange={this.handleInputChange} type="text" name=""/>
-                                        <span>每日GY</span>
+                                        <input onChange={this.handleInputChange} type="text" name="first-radical-irradiation-dosage-perDay"/>
+                                        <span> 每日GY</span>
                                     </div>
                                     <div>
-                                        <input onChange={this.handleInputChange} type="text" name=""/>
-                                        <span>总计GY</span>
+                                        <input onChange={this.handleInputChange} type="text" name="first-radical-irradiation-dosage-total"/>
+                                        <span> 总计GY</span>
                                     </div>
                                 </div>
                             </div>
@@ -203,14 +205,14 @@ class SectionFour extends Component {
                                 <div className="box-content">
                                     <div>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>内放疗</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="first-radical-way" value="internal"/>
+                                            <span> 内放疗</span>
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>外放疗</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="first-radical-way" value="external"/>
+                                            <span> 外放疗</span>
                                         </label>
                                     </div>
                                 </div>
@@ -221,16 +223,16 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>与化疗同步</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="first-radical-time"/>
+                                        <span> 与化疗同步</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>与化疗序贯进⾏</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="first-radical-time"/>
+                                        <span> 与化疗序贯进⾏</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>独⽴作为姑息或者单独治疗</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="first-radical-time"/>
+                                        <span> 独⽴作为姑息或者单独治疗</span>
                                     </label>
                                 </div>
                             </div>
@@ -243,7 +245,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/>
                                 </div>
                             </div>
                             <div className="box-1">
@@ -251,7 +253,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/><input onChange={this.handleInputChange} className="date-input" type="number" name=""/>
+                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -260,12 +262,12 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div>
-                                        <input onChange={this.handleInputChange} type="text" name=""/>
-                                        <span>每日GY</span>
+                                        <input onChange={this.handleInputChange} type="text" name="second-radical-irradiation-dosage-perDay"/>
+                                        <span> 每日GY</span>
                                     </div>
                                     <div>
-                                        <input onChange={this.handleInputChange} type="text" name=""/>
-                                        <span>总计GY</span>
+                                        <input onChange={this.handleInputChange} type="text" name="second-radical-irradiation-dosage-total"/>
+                                        <span> 总计GY</span>
                                     </div>
                                 </div>
                             </div>
@@ -279,14 +281,14 @@ class SectionFour extends Component {
                                 <div className="box-content">
                                     <div>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>内放疗</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="second-radical-way" value="internal"/>
+                                            <span> 内放疗</span>
                                         </label>
                                     </div>
                                     <div>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name=""/>
-                                            <span>外放疗</span>
+                                            <input onChange={this.handleInputChange} type="radio" name="second-radical-way" value="external"/>
+                                            <span> 外放疗</span>
                                         </label>
                                     </div>
                                 </div>
@@ -297,16 +299,16 @@ class SectionFour extends Component {
                                 </div>
                                 <div className="box-content">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>与化疗同步</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="second-radical-time"/>
+                                        <span> 与化疗同步</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>与化疗序贯进⾏</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="second-radical-time"/>
+                                        <span> 与化疗序贯进⾏</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>独⽴作为姑息或者单独治疗</span>
+                                        <input onChange={this.handleInputChange} type="radio" name="second-radical-time"/>
+                                        <span> 独⽴作为姑息或者单独治疗</span>
                                     </label>
                                 </div>
                             </div>

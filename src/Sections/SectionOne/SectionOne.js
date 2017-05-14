@@ -19,8 +19,8 @@ class SectionOne extends Component {
                     <div className="section-title">
                         <span className="title">第一部分 患者基本信息</span>
                         <span>在本报告期内，您是否已经填写过该病人？</span>
-                        <label><input type="radio" value="true" name="hasAnswered" onChange={this.handleInputChange} /><span>是</span></label>
-                        <label><input type="radio" value="false" name="hasAnswered" onChange={this.handleInputChange} /><span>否</span></label>
+                        <label><input type="radio" value="true" name="hasAnswered" onChange={this.handleInputChange} /><span> 是</span></label>
+                        <label><input type="radio" value="false" name="hasAnswered" onChange={this.handleInputChange} /><span> 否</span></label>
                     </div>
                     <div className="section-content">
                         <div className="section-row">
@@ -30,13 +30,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="therapyTimesInTwelveMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近12个月的次数</span><input type="number" name="therapy-times-in-twelveMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="therapyTimesInThreeMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近3个月的次数</span><input type="number" name="therapy-times-in-threeMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="therapyTimesInOneMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近1个月的次数</span><input type="number" name="therapy-times-in-oneMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                 </div>
                             </div>
@@ -46,13 +46,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="" onChange={this.handleInputChange}/>
+                                        <span>最近12个月的次数</span><input type="number" name="doctor-numbers-in-twelveMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="" onChange={this.handleInputChange}/>
+                                        <span>最近3个月的次数</span><input type="number" name="doctor-numbers-in-threeMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="" onChange={this.handleInputChange}/>
+                                        <span>最近1个月的次数</span><input type="number" name="doctor-numbers-in-oneMonthes" onChange={this.handleInputChange}/>
                                     </div>
                                 </div>
                             </div>
@@ -119,19 +119,23 @@ class SectionOne extends Component {
                                 <div className="box-5-1">
                                     <div className="box-title">身高(cm)</div>
                                     <div className="box-content"><input type="text
-                                    " name="tall" onChange={this.handleInputChange}/></div>
+                                    " name="tall" onChange={this.handleInputChange}/> cm</div>
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-5-2">
                                     <div className="box-title">体重(Kg)</div>
                                     <div className="box-content"><input type="text
-                                    " name="weight" onChange={this.handleInputChange}/></div>
+                                    " name="weight" onChange={this.handleInputChange}/> kg</div>
                                 </div>
                             </div>
                             <div className="box box-6">
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
-                                    <div className="box-content" name="date-of-diagnosis"></div>
+                                    <div className="box-content" >
+                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
+                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
+                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
+                                    </div>
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-6-2">
@@ -275,6 +279,16 @@ class SectionOne extends Component {
                                     <div><input type="radio" name="co-morbidities" value="None" onChange={this.handleInputChange}/>无</div>
                                     <div id="long"><input type="radio" name="co-morbidities" value="Gastrointestinal Dysfunction" onChange={this.handleInputChange} />肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="box box-10">
+                            <div>患者当前体能状态描述</div>
+                            <div>
+                                <label><input type="radio" onChange={this.handleInputChange} name="ECOG-performance-Status" value="Asymptomatic"/> 0.无症状</label>
+                                <label><input type="radio" onChange={this.handleInputChange} name="ECOG-performance-Status" value="Symptomatic fully ambulatory"/> 1.有症状但完全可以活动</label>
+                                <label><input type="radio" onChange={this.handleInputChange} name="ECOG-performance-Status" value="Symptomatic in bed<50% of the day"/> 2.有症状，每日卧床时间&lt;50%</label>
+                                <label><input type="radio" onChange={this.handleInputChange} name="ECOG-performance-Status" value="Symptomatic in bed>50% of the day"/> 3.有症状，每日卧床时间&gt;50%,但不是卧床不起</label>
+                                <label><input type="radio" onChange={this.handleInputChange} name="ECOG-performance-Status" value="Bedridden"/> 4.卧床不起</label>
                             </div>
                         </div>
                     </div>

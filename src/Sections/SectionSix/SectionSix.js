@@ -23,43 +23,43 @@ class SectionSix extends Component {
                 <div className="section-content">
                     <div className="section-row">
                         <div className="box box-1">
-                            <div className="box-title">请列出生因子类药物(治疗中性粒细胞减少) (如果知道，请提供商品名;否则请提供通用名及厂家/或产地</div>
+                            <div className="box-title">请列出生因子类药物(治疗中性粒细胞减少) 如果知道请提供商品名;否则请提供通用名及厂家/或产地</div>
                             <div className="box-content">
-                                <input onChange={this.handleInputChange} type="text" name="" />
+                                <input onChange={this.handleInputChange} type="text" name="growth-factor-name" />
                             </div>
                         </div>
                         <div className="box box-2">
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
                                 </div>
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="" /> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="growth-factor-continuing-drug" value="yes"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-planned-perid" /></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-actual-period" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -67,8 +67,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" /> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" /> 预防</div>
                         </div>
                     </div>
                     <div className="space"></div>
@@ -79,41 +79,41 @@ class SectionSix extends Component {
                         <div className="box box-1">
                             <div className="box-title">请列出促红细胞生成素类药物(治疗贫血) (如果知道，请提供商品名;否则请提供通用名及厂家/或产地</div>
                             <div className="box-content">
-                                <input onChange={this.handleInputChange} type="text" name="" />
+                                <input onChange={this.handleInputChange} type="text" name="erythropoietin-name" />
                             </div>
                         </div>
                         <div className="box box-2">
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
                                 </div>
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="" /> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="erythropoietin-continuing-drug" value="yes"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-planned-period" /></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-actual-period" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -121,8 +121,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" /> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" /> 预防</div>
                         </div>
                     </div>
                     <div className="space"></div>
@@ -133,41 +133,41 @@ class SectionSix extends Component {
                         <div className="box box-1">
                             <div className="box-title">请列出药物名称(如果知道，请提供商品名;否则请提供通用名及厂家/或产地</div>
                             <div className="box-content">
-                                <input onChange={this.handleInputChange} type="text" name="" />
+                                <input onChange={this.handleInputChange} type="text" name="bone-metastasis-name" />
                             </div>
                         </div>
                         <div className="box box-2">
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
-                                    <input onChange={this.handleInputChange} type="text" name="" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
                                 </div>
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="" /> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-continuing-drug" /> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-planned-period" /></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-actual-period" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -175,8 +175,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" />预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" /> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" /> 预防</div>
                         </div>
                     </div>
                     <div className="block"></div>

@@ -28,23 +28,23 @@ class SectionFive extends Component {
                                 <div className="box box-1-1-1">
                                     <div className="box-title">方案开始日期</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
-                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
-                                        <input onChange={this.handleInputChange} type="text" name="start-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-start-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-start-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-start-date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-2">
                                     <div className="box-title">方案结束日期</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
-                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
-                                        <input onChange={this.handleInputChange} type="text" name="end-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-end-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-end-date" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-end-date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">
                                      <div className="box-title">治疗方案名称(如果是序贯 案，请标明序贯顺序)</div>
                                     <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name="cyto-regimen" />
+                                        <input onChange={this.handleInputChange} type="text" name="treatment-plan-name" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-4">
@@ -67,28 +67,28 @@ class SectionFive extends Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text" name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="supporting-drugs-name"/></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text"  name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio"  name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text"  name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio"  name="supporting-drugs-name"/></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text"  name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio"  name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text"  name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio"  name="supporting-drugs-name"/></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text"  name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio"  name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text"  name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio"  name="supporting-drugs-name"/></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text"  name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text"  name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="supporting-drugs-name"/></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="text"  name=""/></td>
-                                                <td><input onChange={this.handleInputChange} type="radio"  name=""/></td>
+                                                <td><input onChange={this.handleInputChange} type="text"  name="anti-tumor-drugs-name"/></td>
+                                                <td><input onChange={this.handleInputChange} type="radio"  name="supporting-drugs-name"/></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -105,92 +105,92 @@ class SectionFive extends Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
                                                 <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />至进展</span>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />不知道</span>
                                                     </div>
                                                 </td>
-                                                <td className="week2"><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td className="week2"><input onChange={this.handleInputChange} type="text" name="period-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
                                                 <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                                 <td className="week2">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
-                                                    <div>
-                                                        <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
-                                                <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
-                                                    <div>
-                                                        <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
-                                                    </div>
-                                                </td>
-                                                <td className="week2">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="period-length" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
                                                 <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                                 <td className="week2">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="period-length" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
                                                 <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                                 <td className="week2">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="period-length" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
                                                 <td className="week">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
                                                 </td>
                                                 <td className="week2">
-                                                    <div><input onChange={this.handleInputChange} type="text" name="" /></div>
+                                                    <div><input onChange={this.handleInputChange} type="text" name="period-length" /></div>
+                                                    <div>
+                                                        <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="period" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="actual-period" /></td>
+                                                <td className="week">
+                                                    <div><input onChange={this.handleInputChange} type="text" name="planned-period" /></div>
+                                                    <div>
+                                                        <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
+                                                    </div>
+                                                </td>
+                                                <td className="week2">
+                                                    <div><input onChange={this.handleInputChange} type="text" name="period-length" /></div>
                                                     <div>
                                                         <span><input onChange={this.handleInputChange} type="radio" name="" />同上</span>
                                                     </div>
@@ -209,28 +209,28 @@ class SectionFive extends Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /></td>
-                                                <td><input onChange={this.handleInputChange} type="text" name="" /></td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="continue" value="yes"/></td>
+                                                <td><input onChange={this.handleInputChange} type="text" name="continuing-length" /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -240,17 +240,17 @@ class SectionFive extends Component {
                                 <div className="box box-1-3-1">
                                     <div className="box-col top">
                                         <div>疗效</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 完全缓解 CR</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 部分缓解 PR</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 疾病稳定 SD</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 疾病进展 PD</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 不知道</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="efficacy" value="CR" /> 完全缓解 CR</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="efficacy" value="PR" /> 部分缓解 PR</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="efficacy" value="SD" /> 疾病稳定 SD</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="efficacy" value="PD" /> 疾病进展 PD</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="efficacy" value="unknown" /> 不知道</div>
                                     </div>
                                     <div className="box-col bottom">
                                         <div> 仅限前列腺癌填写</div>
                                         <div> 本次治疗前PSA水平(ng/ml)</div>
-                                        <div><input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 不知道</div>
+                                        <div><input onChange={this.handleInputChange} type="text" name="pas-current-state" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="pas-current-state" value="unknown"/> 不知道</div>
                                     </div>
                                 </div>
                                 <div className="box box-1-3-2">
@@ -274,15 +274,15 @@ class SectionFive extends Component {
                                 <div className="box-title">仅限实体瘤---几线治疗药物</div>
                                 <div className="box-content">
                                     <div className="box box-2-1-1">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 早期/初治病人(未手术)</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 新辅助治疗</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 辅助治疗</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 早期/初治病人(未手术)</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 新辅助治疗</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 辅助治疗</div>
                                     </div>
                                     <div className="box box-2-1-2">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 晚期/转移一线</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 晚期/转移二线</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 晚期/转移三线</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" /> 晚期/转移四线及以上</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 晚期/转移一线</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 晚期/转移二线</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 晚期/转移三线</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage" value=""/> 晚期/转移四线及以上</div>
                                     </div>
                                 </div>
                             </div>
@@ -292,65 +292,65 @@ class SectionFive extends Component {
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> ATE动脉血栓栓塞</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> VTE静脉血栓栓塞</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 体重变化</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> ATE动脉血栓栓塞</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> VTE静脉血栓栓塞</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 体重变化</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 中性粒细胞减少</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 便秘</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 其他:请注明</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 中性粒细胞减少</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 便秘</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 其他:请注明</td>
 
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 厌食/ 欲减退</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 发热</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 口腔炎</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 厌食/ 欲减退</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 发热</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 口腔炎</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 性功能障碍</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 恶心和呕吐</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 心功不全</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 性功能障碍</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 恶心和呕吐</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 心功不全</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 恶病质</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 感染</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 月经不调</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 恶病质</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 感染</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 月经不调</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" />手-足综合征</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 水肿</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 潮热/热潮红</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" />手-足综合征</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 水肿</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 潮热/热潮红</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 疼痛</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 皮疹</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 肠胃穿孔</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 疼痛</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 皮疹</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 肠胃穿孔</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 神经病变</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 黏膜炎</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 肝功能障碍</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 神经病变</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 黏膜炎</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 肝功能障碍</td>
                                             </tr>
                                             <tr>
-                                                 <td><input onChange={this.handleInputChange} type="radio" name="" /> 脱发</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 男性乳头发育</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 腹泻</td>
+                                                 <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 脱发</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 男性乳头发育</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 腹泻</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 血小板减少</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 视力模糊或者其他视力变化</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 贫血</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 血小板减少</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 视力模糊或者其他视力变化</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 贫血</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 高尿酸血症</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 食欲增加</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 从病历中不可知</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 高尿酸血症</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 食欲增加</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 从病历中不可知</td>
 
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 高血压</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name="" /> 无</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 高血压</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" name="side-effect" value="" /> 无</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -361,34 +361,34 @@ class SectionFive extends Component {
                             <div className="box-3-1">
                                 <div className="box-title">仅限血夜肿瘤</div>
                                 <div className="box-title">
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />诱导</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />巩固</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />维持</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />不适用</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />诱导</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />巩固</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />维持</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />不适用</div>
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />一线</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />三线</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />四线及以上</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />一线</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />三线</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />四线及以上</div>
                                     </div>
                                      <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />二线</div>
-                                        <div className="special"><input onChange={this.handleInputChange} type="radio" name="" />治疗线同时更换药物</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />二线</div>
+                                        <div className="special"><input onChange={this.handleInputChange} type="radio" name="derived-current-stage-for-blood-cancer" value="" />治疗线同时更换药物</div>
                                     </div>
                                 </div>
                             </div>
                             <div className="box-3-2">
                                 <div className="box-title">该患者何时发生疾病进展或复发</div>
                                 <div className="box-content">
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />该治疗期间内</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />该治疗结束后3个 内</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />该治疗结束后3-6个月内</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />该治疗结束后1 2个月内</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />该治疗结束后1 2个月后</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />未复发</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />从病人病历中不可知</div>
-                                    <div><input onChange={this.handleInputChange} type="radio" name="" />无</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />该治疗期间内</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />该治疗结束后3个 内</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />该治疗结束后3-6个月内</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />该治疗结束后1 2个月内</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />该治疗结束后1 2个月后</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />未复发</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />从病人病历中不可知</div>
+                                    <div><input onChange={this.handleInputChange} type="radio" name="disease-progression-or-relapse-time" value="" />无</div>
 
                                 </div>
                             </div>
@@ -396,25 +396,25 @@ class SectionFive extends Component {
                                 <div className="box-title">停药或更换治疗方案的原因</div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />治疗方案完成</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />身体状况差</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />治疗方案完成</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />身体状况差</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />远处进展或复发</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />副作用</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />远处进展或复发</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />副作用</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />局部进展或复发</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />疾病稳定</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />局部进展或复发</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />疾病稳定</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />病人的选择</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />濒临死亡</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />病人的选择</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />濒临死亡</div>
                                     </div>
                                      <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />无</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />其他：请注明</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />从病人病历中不可知</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />无</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />其他：请注明</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="reason-for-ending" />从病人病历中不可知</div>
                                     </div>
                                 </div>
                             </div>

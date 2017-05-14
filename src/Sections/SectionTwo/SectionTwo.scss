@@ -362,17 +362,15 @@ $smFont: 12px;
                         height: 100px;
                         .box-col{
                             height: 100%;
-                            div{
-                                width: 49%;
-                                text-align: center;
-                            }
                             .col-left{
-                                
+                                text-align: center;
+                                width: 49%;
                                 height: 100%;
                                 border-right: 1px solid #000;
                                 .col-content{
                                     width: 100%;
                                     div{
+                                        width: 90%;
                                         vertical-align: top;
                                         text-align: left;
                                         display: inline-block;
@@ -380,6 +378,8 @@ $smFont: 12px;
                                 }
                             }
                             .col-right{
+                                text-align: center;
+                                width: 49%;
                                 height: 100%;
                                 .col-content{
                                     width: 100%;
@@ -486,7 +486,7 @@ $smFont: 12px;
             width: 100%;
             background-color: #fff;
             .box{
-                height: 400px;
+                height: 420px;
             }
             .box-5-1{
                 width: 49.5%;
