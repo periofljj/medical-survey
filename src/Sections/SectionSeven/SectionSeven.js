@@ -546,11 +546,11 @@ class SectionSeven extends Component {
                                     <div className="sub-box-1">
                                         <span>该患者是否接受序贯治疗(仅限乳腺癌,肺癌)</span>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" vaule="yes"/>
+                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" value="yes"/>
                                             <span>是</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" vaule="no"/>
+                                            <input onChange={this.handleInputChange} type="radio" name="sequential-therapy" value="no"/>
                                             <span>否</span>
                                         </label>
                                     </div>
