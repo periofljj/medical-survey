@@ -161,21 +161,21 @@ class SectionOne extends Component {
                             <div className="box-7-1">
                                 <div className="box-title">原发肿瘤部位(部位尽可能具体),如果是脑肿瘤,请详细说明脑肿瘤的位置</div>
                                 <div className="box-content">
-                                    <input type="text" name="keyCancer" onChange={this.handleInputChange}/>
+                                    <input type="text" name="key-cancer" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-7-2">
                                 <div className="box-title">原发肿瘤的组织学-请详细说明您所填写肿瘤的组织学分类</div>
                                 <div className="box-content">
-                                    <input type="text" name="" onChange={this.handleInputChange}/>
+                                    <input type="text" name="组织学分类" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-7-3">
                                 <div className="box-title">当前正在指导该肿瘤病人所在的科室</div>
                                 <div className="box-content">
-                                    <input type="text" name="" onChange={this.handleInputChange}/>
+                                    <input type="text" name="overseeing-physician" onChange={this.handleInputChange}/>
                                 </div>
                             </div>
                         </div>
@@ -196,10 +196,10 @@ class SectionOne extends Component {
                                     <div className="box-title">如果是肺癌，请详细说明类型</div>
                                     <div className="box-content">
                                         <div className="box-col">
-                                            <input type="radio" name="" value="SCLC" onChange={this.handleInputChange}/> SCLC小细胞肺癌
+                                            <input type="radio" name="lung-cancer-type" value="SCLC" onChange={this.handleInputChange}/> SCLC小细胞肺癌
                                         </div>
                                         <div className="box-col">
-                                            <input type="radio" name="" value="NSCLC" onChange={this.handleInputChange}/> NSCLC非小细胞肺癌
+                                            <input type="radio" name="lung-cancer-type" value="NSCLC" onChange={this.handleInputChange}/> NSCLC非小细胞肺癌
                                         </div>
                                     </div>
                                 </div>

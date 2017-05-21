@@ -75,6 +75,9 @@ $smFont: 12px;
             .box-1 {
                 .box-content {
                     line-height: 118px;
+                    label{
+                        font-weight: normal;
+                    }
                 }
             }
 
@@ -82,6 +85,9 @@ $smFont: 12px;
                 .box-content {
                     .date-input {
                         margin-top: 40px;
+                    }
+                    label{
+                        font-weight: normal;
                     }
                 }
             }
@@ -94,12 +100,18 @@ $smFont: 12px;
                         height: 42px;
                         line-height: 42px;
                     }
+                    label{
+                        font-weight: normal;
+                    }
                 }
             }
 
             .box-4 {
                 .box-content {
                     padding-top: 20px;
+                    label{
+                        font-weight: normal;
+                    }
                 }
             }
 
@@ -108,6 +120,9 @@ $smFont: 12px;
                     width: 35%;
                     border-right: 1px solid #ccc;
                     float: left;
+                    label{
+                        font-weight: normal;
+                    }
 
                     &:last-child {
                         width: 30%;
@@ -121,6 +136,7 @@ $smFont: 12px;
                     div {
                         label {
                             margin-right: 6px;
+                            font-weight: normal;
                         }
                     }
                 }
@@ -135,6 +151,7 @@ $smFont: 12px;
                 line-height: 36px;
                 label {
                     margin-left: 20px;
+                    font-weight: normal;
                 }
 
                 .other {
@@ -154,6 +171,7 @@ $smFont: 12px;
                 line-height: 36px;
                 label {
                     margin-left: 20px;
+                    font-weight: normal;
                 }
             }
         }
@@ -166,6 +184,7 @@ $smFont: 12px;
                 line-height: 36px;
                 label {
                     margin-left: 0px;
+                    font-weight: normal;
                 }
             }
         }
@@ -193,6 +212,7 @@ $smFont: 12px;
 
                 label {
                     margin-left: 10px;
+                    font-weight: normal;
                 }
             }
         }
@@ -214,6 +234,7 @@ $smFont: 12px;
                         width: 100%;
                         label {
                             margin-left: 33px;
+                            font-weight: normal;
                         }
                     }
                 }

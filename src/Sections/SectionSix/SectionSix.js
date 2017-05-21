@@ -32,18 +32,18 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-start-day" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="growth-factor-end-day" />
                                 </div>
                             </div>
                         </div>
@@ -67,8 +67,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" /> 治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" /> 预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" value="治疗"/> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="growth-factor-aim" value="预防"/> 预防</div>
                         </div>
                     </div>
                     <div className="space"></div>
@@ -86,18 +86,18 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-start-day" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="erythropoietin-end-day" />
                                 </div>
                             </div>
                         </div>
@@ -121,8 +121,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" /> 治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" /> 预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" value="治疗"/> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="erythropoietin-aim" value="预防"/> 预防</div>
                         </div>
                     </div>
                     <div className="space"></div>
@@ -140,18 +140,18 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-start-day" />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
-                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-date" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-year" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-month" />
+                                    <input onChange={this.handleInputChange} type="text" name="bone-metastasis-end-day" />
                                 </div>
                             </div>
                         </div>
@@ -175,8 +175,8 @@ class SectionSix extends Component {
                         </div>
                         <div className="box box-4">
                             <div>治疗目的</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" /> 治疗</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" /> 预防</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" value="治疗"/> 治疗</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-aim" value="预防"/> 预防</div>
                         </div>
                     </div>
                     <div className="block"></div>
