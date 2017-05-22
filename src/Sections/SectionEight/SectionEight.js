@@ -35,17 +35,17 @@ class SectionEight extends Component {
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-date" />
-                                             <input onChange={this.handleInputChange} type="text" name="GF-drug-start-date" />
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-month" />
+                                             <input onChange={this.handleInputChange} type="text" name="GF-drug-start-day" />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-start-date" />     
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-month" />
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-day" />     
                                         </div>
                                     </div>
                                 </div>
@@ -57,11 +57,11 @@ class SectionEight extends Component {
                                         <div><input onChange={this.handleInputChange} type="radio" name="GF-drug-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
-                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="GF给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="GF周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="GF当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="GF计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="GF给药周期" value="unknown"/>不知道</div>
+                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="GF-drug-给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="GF-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="GF-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="GF-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="GF-drug-周期给药" value="unknown"/>不知道</div>
                                     </div>
                                 </div>
                             </div>
@@ -88,49 +88,49 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-date" />
-                                             <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-date" />
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-month" />
+                                             <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-day" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-date" />     
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-month" />
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-day" />     
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
                                         <div className="box-content">
-                                           <div><input onChange={this.handleInputChange} type="radio" name="EPO给药周期" value="持续给药"/> 持续给药</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="EPO给药周期" value="周期给药"/> 周期给药</div>
+                                           <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="持续给药"/> 持续给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="周期给药"/> 周期给药</div>
                                         </div>
                                         
                                     </div>
                                     <div className="box box-3-1-5">
                                         <div className="box-title">如果持续给药</div>
                                         <div className="box-content-1">
-                                            <div>每周 <input onChange={this.handleInputChange} type="text" name="EPO每周给药次数" /> 次</div>
-                                            <div>计划多少周 <input onChange={this.handleInputChange} type="text" name="EPO计划给药周数" /> 周</div>
-                                            <div>每几 <input onChange={this.handleInputChange} type="text" name="EPO每几周给药一次" /> 周1次</div>
-                                            <div>不知道 <input onChange={this.handleInputChange} type="radio" name="EPO持续给药" value="unknown"/></div>
+                                            <div>每周 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周给药次数" /> 次</div>
+                                            <div>计划多少周 <input onChange={this.handleInputChange} type="text" name="-drug-EPO计划给药周数" /> 周</div>
+                                            <div>每几 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每几周给药一次" /> 周1次</div>
+                                            <div>不知道 <input onChange={this.handleInputChange} type="radio" name="EPO-drug-持续给药" value="unknown"/></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="box box-3-1-6">
                                         <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="EPO-drug-doses-quantity" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-doses-unit" /> IU单位</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-doses-unit" /> mcg微克</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-doses-unit" value="IU"/> IU单位</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-doses-unit" value="mcg"/> mcg微克</div>
                                     </div>
                                     <div className="box box-3-1-7">
                                         <div>周期性给药: </div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="EPO每周期给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="EPO周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="EPO当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="EPO计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO周期给药" value="unknown" />不知道</div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周期给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="EPO-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-周期给药" value="unknown" />不知道</div>
                                     </div>
                                 </div>
                             </div>
@@ -148,17 +148,17 @@ class SectionEight extends Component {
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-startYear" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-startMonth" />
-                                             <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-startDay" />
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-month" />
+                                             <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-day" />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-endYear" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-endMonth" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-endDay" />     
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-month" />
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-day" />     
                                         </div>
                                     </div>
                                 </div>
@@ -170,11 +170,11 @@ class SectionEight extends Component {
                                         <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
-                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic给药周期" value="不知道"/>不知道</div>
+                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-周期给药" value="不知道"/>不知道</div>
                                     </div>
                                 </div>
                             </div>
@@ -240,11 +240,11 @@ class SectionEight extends Component {
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
-                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic给药周期" value="unknown"/>不知道</div>
+                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-周期给药" value="unknown"/>不知道</div>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@ class SectionEight extends Component {
                             <div className="box box-3">
                                 <div>
                                     <div className="box box-3-1-1">
-                                        <div className="box-title">二磷酸盐类及其他治疗 转移有关的药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
+                                        <div className="box-title">二磷酸盐类及其他治疗骨转移有关的药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name" />
                                         </div>
@@ -330,28 +330,28 @@ class SectionEight extends Component {
                                     </div>
                                     <div className="box box-3-1-9">
                                         <div className="box-content">
-                                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 持续给药</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 周期给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药方式" /> 持续给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药方式" /> 周期给药</div>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-10">
-                                        <div>周期性给药 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />不知道</div>
+                                        <div>如果周期性给药</div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-每周期给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药周期" value="unknown"/>不知道</div>
                                     </div>
                                     <div className="box box-3-1-11">
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 每天给药</div>
-                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="" /> 月</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-每天给药次数" /> 每天给药</div>
+                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划给药月数" /> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="" /> 周1次</div>
-                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="" /></div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-几周给药一次" /> 周1次</div>
+                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-持续给药" /></div>
                                             </div>
                                         </div>
                                     </div>
@@ -371,17 +371,17 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-2 box-4-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-date" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-month" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-day" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3 box-4-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-date" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-date" />     
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-year" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-month" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-day" />     
                                         </div>
                                     </div>
                                     <div className="box box-3-1-5 box-4-4">
@@ -404,12 +404,12 @@ class SectionEight extends Component {
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 每天给药</div>
-                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="" /> 月</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-" /> 每天给药</div>
+                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="other-drug-计划给药月数" /> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="" /> 周1次</div>
-                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="" /></div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="other-drug-几周给药一次" /> 周1次</div>
+                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="other-drug-持续给药" value="unknown"/></div>
                                             </div>
                                         </div>
                                     </div>
@@ -435,29 +435,28 @@ class SectionEight extends Component {
                                         </div>
                                     </div>
                                     <div className="box box-3-1-10 box-4-7">
-                                        <div>周期性给药 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="" />不知道</div>
+                                        <div>周期性给药: </div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="other-drug-每周期给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="other-drug-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="other-drug-周期给药" value="unknown"/>不知道</div>
                                     </div>
                                     <div className="box box-3-1-11 box-4-8">
                                         <div className="box-title">治疗途径</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 口服</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 静脉输液</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 局部用药</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 皮下注射</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 其他请指明</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="Oral"/> 口服</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="IV  Infusion"/> 静脉输液</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="Topical"/> 局部用药</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="Subcutaneous"/> 皮下注射</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="other"/> 其他请指明</div>
                                             </div>
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 静脉推注</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 持续输液</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> IM肌肉注射</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> PCA(自控止痛治疗)</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="" /> 其他请指明</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="IV Bolus"/> 静脉推注</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="Cont IV Infusion"/> 持续输液</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="Intramuscular"/> IM肌肉注射</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-route-of-administration" value="PCA"/> PCA(自控止痛治疗)</div>
                                             </div>
                                         </div>
                                     </div>
@@ -473,14 +472,14 @@ class SectionEight extends Component {
                     </div>
                     <div className="section-content">
                         <div className="box box-5">
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 1.容易</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 2</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 3</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 4</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 5</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 6</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 7.困难</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 不清楚</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="1"/> 1.容易</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="2"/> 2</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="3"/> 3</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="4"/> 4</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="5"/> 5</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="6"/> 6</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="7"/> 7.困难</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="unknown"/> 不清楚</div>
                         </div>
                     </div>
                 </div>
@@ -491,14 +490,14 @@ class SectionEight extends Component {
                     </div>
                     <div className="section-content">
                         <div className="box box-5">
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 1.快</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 2</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 3</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 4</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 5</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 6</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 7.慢</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="" /> 不清楚</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="1"/> 1.快</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="2"/> 2</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="3"/> 3</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="4"/> 4</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="5"/> 5</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="6"/> 6</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="7"/> 7.慢</div>
+                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="unknown"/> 不清楚</div>
                         </div>
                     </div>
                 </div>
