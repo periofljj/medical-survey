@@ -12,6 +12,7 @@ import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
 
+
 class App extends Component {
     constructor(props) {
         super(props);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './SectionOne.css'
+import './SectionOne.css';
+import DateTimeField from "react-bootstrap-datetimepicker";
 
 class SectionOne extends Component {
     constructor(props) {
@@ -30,13 +31,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="therapy-times-in-twelveMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近12个月的次数</span><input type="number" name="therapy-times-in-twelveMonthes" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="therapy-times-in-threeMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近3个月的次数</span><input type="number" name="therapy-times-in-threeMonthes" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="therapy-times-in-oneMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近1个月的次数</span><input type="number" name="therapy-times-in-oneMonthes" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                 </div>
                             </div>
@@ -46,13 +47,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="doctor-numbers-in-twelveMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近12个月的次数</span><input type="number" name="doctor-numbers-in-twelveMonthes" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="doctor-numbers-in-threeMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近3个月的次数</span><input type="number" name="doctor-numbers-in-threeMonthes" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="doctor-numbers-in-oneMonthes" onChange={this.handleInputChange}/>
+                                        <span>最近1个月的次数</span><input type="number" name="doctor-numbers-in-oneMonthes" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                 </div>
                             </div>
@@ -118,24 +119,20 @@ class SectionOne extends Component {
                             <div className="box box-5">
                                 <div className="box-5-1">
                                     <div className="box-title">身高(cm)</div>
-                                    <div className="box-content"><input type="text
-                                    " name="tall" onChange={this.handleInputChange}/> cm</div>
+                                    <div className="box-content"><input type="number
+                                    " name="tall" onChange={this.handleInputChange}  min="1" max="200"/> cm</div>
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-5-2">
                                     <div className="box-title">体重(Kg)</div>
-                                    <div className="box-content"><input type="text
-                                    " name="weight" onChange={this.handleInputChange}/> kg</div>
+                                    <div className="box-content"><input type="number
+                                    " name="weight" onChange={this.handleInputChange} min="1" max="200"/> kg</div>
                                 </div>
                             </div>
                             <div className="box box-6">
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
-                                    <div className="box-content" >
-                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
-                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
-                                        <input type="text" name="date-of-diagnosis" onChange={this.handleInputChange}/>
-                                    </div>
+                                    <DateTimeField />
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-6-2">
@@ -161,14 +158,14 @@ class SectionOne extends Component {
                             <div className="box-7-1">
                                 <div className="box-title">原发肿瘤部位(部位尽可能具体),如果是脑肿瘤,请详细说明脑肿瘤的位置</div>
                                 <div className="box-content">
-                                    <input type="text" name="key-cancer" onChange={this.handleInputChange}/>
+                                    <input type="text" name="key-cancer" onChange={this.handleInputChange} placeholder="CXX.X或DXX.X"/>
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-7-2">
                                 <div className="box-title">原发肿瘤的组织学-请详细说明您所填写肿瘤的组织学分类</div>
                                 <div className="box-content">
-                                    <input type="text" name="组织学分类" onChange={this.handleInputChange}/>
+                                    <input type="text" name="组织学分类" onChange={this.handleInputChange} placeholder="XXXXX"/>
                                 </div>
                             </div>
                             <div className="space"></div>
@@ -181,17 +178,6 @@ class SectionOne extends Component {
                         </div>
                         <div className="box box-8">
                             <div className="box-8-1">
-                                <div className="box box-8-1-1">
-                                    <div className="box-8-1-1-1">
-                                        <div className="box-title">公司填写</div>
-                                        <div className="box-content"><input type="text" name="company1" onChange={this.handleInputChange}/></div>
-                                    </div>
-                                    <div className="space"></div>
-                                    <div className="box-8-1-1-2">
-                                       <div className="box-title">公司填写</div>
-                                        <div className="box-content"><input type="text" name="company2" onChange={this.handleInputChange}/></div>
-                                    </div>
-                                </div>
                                 <div className="box box-8-1-2">
                                     <div className="box-title">如果是肺癌，请详细说明类型</div>
                                     <div className="box-content">
@@ -204,32 +190,32 @@ class SectionOne extends Component {
                                     </div>
                                 </div>
                                 <div className="box box-8-1-3">
-                                    <div className="box-title">转移部位及淋巴结侵犯程度</div>
+                                    <div className="box-title">转移部位及淋巴结侵犯程度 (可多选)</div>
                                     <div className="box-content">
                                         <div className="box-col">
-                                            <div><input type="radio" name="site-of-mets" value="Local Lymph Node" onChange={this.handleInputChange}/>局部淋巴结</div>
-                                            <div><input type="radio" name="site-of-mets" value="Uterus" onChange={this.handleInputChange}/>子宫</div>
-                                            <div><input type="radio" name="site-of-mets" value="Liver" onChange={this.handleInputChange}/>肝</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Local Lymph Node" onChange={this.handleInputChange}/>局部淋巴结</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Uterus" onChange={this.handleInputChange}/>子宫</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Liver" onChange={this.handleInputChange}/>肝</div>
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="radio" name="site-of-mets" value="Remote Lymph Node" onChange={this.handleInputChange}/>远端淋巴结</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Remote Lymph Node" onChange={this.handleInputChange}/>远端淋巴结</div>
 
-                                            <div><input type="radio" name="site-of-mets" value="Kidney" onChange={this.handleInputChange}/>肾</div>
-                                            <div><input type="radio" name="site-of-mets" value="Lung" onChange={this.handleInputChange}/>肺</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Kidney" onChange={this.handleInputChange}/>肾</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Lung" onChange={this.handleInputChange}/>肺</div>
                                         </div>
                                         <div className="box-col">
-
-                                        </div>
-                                        <div className="box-col">
-                                            <div><input type="radio" name="site-of-mets" value="Pleura" onChange={this.handleInputChange}/>胸膜</div>
-                                            <div><input type="radio" name="site-of-mets" value="Stomach" onChange={this.handleInputChange}/>胃</div>
-                                             <div><input type="radio" name="site-of-mets" value="Skin" onChange={this.handleInputChange}/>皮肤</div>
 
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="radio" name="site-of-mets" value="Peritoneum" onChange={this.handleInputChange}/>腹膜/大网膜</div>
-                                            <div><input type="radio" name="site-of-mets" value="Bone" onChange={this.handleInputChange}/>骨</div>
-                                            <div><input type="radio" name="site-of-mets" value="Brain" onChange={this.handleInputChange}/>脑</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Pleura" onChange={this.handleInputChange}/>胸膜</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Stomach" onChange={this.handleInputChange}/>胃</div>
+                                             <div><input type="checkbox" name="site-of-mets" value="Skin" onChange={this.handleInputChange}/>皮肤</div>
+
+                                        </div>
+                                        <div className="box-col">
+                                            <div><input type="checkbox" name="site-of-mets" value="Peritoneum" onChange={this.handleInputChange}/>腹膜/大网膜</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Bone" onChange={this.handleInputChange}/>骨</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Brain" onChange={this.handleInputChange}/>脑</div>
 
                                         </div>
                                         <div className="box-col">
