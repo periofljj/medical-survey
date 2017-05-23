@@ -132,7 +132,7 @@ class SectionOne extends Component {
                             <div className="box box-6">
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
-                                    <DateTimeField />
+                                    <DateTimeField inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-6-2">

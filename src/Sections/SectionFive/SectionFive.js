@@ -8,7 +8,6 @@ class SectionFive extends Component {
     }
 
     handleInputChange(event) {
-
         this.props.sectionFiveChange(event);
     }
 

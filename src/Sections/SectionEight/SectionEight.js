@@ -45,7 +45,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="GF-drug-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="GF-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-day" />
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-day" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -106,7 +106,7 @@ class SectionEight extends Component {
                                            <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="持续给药"/> 持续给药</div>
                                             <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="周期给药"/> 周期给药</div>
                                         </div>
-                                        
+
                                     </div>
                                     <div className="box box-3-1-5">
                                         <div className="box-title">如果持续给药</div>
@@ -158,7 +158,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-day" />
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-day" />
                                         </div>
                                     </div>
                                 </div>
@@ -275,7 +275,7 @@ class SectionEight extends Component {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="section-row">
                             <div className="box box-3">
                                 <div>
@@ -298,7 +298,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-day" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -320,7 +320,7 @@ class SectionEight extends Component {
                                                 <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-cause" value="迟发性骨转移/骨损伤"/> 迟发性骨转移/骨损伤</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div>
@@ -381,7 +381,7 @@ class SectionEight extends Component {
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="other-drug-end-year" />
                                             <input onChange={this.handleInputChange} type="text" name="other-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-day" />     
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-day" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-5 box-4-4">
@@ -398,7 +398,7 @@ class SectionEight extends Component {
                                                 <div><input onChange={this.handleInputChange} type="radio" name="other-drug-treatment-caus" value="other"/> 其他</div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div className="box box-3-1-11  box-4-5">
                                         <div className="box-title">如果持续性给药</div>

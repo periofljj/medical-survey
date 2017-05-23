@@ -62,16 +62,31 @@ class App extends Component {
         }
     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const name = target.name;
-        var value;
-        if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
-            value = target.value;
+    handleInputChange(event, time) {
+        if(!event) {
+            var name = time.name;
+            var value = time.value;
         }
-        else if (target.type === 'checkbox') {
-            value = target.checked;
+        else {
+            const target = event.target;
+            const name = target.name;
+            var value;
+            if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
+                value = target.value;
+            }
+            else if (target.type === 'checkbox') {
+                value = target.checked;
+            }
         }
+        // state['site-of-mets'] = {
+        //     "Uterus": true,
+
+        // }
+        // var result = this.state['site-of-mets'];
+        // result[value] = target.checked;
+        // this.setState({
+        //     [name]: result
+        // });
 
         this.setState({
             [name]: value
@@ -93,6 +108,7 @@ class App extends Component {
             console.log(storage['medical-survey']);
         }
     }
+
 
     finish() {
         var array = [this.state];
