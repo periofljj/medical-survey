@@ -20,10 +20,11 @@ class App extends Component {
         this.finish = this.finish.bind(this);
         this.load = this.load.bind(this);
         this.clearLocalStorage = this.clearLocalStorage.bind(this);
+        this.addSectionFive = this.addSectionFive.bind(this);
         // this.setValue = this.setValue(this);
 
         // this.state = {
-        //     hasAnswered: ""
+        //     sectionFiveNum: 1
         // };
     }
 
@@ -32,8 +33,14 @@ class App extends Component {
         if (localStorage.length === 0) {
             return;
         }
-        var states = JSON.parse(localStorage['medical-survey']);
+        if (!localStorage['sectionFiveNum']) {
+            localStorage.setItem('sectionFiveNum', 1);
+        }
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
         this.state = states;
+        this.setState({
+            sectionFiveNum: localStorage['sectionFiveNum']
+        });
         var elements, target;
         for (var key in states) {
             if (states[key]) {
@@ -48,7 +55,6 @@ class App extends Component {
                             if (target.type === 'radio' || target.type === 'checkbox') {
                                 target.checked = true;
                             }
-                            console.log(elements[i].type);
                         }
                     }
                 }
@@ -109,6 +115,7 @@ class App extends Component {
         }
 
         localStorage.removeItem("medical-survey");
+        localStorage.removeItem("sectionFiveNum");
     }
 
     setValue() {
@@ -139,13 +146,12 @@ class App extends Component {
     clearLocalStorage() {
         var localStorage = window.localStorage;
         localStorage.removeItem("medical-survey");
+        localStorage.removeItem("sectionFiveNum");
     }
 
     load(input) {
-        console.log("load");
-        console.log(input.target.value);
-        if (window.FileReader) {  
-            var file = input.target.files[0];  
+        if (window.FileReader) {
+            var file = input.target.files[0];
             // var filename = file.name.split(".")[0];
             Papa.parse(file, {
                 complete: function(result) {
@@ -161,28 +167,49 @@ class App extends Component {
                     this.setValue();
                 }.bind(this)
             });
-        }   
-        //支持IE 7 8 9 10  
-        // else if (typeof window.ActiveXObject != 'undefined'){  
-        //     var xmlDoc;   
-        //     xmlDoc = new ActiveXObject("Microsoft.XMLDOM");   
-        //     xmlDoc.async = false;   
-        //     xmlDoc.load(input.value);   
-        //     alert(xmlDoc.xml);   
-        // }   
-        // //支持FF  
-        // else if (document.implementation && document.implementation.createDocument) {   
-        //     var xmlDoc;   
-        //     xmlDoc = document.implementation.createDocument("", "", null);   
-        //     xmlDoc.async = false;   
-        //     xmlDoc.load(input.value);   
-        //     alert(xmlDoc.xml);  
-        // } else {   
-        //     alert('error');   
+        }
+        //支持IE 7 8 9 10
+        // else if (typeof window.ActiveXObject != 'undefined'){
+        //     var xmlDoc;
+        //     xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        //     xmlDoc.async = false;
+        //     xmlDoc.load(input.value);
+        //     alert(xmlDoc.xml);
+        // }
+        // //支持FF
+        // else if (document.implementation && document.implementation.createDocument) {
+        //     var xmlDoc;
+        //     xmlDoc = document.implementation.createDocument("", "", null);
+        //     xmlDoc.async = false;
+        //     xmlDoc.load(input.value);
+        //     alert(xmlDoc.xml);
+        // } else {
+        //     alert('error');
         // }
     }
 
+    addSectionFive () {
+        var storage = window.localStorage;
+        // var states = JSON.parse(localStorage['medical-survey']);
+        var sectionFiveNum = Number(storage['sectionFiveNum']);
+        storage.setItem('sectionFiveNum', sectionFiveNum + 1);
+        this.setState({
+            sectionFiveNum: sectionFiveNum
+        });
+
+    }
+
 	render() {
+        var storage = window.localStorage;
+        var sectionFiveNum = Number(storage['sectionFiveNum']) || 1;
+        var numbers = [];
+        for (var i = 1; i <= sectionFiveNum; i++) {
+            numbers.push(i);
+        }
+        var sectionFiveItems = numbers.map((number) => {
+            var sectionId = "5-" + number;
+            return <SectionFive key={number} sectionId={sectionId} sectionFiveChange={this.handleInputChange}></SectionFive>
+        });
 		return (
 			<div className="medical-survey">
                 <PageTitle></PageTitle>
@@ -191,7 +218,8 @@ class App extends Component {
                 <SectionTwo sectionTwoChange={this.handleInputChange}></SectionTwo>
                 <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
                 <SectionFour sectionFourChange={this.handleInputChange}></SectionFour>
-                <SectionFive sectionFiveChange={this.handleInputChange}></SectionFive>
+                {sectionFiveItems}
+                <button className="" onClick={this.addSectionFive}>继续填写第五部分</button>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
                 <SectionSeven sectionSevenChange={this.handleInputChange}></SectionSeven>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
