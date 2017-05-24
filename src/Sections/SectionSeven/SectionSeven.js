@@ -1,15 +1,50 @@
 import React, { Component } from 'react';
-import './SectionSeven.css'
+import './SectionSeven.css';
+import DateTimeField from "react-bootstrap-datetimepicker";
+var moment = require('moment');
 
 class SectionSeven extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.timeSelectOnChange1 = this.timeSelectOnChange1.bind(this);
+        this.timeSelectOnChange2 = this.timeSelectOnChange2.bind(this);
+        this.timeSelectOnChange3 = this.timeSelectOnChange3.bind(this);
+        this.timeSelectOnChange4 = this.timeSelectOnChange4.bind(this);
     }
 
     handleInputChange(event) {
-
         this.props.sectionSevenChange(event);
+    }
+    timeSelectOnChange1(time) {
+        var time = {
+            name: "therapy-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionSevenChange(false, time);
+    }
+
+    timeSelectOnChange2(time) {
+        var time = {
+            name: "therapy-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionSevenChange(false, time);
+    }
+    timeSelectOnChange3(time) {
+        var time = {
+            name: "drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionSevenChange(false, time);
+    }
+
+    timeSelectOnChange4(time) {
+        var time = {
+            name: "drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionSevenChange(false, time);
     }
 
     render() {
@@ -27,8 +62,8 @@ class SectionSeven extends Component {
                                 <div>方案第一次开始日期</div>
                                 <div>(年/月/日)</div>
                             </div>
-                            <div className="box-content text-center">
-                                <input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-start-date"/>
+                            <div style={{position: 'relative'}}>
+                                <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
                             </div>
                         </div>
                         <div className="box width-15 box-2">
@@ -38,7 +73,9 @@ class SectionSeven extends Component {
                             </div>
                             <div className="box-content text-center">
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="therapy-end-date"/>
+                                   <div style={{position: 'relative'}}>
+                                        <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                    </div>
                                     <label>
                                         <input onChange={this.handleInputChange} type="checkbox" name="therapy-end-date" value="doing"/>
                                         <span>进行中</span>
@@ -650,8 +687,8 @@ class SectionSeven extends Component {
                                         <div className="sub-box-title">
                                             <span>开始日期 如果开始日期与上面的不同 年/月/日</span>
                                         </div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} className="date-input" type="text" name="drug-start-year"/><input onChange={this.handleInputChange} className="date-input" type="text" name="drug-start-month"/><input onChange={this.handleInputChange} className="date-input" type="text" name="drug-start-day"/>
+                                        <div style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-3">
@@ -746,8 +783,8 @@ class SectionSeven extends Component {
                                         <div className="sub-box-title">
                                             <span>结束日期 如果结束日期与上面的不同 年/月/日</span>
                                         </div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} className="date-input" type="text" name="drug-end-year"/><input onChange={this.handleInputChange} className="date-input" type="text" name="drug-end-month"/><input onChange={this.handleInputChange} className="date-input" type="text" name="drug-end-day"/>
+                                        <div style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-5">

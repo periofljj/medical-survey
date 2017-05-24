@@ -5,10 +5,43 @@ class SectionThree extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.chooseAllNotInspect = this.chooseAllNotInspect.bind(this);
     }
 
     handleInputChange(event) {
         this.props.sectionThreeChange(event);
+    }
+
+    chooseAllNotInspect(event) {
+        var value = event.target.checked;
+        var elements = document.getElementsByClassName('section-3-not-inspected');
+        var event;
+        if (value) {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].checked = true;
+                event = {
+                    target: {
+                        type: 'radio',
+                        value: elements[i].value,
+                        name: elements[i].name
+                    }
+                }
+                this.props.sectionThreeChange(event);
+            }
+        }
+        else {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].checked = false;
+                event = {
+                    target: {
+                        type: 'radio',
+                        value: elements[i].value,
+                        name: elements[i].name
+                    }
+                }
+                this.props.sectionThreeChange(event);
+            }
+        }
     }
 
     render() {
@@ -18,7 +51,7 @@ class SectionThree extends Component {
                     <span className="title">第三部分 关键的诊断试验/检测结果</span>
                     <label>
                         <span>该患者未做任何基因或染色体检测</span>
-                        <input onChange={this.handleInputChange} type="checkbox" name="none-gene-test" value="yes"/>
+                        <input onChange={this.chooseAllNotInspect} type="checkbox" name="none-gene-test" value="yes"/>
                     </label>
                 </div>
 
@@ -49,7 +82,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="PD-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="PD-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -88,7 +121,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="HPV-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="HPV-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -127,7 +160,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="CD20-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="CD20-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -166,7 +199,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="CD30-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="CD30-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -205,7 +238,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="CD38-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="CD38-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -244,7 +277,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ER-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="ER-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -283,7 +316,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="PR-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="PR-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -322,7 +355,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="HER2-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="HER2-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -361,7 +394,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="RET-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="RET-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -400,7 +433,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ROS-1-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="ROS-1-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -439,7 +472,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="N-RAS-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="N-RAS-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -478,7 +511,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="K-RAS-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="K-RAS-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -517,7 +550,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="BRAF-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="BRAF-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -556,7 +589,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ALK-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="ALK-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -595,7 +628,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="C-MET-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="C-MET-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -634,7 +667,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="C-KIT-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="C-KIT-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -672,7 +705,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="FGFR-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="FGFR-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -711,7 +744,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ZAP-70-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="ZAP-70-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -750,7 +783,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="B2M-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="B2M-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -789,7 +822,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="mitotic-index-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="mitotic-index-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -828,7 +861,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="ctc-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="ctc-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -867,7 +900,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="vegf-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="vegf-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -906,7 +939,7 @@ class SectionThree extends Component {
                                                 <span> 正在等结果</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="FLT3-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="FLT3-gene-mutation-test" value="Not detected"/>
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -934,7 +967,7 @@ class SectionThree extends Component {
                                             <span className="test-name">KI-67抗体水平</span>
                                             <input onChange={this.handleInputChange} className="input-test" type="test" name="KI-67-gene-mutation-test"/>&nbsp;&nbsp;
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="KI-67-gene-mutation-test" value="Not detected"/>
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="KI-67-gene-mutation-test" value="Not detected"/>
                                                 <span>未检测</span>
                                             </label>
                                         </td>
@@ -976,7 +1009,7 @@ class SectionThree extends Component {
                                         <span> 正在等结果</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-test" value="Not detected"/>
+                                        <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="EGFR-gene-mutation-test" value="Not detected"/>
                                         <span> 未检测</span>
                                     </label>
                                 </div>
@@ -1049,7 +1082,7 @@ class SectionThree extends Component {
                                             <span> 正在等结果</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name="BRCA1-gene-mutation-test" value="Not detected"/>
+                                            <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="BRCA1-gene-mutation-test" value="Not detected"/>
                                             <span> 未检测</span>
                                         </label>
                                     </div>
@@ -1068,7 +1101,7 @@ class SectionThree extends Component {
                                             <span> 正在等结果</span>
                                         </label>
                                         <label>
-                                            <input onChange={this.handleInputChange} type="radio" name="BRCA2-gene-mutation-test" value="Not detected"/>
+                                            <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="BRCA2-gene-mutation-test" value="Not detected"/>
                                             <span> 未检测</span>
                                         </label>
                                     </div>
@@ -1196,7 +1229,7 @@ class SectionThree extends Component {
                                                     <span> 正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cll" value="Not detected"/>
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="chromosomal-abnormalities-in-cll" value="Not detected"/>
                                                     <span> 未检测</span>
                                                 </label>
                                             </div>
@@ -1261,7 +1294,7 @@ class SectionThree extends Component {
                                                     <span> 正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-cml" value="Not detected"/>
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="chromosomal-abnormalities-in-cml" value="Not detected"/>
                                                     <span> 未检测</span>
                                                 </label>
                                             </div>
@@ -1330,7 +1363,7 @@ class SectionThree extends Component {
                                                     <span>其他</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-mm"/>
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="chromosomal-abnormalities-in-mm"/>
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1407,7 +1440,7 @@ class SectionThree extends Component {
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="chromosomal-abnormalities-in-aml" />
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="chromosomal-abnormalities-in-aml" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1464,7 +1497,7 @@ class SectionThree extends Component {
                                                     <span>正在等结果</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="CRC-MSI" />
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="CRC-MSI" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1523,7 +1556,7 @@ class SectionThree extends Component {
                                                     <span>EGFR-既有扩增,也有VIII重排</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="EGFR扩增检测" />
+                                                    <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="EGFR扩增检测" />
                                                     <span>未检测</span>
                                                 </label>
                                             </div>
@@ -1627,7 +1660,7 @@ class SectionThree extends Component {
                                         <td>
                                             <input onChange={this.handleInputChange} type="test" name="psa-level" />
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-level" />
+                                                <input onChange={this.handleInputChange} type="checkbox" className="section-3-not-inspected" name="psa-level" />
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
@@ -1662,7 +1695,7 @@ class SectionThree extends Component {
                                         <td>
                                             <input onChange={this.handleInputChange} type="test" name="gleason-grade" />
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="gleason-grade" />
+                                                <input onChange={this.handleInputChange} type="checkbox" className="section-3-not-inspected" name="gleason-grade" />
                                                 <span> 未检测</span>
                                             </label>
                                         </td>

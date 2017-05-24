@@ -1,17 +1,117 @@
 import React, { Component } from 'react';
-import './SectionEight.css'
+import './SectionEight.css';
+import DateTimeField from "react-bootstrap-datetimepicker";
+var moment = require('moment');
 
 class SectionEight extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.timeSelectOnChange1 = this.timeSelectOnChange1.bind(this);
+        this.timeSelectOnChange2 = this.timeSelectOnChange2.bind(this);
+        this.timeSelectOnChange3 = this.timeSelectOnChange3.bind(this);
+        this.timeSelectOnChange4 = this.timeSelectOnChange4.bind(this);
+        this.timeSelectOnChange5 = this.timeSelectOnChange5.bind(this);
+        this.timeSelectOnChange6 = this.timeSelectOnChange6.bind(this);
+        this.timeSelectOnChange7 = this.timeSelectOnChange7.bind(this);
+        this.timeSelectOnChange8 = this.timeSelectOnChange8.bind(this);
     }
 
     handleInputChange(event) {
-
         this.props.sectionEightChange(event);
     }
+timeSelectOnChange1(time) {
+        var time = {
+            name: "GF-drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
 
+    timeSelectOnChange2(time) {
+        var time = {
+            name: "GF-drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange3(time) {
+        var time = {
+            name: "EPO-drug-start-year",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange4(time) {
+        var time = {
+            name: "EPO-drug-end-year",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange5(time) {
+        var time = {
+            name: "acute-anti-emetic-drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange6(time) {
+        var time = {
+            name: "acute-anti-emetic-drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+    timeSelectOnChange7(time) {
+        var time = {
+            name: "delayed-anti-emetic-drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange8(time) {
+        var time = {
+            name: "delayed-anti-emetic-drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+    timeSelectOnChange9(time) {
+        var time = {
+            name: "bone-metastases-drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange10(time) {
+        var time = {
+            name: "bone-metastases-drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+    timeSelectOnChange11(time) {
+        var time = {
+            name: "other-drug-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
+
+    timeSelectOnChange12(time) {
+        var time = {
+            name: "other-drug-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionChange(false, time);
+    }
     render() {
         return (
             <div>
@@ -29,23 +129,19 @@ class SectionEight extends Component {
                                     <div className="box box-1-1-1">
                                         <div className="box-title">生长因子类药物(治疗中性粒细胞减少) (如果知道，请提供商品名;否则请提供通 名及厂家/或产地)</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="GF-Drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="GF-Drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-start-month" />
-                                             <input onChange={this.handleInputChange} type="text" name="GF-drug-start-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="GF-drug-end-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -82,23 +178,19 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-1">
                                         <div className="box-title">促红细胞生成素类药物(治疗贫血) (如果知道，请提供商品名;否则请提供通用名及厂家/或产地</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-month" />
-                                             <input onChange={this.handleInputChange} type="text" name="EPO-drug-start-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="EPO-drug-end-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -142,23 +234,19 @@ class SectionEight extends Component {
                                     <div className="box box-1-1-1">
                                         <div className="box-title">急性止吐药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-month" />
-                                             <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-start-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange5} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-end-day" />
+                                       <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange6} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -212,23 +300,19 @@ class SectionEight extends Component {
                                     <div className="box box-1-1-1">
                                         <div className="box-title">迟发性止吐药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-start-month" />
-                                             <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-start-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange7} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name-end-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange8} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                 </div>
@@ -282,23 +366,19 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-1">
                                         <div className="box-title">二磷酸盐类及其他治疗骨转移有关的药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-start-month" />
-                                             <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-start-day" />
+                                       <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange9} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name-end-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange10} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -363,25 +443,21 @@ class SectionEight extends Component {
                             <div className="box box-3 box-4">
                                 <div>
                                     <div className="box box-3-1-1 box-4-1">
-                                        <div className="box-title">其它支持类药物(麻醉性镇痛剂、CTI BL、高钙血症、PBSC、BMT. . . ) (如果知道，请提供商品名;否则请提供通用名及商家/或产地)</div>
+                                        <div className="box-title">其它支持类药物(麻醉性镇痛剂、CTI BL、高钙血症、PBSC、BMT) (如果知道，请提供商品名;否则请提供通用名及商家/或产地)</div>
                                         <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-name" />
+                                            <input onChange={this.handleInputChange} type="text" name="other-drug-name" placeholder="XXXXX"/>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-2 box-4-2">
                                         <div className="box-title">开始日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-start-day" />
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange11} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3 box-4-3">
                                         <div className="box-title">结束日期</div>
-                                        <div className="box-content">
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-year" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-month" />
-                                            <input onChange={this.handleInputChange} type="text" name="other-drug-end-day" />
+                                       <div className="sm-date-field" style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange12} inputFormat="YYYY-MM-DD" mode="date" />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-5 box-4-4">
@@ -466,42 +542,7 @@ class SectionEight extends Component {
                     </div>
                 </div>
                 <div className="block"></div>
-                <div className="section section-eight">
-                    <div className="section-title">
-                        <span>请您对该问卷填写的难易程度进行评分(7分为困难；1分为容易)</span>
-                    </div>
-                    <div className="section-content">
-                        <div className="box box-5">
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="1"/> 1.容易</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="2"/> 2</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="3"/> 3</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="4"/> 4</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="5"/> 5</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="6"/> 6</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="7"/> 7.困难</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷难易程度" value="unknown"/> 不清楚</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="block"></div>
-                <div className="section section-eight">
-                    <div className="section-title">
-                        <span>请您对该问卷填写的完成速度进行评分(7分为慢;1分为快)</span>
-                    </div>
-                    <div className="section-content">
-                        <div className="box box-5">
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="1"/> 1.快</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="2"/> 2</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="3"/> 3</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="4"/> 4</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="5"/> 5</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="6"/> 6</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="7"/> 7.慢</div>
-                            <div><input onChange={this.handleInputChange} type="radio" name="问卷完成速度" value="unknown"/> 不清楚</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="block"></div>
+
                 <div className="section section-eight">
                     <div className="section-title">
                         <span>您还有其他建议吗?</span>

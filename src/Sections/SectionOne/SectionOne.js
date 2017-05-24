@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
 import './SectionOne.css';
 import DateTimeField from "react-bootstrap-datetimepicker";
+var moment = require('moment');
 
 class SectionOne extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.timeSelectOnChange = this.timeSelectOnChange.bind(this);
     }
 
     handleInputChange(event) {
-
         this.props.sectionOneChange(event);
+    }
+
+    timeSelectOnChange(time) {
+        var time = {
+            name: "date-of-diagnosis",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionOneChange(false, time);
     }
 
     render() {
@@ -31,13 +40,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="therapy-times-in-twelveMonthes" onChange={this.handleInputChange} min="1" max="99"/>
+                                        <span>最近12个月的次数</span><input type="number" name="therapy-times-in-twelveMonths" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="therapy-times-in-threeMonthes" onChange={this.handleInputChange} min="1" max="99"/>
+                                        <span>最近3个月的次数</span><input type="number" name="therapy-times-in-threeMonths" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="therapy-times-in-oneMonthes" onChange={this.handleInputChange} min="1" max="99"/>
+                                        <span>最近1个月的次数</span><input type="number" name="therapy-times-in-oneMonths" onChange={this.handleInputChange} min="1" max="99"/>
                                     </div>
                                 </div>
                             </div>
@@ -47,13 +56,13 @@ class SectionOne extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <span>最近12个月的次数</span><input type="number" name="doctor-numbers-in-twelveMonthes" onChange={this.handleInputChange} min="1" max="20"/>
+                                        <span>最近12个月的次数</span><input type="number" name="doctor-numbers-in-twelveMonths" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近3个月的次数</span><input type="number" name="doctor-numbers-in-threeMonthes" onChange={this.handleInputChange} min="1" max="20"/>
+                                        <span>最近3个月的次数</span><input type="number" name="doctor-numbers-in-threeMonths" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                     <div className="box-col">
-                                        <span>最近1个月的次数</span><input type="number" name="doctor-numbers-in-oneMonthes" onChange={this.handleInputChange} min="1" max="20"/>
+                                        <span>最近1个月的次数</span><input type="number" name="doctor-numbers-in-oneMonths" onChange={this.handleInputChange} min="1" max="20"/>
                                     </div>
                                 </div>
                             </div>
@@ -119,20 +128,20 @@ class SectionOne extends Component {
                             <div className="box box-5">
                                 <div className="box-5-1">
                                     <div className="box-title">身高(cm)</div>
-                                    <div className="box-content"><input type="number
-                                    " name="tall" onChange={this.handleInputChange}  min="1" max="200"/> cm</div>
+                                    <div className="box-content"><input type="number" name="tall" onChange={this.handleInputChange}  min="1" max="200"/> cm</div>
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-5-2">
                                     <div className="box-title">体重(Kg)</div>
-                                    <div className="box-content"><input type="number
-                                    " name="weight" onChange={this.handleInputChange} min="1" max="200"/> kg</div>
+                                    <div className="box-content"><input type="number" name="weight" onChange={this.handleInputChange} min="1" max="200"/> kg</div>
                                 </div>
                             </div>
                             <div className="box box-6">
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
-                                    <DateTimeField inputFormat="YYYY-MM-DD" mode="date" />
+                                    <div style={{position: 'relative'}}>
+                                        <DateTimeField onChange={this.timeSelectOnChange} inputFormat="YYYY-MM-DD" mode="date" />
+                                    </div>
                                 </div>
                                 <div className="space"></div>
                                 <div className="box-6-2">
@@ -220,7 +229,7 @@ class SectionOne extends Component {
                                         </div>
                                         <div className="box-col">
                                             <div><input type="radio" name="site-of-mets" value="None" onChange={this.handleInputChange}/>无</div>
-                                            <div><input type="radio" name="site-of-mets" value="Other" onChange={this.handleInputChange}/>其他</div>
+                                            <div><input type="text" name="site-of-mets" value="" onChange={this.handleInputChange} placeholder="其它请填写"/></div>
                                         </div>
                                     </div>
                                 </div>
@@ -259,7 +268,7 @@ class SectionOne extends Component {
                                  <div className="box-col">
                                     <div><input type="radio" name="co-morbidities" value="Thrombocytopenia" onChange={this.handleInputChange}/>血小板减少症</div>
                                     <div><input type="radio" name="co-morbidities" value="Renal Insufficiency" onChange={this.handleInputChange}/>肾功不全</div>
-                                    <div><input type="radio" name="co-morbidities" value="Other" onChange={this.handleInputChange}/>其他</div>
+                                    <div><input type="text" name="co-morbidities" onChange={this.handleInputChange} placeholder="其它请填写"/></div>
                                 </div>
                                  <div className="box-col">
                                     <div><input type="radio" name="co-morbidities" value="None" onChange={this.handleInputChange}/>无</div>

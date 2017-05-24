@@ -1,15 +1,76 @@
 import React, { Component } from 'react';
-import './SectionFour.css'
+import './SectionFour.css';
+import DateTimeField from "react-bootstrap-datetimepicker";
+var moment = require('moment');
+
 
 class SectionFour extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.timeSelectOnChange1 = this.timeSelectOnChange1.bind(this);
+        this.timeSelectOnChange2 = this.timeSelectOnChange2.bind(this);
+        this.timeSelectOnChange3 = this.timeSelectOnChange3.bind(this);
+        this.timeSelectOnChange4 = this.timeSelectOnChange4.bind(this);
+        this.timeSelectOnChange5 = this.timeSelectOnChange5.bind(this);
+        this.timeSelectOnChange6 = this.timeSelectOnChange6.bind(this);
+        this.timeSelectOnChange7 = this.timeSelectOnChange7.bind(this);
     }
 
     handleInputChange(event) {
-
         this.props.sectionFourChange(event);
+    }
+
+    timeSelectOnChange1(time) {
+        var time = {
+            name: "first-surgery-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+
+    timeSelectOnChange2(time) {
+        var time = {
+            name: "second-surgery-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+
+    timeSelectOnChange3(time) {
+        var time = {
+            name: "third-surgery-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+    timeSelectOnChange4(time) {
+        var time = {
+            name: "first-radical-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+    timeSelectOnChange5(time) {
+        var time = {
+            name: "first-radical-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+    timeSelectOnChange6(time) {
+        var time = {
+            name: "second-radical-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
+    }
+    timeSelectOnChange7(time) {
+        var time = {
+            name: "second-radical-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFourChange(false, time);
     }
 
     render() {
@@ -57,6 +118,10 @@ class SectionFour extends Component {
                                         <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="unknown"/>
                                         <span>不知道</span>
                                     </label>
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="resection-applicable" value="unknown"/>
+                                        <span>不适用</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -70,25 +135,21 @@ class SectionFour extends Component {
                                     <span>第一次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-1" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-2" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-3" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-4" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">
                                 <div className="box-title">
                                     <span>手术日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-surgery-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
-                            <div className="box-3">
-                                <div className="box-title">
-                                    <span>公司填写</span>
-                                </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-company"/>
-                                </div>
-                            </div>
+
                         </div>
                         <div className="box-row">
                             <div className="box-1">
@@ -96,25 +157,21 @@ class SectionFour extends Component {
                                     <span>第二次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-1" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-2" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-3" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-4" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">
                                 <div className="box-title">
                                     <span>手术日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-surgery-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
-                            <div className="box-3">
-                                <div className="box-title">
-                                    <span>公司填写</span>
-                                </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-company"/>
-                                </div>
-                            </div>
+
                         </div>
                         <div className="box-row">
                             <div className="box-1">
@@ -122,27 +179,21 @@ class SectionFour extends Component {
                                     <span>第三次治疗性手术(名称、部位范围、方式等)</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text"  name="third-surgery-name"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-1" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-2" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-3" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-4" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">
                                 <div className="box-title">
                                     <span>手术日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="third-surgery-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
-                            <div className="box-3">
-                                <div className="box-title">
-                                    <span>公司填写</span>
-                                </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-company"/>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <div className="right-container">
@@ -168,16 +219,16 @@ class SectionFour extends Component {
                                 <div className="box-title">
                                     <span>开始日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-start-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
                             <div className="box-1">
                                 <div className="box-title">
                                     <span>结束日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="first-radical-end-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange5} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
                             <div className="box-2">
@@ -244,16 +295,16 @@ class SectionFour extends Component {
                                 <div className="box-title">
                                     <span>开始日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-start-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange6} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
                             <div className="box-1">
                                 <div className="box-title">
                                     <span>结束日期(年/月/日)</span>
                                 </div>
-                                <div className="box-content">
-                                    <input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/><input onChange={this.handleInputChange} className="date-input" type="number" name="second-radical-end-date"/>
+                                <div style={{position: 'relative'}}>
+                                    <DateTimeField onChange={this.timeSelectOnChange7} inputFormat="YYYY-MM-DD" mode="date" />
                                 </div>
                             </div>
                             <div className="box-2">

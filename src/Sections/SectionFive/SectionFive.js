@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
-import './SectionFive.css'
+import './SectionFive.css';
+import DateTimeField from "react-bootstrap-datetimepicker";
+var moment = require('moment');
 
 class SectionFive extends Component {
     constructor(props) {
         super(props);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.timeSelectOnChange1 = this.timeSelectOnChange1.bind(this);
+        this.timeSelectOnChange2 = this.timeSelectOnChange2.bind(this);
     }
 
     handleInputChange(event) {
         this.props.sectionFiveChange(event);
+    }
+    timeSelectOnChange1(time) {
+        var time = {
+            name: this.props.sectionId + "-treatment-plan-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFiveChange(false, time);
+    }
+
+    timeSelectOnChange2(time) {
+        var time = {
+            name: this.props.sectionId + "-treatment-plan-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.props.sectionFiveChange(false, time);
     }
 
     render() {
@@ -28,18 +47,14 @@ class SectionFive extends Component {
                             <div className="box box-1-1">
                                 <div className="box box-1-1-1">
                                     <div className="box-title">方案开始日期</div>
-                                    <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-start-year"} />
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-start-month"} />
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-start-day"} />
+                                    <div className="sm-date-field" style={{position: 'relative'}}>
+                                        <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-2">
                                     <div className="box-title">方案结束日期</div>
-                                    <div className="content">
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-end-year"} />
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-end-month"} />
-                                        <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-end-day"} />
+                                    <div className="sm-date-field" style={{position: 'relative'}}>
+                                        <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">

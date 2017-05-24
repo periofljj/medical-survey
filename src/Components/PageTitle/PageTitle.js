@@ -11,7 +11,7 @@ class PageTitle extends Component {
     }
 
     handleInputChange(event) {
-        this.props.sectionOneChange(event);
+        this.props.pageTitleChange(event);
     }
 
     timeSelectOnChange(time) {
@@ -19,7 +19,7 @@ class PageTitle extends Component {
             name: "finished-time",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionOneChange(false, time);
+        this.props.pageTitleChange(false, time);
     }
 
 
@@ -29,8 +29,9 @@ class PageTitle extends Component {
                 <span>在完成此部分前，请先阅读前面的简介</span>
                 <div className="finished-time">
                 	<span>问卷完成日期(年/月/日)</span>
-                    <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
-                    <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                    <div style={{position: 'relative'}}>
+                        <DateTimeField onChange={this.timeSelectOnChange} inputFormat="YYYY-MM-DD" mode="date" />
+                    </div>
                 </div>
                 <div className="clear"></div>
             </div>

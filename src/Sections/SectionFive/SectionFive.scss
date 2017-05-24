@@ -3,6 +3,18 @@ $mdFont: 14px;
 $smFont: 12px;
 .section-five {
     clear: both;
+    .sm-date-field {
+        .date{
+            input[type="text"] {
+                width: 100% !important;
+                font-size: 12px !important;
+            }
+
+            .input-group-addon{
+                padding: 3px !important;
+            }
+        }
+    }
     .section-title {
         width: 100%;
         padding: 0;
@@ -260,7 +272,7 @@ $smFont: 12px;
             }
             .box-2-2{
                 width: 100%;
-                height: 370px;
+                height: 390px;
                 background-color: #d8d7d4;
                 td{
                     width: 140px;

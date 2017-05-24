@@ -37,12 +37,12 @@ $smFont: 12px;
                 .box {
                     background-color: #d8d7d4;
                     border: 1px solid #ccc;
-                    width: 400px;
+                    width: 500px;
 
                     div {
                         padding: 6px 16px;
                         label {
-                            width: 43%;
+                            width: 33%;
                         }
                     }
                 }
@@ -68,8 +68,10 @@ $smFont: 12px;
                         height: 32px;
                         line-height: 32px;
                         input {
+                            width: 60px;
                             height: 24px;
                             line-height: 24px;
+                            margin-right: 5px;
                         }
                     }
 

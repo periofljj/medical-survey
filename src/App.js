@@ -63,14 +63,14 @@ class App extends Component {
     }
 
     handleInputChange(event, time) {
+        var name,value,target;
         if(!event) {
-            var name = time.name;
-            var value = time.value;
+            name = time.name;
+            value = time.value;
         }
         else {
-            const target = event.target;
-            const name = target.name;
-            var value;
+            target = event.target;
+            name = target.name;
             if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
                 value = target.value;
             }
@@ -228,14 +228,14 @@ class App extends Component {
         });
 		return (
 			<div className="medical-survey">
-                <PageTitle></PageTitle>
+                <PageTitle pageTitleChange={this.handleInputChange}></PageTitle>
                 <input className="load-button" type="file" onChange={this.load}/>
                 <SectionOne sectionOneChange={this.handleInputChange}></SectionOne>
                 <SectionTwo sectionTwoChange={this.handleInputChange}></SectionTwo>
                 <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
                 <SectionFour sectionFourChange={this.handleInputChange}></SectionFour>
                 {sectionFiveItems}
-                <button className="" onClick={this.addSectionFive}>继续填写第五部分</button>
+                <button className="continue" onClick={this.addSectionFive}>继续填写第五部分</button>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
                 <SectionSeven sectionSevenChange={this.handleInputChange}></SectionSeven>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
