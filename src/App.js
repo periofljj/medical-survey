@@ -73,10 +73,10 @@ class App extends Component {
             name = target.name;
             if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
                 value = target.value;
-                if(target.className=="none"){
+                if(target.className=="none"||target.className=="unknown"){
                     var obj = document.getElementsByName(target.name);
                     for(var i=0;i<obj.length;i++){
-                        if(obj[i].className!="none"){
+                        if(obj[i].className != target.className){
                             obj[i].checked = false;
                             obj[i].disabled = true;
                         } 

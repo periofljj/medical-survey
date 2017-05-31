@@ -392,12 +392,12 @@ timeSelectOnChange1(time) {
                                         <div className="box-title">治疗原因</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-cause" value="Bone Pain"/> 骨痛</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-cause" value="Bone metastasis / Bone injury"/> 骨转移/骨损伤</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-treatment-cause" value="Bone Pain"/> 骨痛</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-treatment-cause" value="Bone metastasis / Bone injury"/> 骨转移/骨损伤</div>
                                             </div>
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-cause" value="Tumor pain"/> 肿瘤痛</div>
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-cause" value="迟发性骨转移/骨损伤"/> 迟发性骨转移/骨损伤</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-treatment-cause" value="Tumor pain"/> 肿瘤痛</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-treatment-cause" value="迟发性骨转移/骨损伤"/> 迟发性骨转移/骨损伤</div>
                                             </div>
                                         </div>
 
