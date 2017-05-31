@@ -63,12 +63,12 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="box box-1-2-2">
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-TNM" value="Limited Stage"/>局限期</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-TNM" value="Local Advanced"/>局部晚期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Limited Stage"/>局限期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Local Advanced"/>局部晚期</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-TNM" value="Advanced"/>晚期</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="derived-TNM" value="Metastasis"/>转移</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Advanced"/>晚期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Metastasis"/>转移</div>
                                     </div>
                                 </div>
                             </div>
@@ -123,12 +123,12 @@ class SectionTwo extends Component {
                                 </div>
                                 <div className="box box-1-2-2">
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="current-TNM" value="Limited Stage"/>局限期</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="current-TNM" value="Local Advanced"/>局部晚期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Limited Stage"/>局限期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Local Advanced"/>局部晚期</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name="current-TNM" value="Advanced"/>晚期</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="current-TNM" value="Metastasis"/>转移</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Advanced"/>晚期</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="" value="Metastasis"/>转移</div>
                                     </div>
                                 </div>
                             </div>
@@ -204,14 +204,14 @@ class SectionTwo extends Component {
                                     </div>
                                     <div className="box-content3">
                                         <div className="box-left">
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="Low"/> 低度恶性/惰性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="Medium"/> 中度恶性/侵袭性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-first-diagnosis" value="High"/> 高度恶性/ 侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="" value="Low"/> 低度恶性/惰性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="" value="Medium"/> 中度恶性/侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="" value="High"/> 高度恶性/ 侵袭性</div>
                                         </div>
                                         <div className="box-right">
-                                             <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="Low"/> 低度恶性/惰性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="Medium"/> 中度恶性/侵袭性</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="ann-arbor-current" value="High"/> 高度恶性/ 侵袭性</div>
+                                             <div><input onChange={this.handleInputChange} type="radio" name="" value="Low"/> 低度恶性/惰性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="" value="Medium"/> 中度恶性/侵袭性</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="" value="High"/> 高度恶性/ 侵袭性</div>
                                         </div>
                                     </div>
                                 </div>

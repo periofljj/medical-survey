@@ -58,7 +58,7 @@ class SectionFive extends Component {
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">
-                                     <div className="box-title">治疗方案名称(如果是序贯 案，请标明序贯顺序)</div>
+                                     <div className="box-title">治疗方案名称(如果是序贯方案，请标明序贯顺序)</div>
                                     <div className="content">
                                         <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-name"} />
                                     </div>
@@ -308,65 +308,65 @@ class SectionFive extends Component {
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="ATE" /> ATE动脉血栓栓塞</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="VTE" /> VTE静脉血栓栓塞</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Weight change" /> 体重变化</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="ATE" /> ATE动脉血栓栓塞</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="VTE" /> VTE静脉血栓栓塞</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Weight change" /> 体重变化</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Neutropenia" /> 中性粒细胞减少</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Constipation" /> 便秘</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="other" /> 其他:请注明</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Neutropenia" /> 中性粒细胞减少</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Constipation" /> 便秘</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="other" className="other"/> <span className={sectionKey + "-side-effect-text"}>其他</span></td>
 
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Anorexia" /> 厌食/食欲减退</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Fever" /> 发热</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Stomatitis" /> 口腔炎</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Anorexia" /> 厌食/食欲减退</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Fever" /> 发热</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Stomatitis" /> 口腔炎</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Sexual dysfunction" /> 性功能障碍</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Nausea and vomiting" /> 恶心和呕吐</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Cardiac insufficiency" /> 心功不全</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Sexual dysfunction" /> 性功能障碍</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Nausea and vomiting" /> 恶心和呕吐</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Cardiac insufficiency" /> 心功不全</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Cachexia" /> 恶病质</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Infection" /> 感染</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="abnormal menstruation" /> 月经不调</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Cachexia" /> 恶病质</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Infection" /> 感染</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="abnormal menstruation" /> 月经不调</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Hand-foot syndrome" />手-足综合征</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="edema" /> 水肿</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Hot / hot flashes" /> 潮热/热潮红</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Hand-foot syndrome" />手-足综合征</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="edema" /> 水肿</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Hot / hot flashes" /> 潮热/热潮红</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="pain" /> 疼痛</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="erythra" /> 皮疹</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="gastric-intestinal perforation" /> 肠胃穿孔</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="pain" /> 疼痛</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="erythra" /> 皮疹</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="gastric-intestinal perforation" /> 肠胃穿孔</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Neuropathy" /> 神经病变</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Mucositis" /> 黏膜炎</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="hepatosis" /> 肝功能障碍</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Neuropathy" /> 神经病变</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Mucositis" /> 黏膜炎</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="hepatosis" /> 肝功能障碍</td>
                                             </tr>
                                             <tr>
-                                                 <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Alopecia" /> 脱发</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Gynaecomastia" /> 男性乳头发育</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="diarrhea" /> 腹泻</td>
+                                                 <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Alopecia" /> 脱发</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Gynaecomastia" /> 男性乳头发育</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="diarrhea" /> 腹泻</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Thrombocytopenia" /> 血小板减少</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Blurred vision or other visual changes" /> 视力模糊或者其他视力变化</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="anemia" /> 贫血</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Thrombocytopenia" /> 血小板减少</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Blurred vision or other visual changes" /> 视力模糊或者其他视力变化</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="anemia" /> 贫血</td>
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="hyperuricemia" /> 高尿酸血症</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Increased appetite" /> 食欲增加</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Don't know" /> 从病历中不可知</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="hyperuricemia" /> 高尿酸血症</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Increased appetite" /> 食欲增加</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Don't know" /> 从病历中不可知</td>
 
                                             </tr>
                                             <tr>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="Hypertension" /> 高血压</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-side-effect"} value="none" /> 无</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Hypertension" /> 高血压</td>
+                                                <td><input onChange={this.handleInputChange} type="radio" className="none" name={sectionKey + "-side-effect"} value="none" /> 无</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -412,25 +412,25 @@ class SectionFive extends Component {
                                 <div className="box-title">停药或更换治疗方案的原因</div>
                                 <div className="box-content">
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="治疗方案完成"/>治疗方案完成</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="身体状况差"/>身体状况差</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="治疗方案完成"/>治疗方案完成</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="身体状况差"/>身体状况差</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="远处进展或复发"/>远处进展或复发</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="副作用"/>副作用</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="远处进展或复发"/>远处进展或复发</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="副作用"/>副作用</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="局部进展或复发"/>局部进展或复发</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="疾病稳定"/>疾病稳定</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="局部进展或复发"/>局部进展或复发</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="疾病稳定"/>疾病稳定</div>
                                     </div>
                                     <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="病人的选择"/>病人的选择</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="濒临死亡"/>濒临死亡</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="病人的选择"/>病人的选择</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="濒临死亡"/>濒临死亡</div>
                                     </div>
                                      <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="无"/>无</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="其他"/>其他：请注明</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="从病人病历中不可知"/>从病人病历中不可知</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="无" className="none"/>无</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="其他" className="other"/><span className={sectionKey + "-reason-for-ending-text"}>其他</span></div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="从病人病历中不可知"/>从病人病历中不可知</div>
                                     </div>
                                 </div>
                             </div>

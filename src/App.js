@@ -73,9 +73,31 @@ class App extends Component {
             name = target.name;
             if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
                 value = target.value;
+                if(target.className=="none"){
+                    var obj = document.getElementsByName(target.name);
+                    for(var i=0;i<obj.length;i++){
+                        if(obj[i].className!="none"){
+                            obj[i].checked = false;
+                            obj[i].disabled = true;
+                        } 
+                    }
+                }
+                
             }
             else if (target.type === 'checkbox') {
                 value = target.checked;
+                if(target.className=="other"){
+                    if(value==true){
+                        console.log(target.name+"-text");
+                        var obj = document.getElementsByClassName(target.name+"-text");
+                        obj[0].innerHTML="<input type='text' placeholder='请填写' style='width:50px'>";
+                    }else{
+                        var obj = document.getElementsByClassName(target.name+"-text");
+                        obj[0].innerHTML="其它";
+                    }
+                   
+
+                }
             }
         }
         // state['site-of-mets'] = {

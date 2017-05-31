@@ -990,6 +990,30 @@ class SectionThree extends Component {
                                             </label>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <span className="test-name">其它</span>
+                                            <input onChange={this.handleInputChange} className="input-test" type="test" name="-gene-mutation-test"/>&nbsp;&nbsp;
+                                        </td>
+                                        <td>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="-gene-recent-inspection-time" value="确诊时"/>
+                                                <span> 确诊时</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="-gene-recent-inspection-time" value="当前治疗期间"/>
+                                                <span> 当前治疗期间</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="-gene-recent-inspection-time" value="当前治疗之前"/>
+                                                <span> 当前治疗之前</span>
+                                            </label>
+                                            <label>
+                                                <input onChange={this.handleInputChange} type="radio" name="-gene-recent-inspection-time" value="前一次治疗之前"/>
+                                                <span> 前一次治疗之前</span>
+                                            </label>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
 
@@ -1693,7 +1717,7 @@ class SectionThree extends Component {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input onChange={this.handleInputChange} type="test" name="gleason-grade" />
+                                            <input onChange={this.handleInputChange} type="number" name="gleason-grade" min="2" max="10"/>
                                             <label>
                                                 <input onChange={this.handleInputChange} type="checkbox" className="section-3-not-inspected" name="gleason-grade" />
                                                 <span> 未检测</span>

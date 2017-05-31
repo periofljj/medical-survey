@@ -244,6 +244,10 @@ class SectionFour extends Component {
                                         <input onChange={this.handleInputChange} type="text" name="first-radical-irradiation-dosage-total"/>
                                         <span> 总计GY</span>
                                     </div>
+                                    <div>
+                                        <input onChange={this.handleInputChange} type="radio" name="first-radical-irradiation-dosage-total"/>
+                                        <span> 不详</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>

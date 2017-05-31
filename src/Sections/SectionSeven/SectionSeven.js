@@ -170,7 +170,7 @@ class SectionSeven extends Component {
                                 <div className="sub-box">
                                     <label>
                                         <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>治疗线同前</span>
+                                        <span>治疗线同前更换药物</span>
                                     </label>
                                 </div>
                             </div>
@@ -295,10 +295,10 @@ class SectionSeven extends Component {
                                 <span> 外科</span>
                             </label>
                             <label>
-                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator"/>
+                                <input onChange={this.handleInputChange} type="radio" name="therapy-initiator" value="other"/>
                                 <span> 其它科室医生(请注明)</span>
                             </label>
-                            <input onChange={this.handleInputChange} className="other" type="text" name="" name="therapy-initiator"/>
+                            <input onChange={this.handleInputChange} className="other" type="text" name="therapy-initiator"/>
                         </div>
                     </div>
 
