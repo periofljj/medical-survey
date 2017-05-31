@@ -11,6 +11,7 @@ import SectionSix from './Sections/SectionSix/SectionSix';
 import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
+import $ from 'jquery';
 
 
 class App extends Component {
@@ -45,8 +46,10 @@ class App extends Component {
         for (var key in states) {
             if (states[key]) {
                 elements = document.getElementsByName(key);
-                if (elements.length === 1 && (elements[0].type === 'text' || elements[0].type === 'number')) {
-                    elements[0].value = states[key];
+                if (elements.length === 1) {
+                    if (elements[0].type === 'text' || elements[0].type === 'number') {
+                        elements[0].value = states[key];
+                    }
                 }
                 else {
                     for (var i = 0; i < elements.length; i++) {
@@ -62,8 +65,10 @@ class App extends Component {
         }
     }
 
+
+
     handleInputChange(event, time) {
-        var name,value,target;
+        var name, value, target, data, hasSetState = false;
         if(!event) {
             name = time.name;
             value = time.value;
@@ -73,21 +78,15 @@ class App extends Component {
             name = target.name;
             if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
                 value = target.value;
-                if(target.className=="none"||target.className=="unknown"){
-                    var obj = document.getElementsByName(target.name);
-                    for(var i=0;i<obj.length;i++){
-                        if(obj[i].className != target.className){
-                            obj[i].checked = false;
-                            obj[i].disabled = true;
-                        } 
-                    }
-                }
-                
+                this.setState({
+                    [name]: value
+                });
             }
             else if (target.type === 'checkbox') {
                 value = target.checked;
+                data = target.value;
                 if(target.className=="other"){
-                    if(value==true){
+                    if(value === true){
                         console.log(target.name+"-text");
                         var obj = document.getElementsByClassName(target.name+"-text");
                         obj[0].innerHTML="<input type='text' placeholder='请填写' style='width:50px'>";
@@ -95,11 +94,57 @@ class App extends Component {
                         var obj = document.getElementsByClassName(target.name+"-text");
                         obj[0].innerHTML="其它";
                     }
-                   
+                    return;
+                }
+                else if(target.className === "none" || target.className === "unknown"){
+                    var obj = document.getElementsByName(target.name);
+                    if (value === true) {
+                        for(var i=0; i<obj.length; i++){
+                            if(obj[i].className != target.className){
+                                obj[i].checked = false;
+                                obj[i].disabled = true;
+                            } 
+                        }
+                    }
+                    else {
+                        for(var i=0; i<obj.length; i++){
+                            if(obj[i].className != target.className){
+                                obj[i].disabled = false;
+                            } 
+                        }
+                    }
 
+                    this.setState({
+                        [name]: [data]
+                    });
+                    hasSetState = true;
+                }
+
+                if (!hasSetState) {
+                    var state;
+                    if (this.state) {
+                        state = this.state[name];
+                    }
+              
+                    var stateArr = state || [];
+                    if (value) {
+                        if (stateArr.length === 0)
+                            stateArr[0] = data;
+                        else
+                            stateArr.push(data);
+                    }
+                    else {
+                        var index = stateArr.indexOf(data);
+                        stateArr.splice(index, 1);
+                    }
+                    this.setState({
+                        [name]: stateArr
+                    });
                 }
             }
         }
+
+
         // state['site-of-mets'] = {
         //     "Uterus": true,
 
@@ -110,9 +155,7 @@ class App extends Component {
         //     [name]: result
         // });
 
-        this.setState({
-            [name]: value
-        });
+
         var states = this.state;
         if (!states) {
             states = {};
@@ -185,6 +228,7 @@ class App extends Component {
         var localStorage = window.localStorage;
         localStorage.removeItem("medical-survey");
         localStorage.removeItem("sectionFiveNum");
+        location.reload();
     }
 
     load(input) {
