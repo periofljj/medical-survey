@@ -58,7 +58,7 @@ class SectionFive extends Component {
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">
-                                     <div className="box-title">治疗方案名称(如果是序贯方案，请标明序贯顺序)</div>
+                                     <div className="box-title">治疗方案名称(如果是序贯方案请标明序贯顺序)</div>
                                     <div className="content">
                                         <input onChange={this.handleInputChange} type="text" name={sectionKey + "-treatment-plan-name"} />
                                     </div>
@@ -366,7 +366,7 @@ class SectionFive extends Component {
                                             </tr>
                                             <tr>
                                                 <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Hypertension" /> 高血压</td>
-                                                <td><input onChange={this.handleInputChange} type="radio" className="none" name={sectionKey + "-side-effect"} value="none" /> 无</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" className="none" name={sectionKey + "-side-effect"} value="none" /> 无</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -428,7 +428,7 @@ class SectionFive extends Component {
                                         <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="濒临死亡"/>濒临死亡</div>
                                     </div>
                                      <div className="box-col">
-                                        <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-reason-for-ending"} value="无" className="none"/>无</div>
+                                        <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="无" className="none"/>无</div>
                                         <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="其他" className="other"/><span className={sectionKey + "-reason-for-ending-text"}>其他</span></div>
                                         <div><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-reason-for-ending"} value="从病人病历中不可知"/>从病人病历中不可知</div>
                                     </div>

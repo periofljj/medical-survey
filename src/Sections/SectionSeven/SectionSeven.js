@@ -526,11 +526,11 @@ class SectionSeven extends Component {
                                         <span>男性乳房发育</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="therapy-side-effects" value="none" className="none"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="none" className="none"/>
                                         <span>无</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="therapy-side-effects" value="Don't know" className="unknown"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="therapy-side-effects" value="Don't know" className="unknown"/>
                                         <span>从病人病历不可知</span>
                                     </label>
                                 </div>

@@ -81,13 +81,13 @@ class App extends Component {
                 this.setState({
                     [name]: value
                 });
+                
             }
             else if (target.type === 'checkbox') {
                 value = target.checked;
                 data = target.value;
                 if(target.className=="other"){
                     if(value === true){
-                        console.log(target.name+"-text");
                         var obj = document.getElementsByClassName(target.name+"-text");
                         obj[0].innerHTML="<input type='text' placeholder='请填写' style='width:50px'>";
                     }else{
@@ -118,6 +118,39 @@ class App extends Component {
                         [name]: [data]
                     });
                     hasSetState = true;
+                }
+                else if(target.className.indexOf("continued")){
+                    if(value === true){
+                        var arr = target.className.split(' ');
+                        var obj = document.getElementsByClassName(arr[0]+" cycle");
+                        for(var i=0; i<obj.length; i++){
+                            obj[i].value="";
+                            this.setState({
+                                [obj[i].name]:''
+                            });
+                            obj[i].disabled = true;
+                        }
+
+                    }else{
+                        var arr = target.className.split(' ');
+                        var obj = document.getElementsByClassName(arr[0]+" cycle");
+                        for(var i=0; i<obj.length; i++){
+                            obj[i].disabled = false;
+                        }
+                    }
+                     
+                    this.setState({
+                        [name]: value
+                    });
+                    return;
+                }
+                else if(target.className=="cycle"){
+                    var obj = document.getElementsByClassName("continued-"+target.name);
+                    for(var i=0; i<obj.length; i++){
+                        obj[i].checked = false;
+                        obj[i].disabled = true;
+                    }
+                    return;
                 }
 
                 if (!hasSetState) {

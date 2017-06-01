@@ -117,18 +117,18 @@ class SectionSix extends Component {
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="growth-factor-continuing-drug" value="yes"/> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="growth-factor-continuing-drug" value="yes" className="growth-factor-drug continued"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-planned-perid" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-planned-perid" className="growth-factor-drug cycle" /></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-actual-period" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-actual-period" className="growth-factor-drug cycle" /></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -164,18 +164,18 @@ class SectionSix extends Component {
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="growth-factor-continuing-drug-2" value="yes"/> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="growth-factor-continuing-drug-2" value="yes" className="growth-factor-drug-2 continued"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-planned-perid-2" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-planned-perid-2" className="growth-factor-drug-2 cycle"/></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-actual-period-2" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="growth-factor-actual-period-2" className="growth-factor-drug-2 cycle"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -214,18 +214,18 @@ class SectionSix extends Component {
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="erythropoietin-continuing-drug" value="yes"/> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="erythropoietin-continuing-drug" value="yes" className="erythropoietin-drug continued"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-planned-period" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-planned-period"  className="erythropoietin-drug cycle"/></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-actual-period" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="erythropoietin-actual-period"  className="erythropoietin-drug cycle"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -264,18 +264,18 @@ class SectionSix extends Component {
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="radio" name="bone-metastasis-continuing-drug" /> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="bone-metastasis-continuing-drug" className="bone-metastasis-drug continued"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td>计划的周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-planned-period" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-planned-period" className="bone-metastasis-drug cycle"/></td>
                                         </tr>
                                         <tr>
                                             <td>实际给药周期数</td>
-                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-actual-period" /></td>
+                                            <td><input onChange={this.handleInputChange} type="text" name="bone-metastasis-actual-period" className="bone-metastasis-drug cycle"/></td>
                                         </tr>
                                     </tbody>
                                 </table>
