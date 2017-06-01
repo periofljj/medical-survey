@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SectionFour.css';
-import DateTimeField from "react-bootstrap-datetimepicker";
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
 
 
@@ -26,6 +27,9 @@ class SectionFour extends Component {
             name: "first-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'first-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
 
@@ -34,6 +38,9 @@ class SectionFour extends Component {
             name: "second-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'second-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
 
@@ -42,6 +49,9 @@ class SectionFour extends Component {
             name: "third-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'third-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
     timeSelectOnChange4(time) {
@@ -49,6 +59,9 @@ class SectionFour extends Component {
             name: "first-radical-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'first-radical-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
     timeSelectOnChange5(time) {
@@ -56,6 +69,9 @@ class SectionFour extends Component {
             name: "first-radical-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'first-radical-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
     timeSelectOnChange6(time) {
@@ -63,6 +79,9 @@ class SectionFour extends Component {
             name: "second-radical-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'second-radical-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
     timeSelectOnChange7(time) {
@@ -70,10 +89,37 @@ class SectionFour extends Component {
             name: "second-radical-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'second-radical-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionFourChange(false, time);
     }
 
     render() {
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+        var firstSurgeryDateDefault = states.hasOwnProperty('first-surgery-date') ? states['first-surgery-date'] : "";
+        var firstSurgeryDate = this.states ? this.states['first-surgery-date'] : "";
+
+        var secondSurgeryDateDefault = states.hasOwnProperty('second-surgery-date') ? states['second-surgery-date'] : "";
+        var secondSurgeryDate = this.states ? this.states['second-surgery-date'] : "";
+
+        var thirdSurgeryDateDefault = states.hasOwnProperty('third-surgery-date') ? states['third-surgery-date'] : "";
+        var thirdSurgeryDate = this.states ? this.states['third-surgery-date'] : "";
+
+        var firstRadicalStartDateDefault = states.hasOwnProperty('first-radical-start-date') ? states['first-radical-start-date'] : "";
+        var firstRadicalStartDate = this.states ? this.states['first-radical-start-date'] : "";
+
+        var firstRadicalEndDateDefault = states.hasOwnProperty('first-radical-end-date') ? states['first-radical-end-date'] : "";
+        var firstRadicalEndDate = this.states ? this.states['first-radical-end-date'] : "";
+
+        var secondRadicalStartDateDefault = states.hasOwnProperty('second-radical-start-date') ? states['second-radical-start-date'] : "";
+        var secondRadicalStartDate = this.states ? this.states['second-radical-start-date'] : "";
+
+        var secondRadicalEndDateDefault = states.hasOwnProperty('second-radical-end-date') ? states['second-radical-end-date'] : "";
+        var secondRadicalEndDate = this.states ? this.states['second-radical-end-date'] : "";
+
+
         return (
             <div className="section section-four">
                 <div className="section-title">
@@ -146,7 +192,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange1} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={firstSurgeryDateDefault} value={firstSurgeryDate}  />
                                 </div>
                             </div>
 
@@ -168,7 +214,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange2} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={secondSurgeryDateDefault} value={secondSurgeryDate}  />
                                 </div>
                             </div>
 
@@ -190,7 +236,7 @@ class SectionFour extends Component {
                                     <span>手术日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange3} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={thirdSurgeryDateDefault} value={thirdSurgeryDate}  />
                                 </div>
                             </div>
 
@@ -220,7 +266,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange4} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={firstRadicalStartDateDefault} value={firstRadicalStartDate}  />
                                 </div>
                             </div>
                             <div className="box-1">
@@ -228,7 +274,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange5} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange5} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={firstRadicalEndDateDefault} value={firstRadicalEndDate}  />
                                 </div>
                             </div>
                             <div className="box-2">
@@ -300,7 +346,7 @@ class SectionFour extends Component {
                                     <span>开始日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange6} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange6} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={secondRadicalStartDateDefault} value={secondRadicalStartDate} />
                                 </div>
                             </div>
                             <div className="box-1">
@@ -308,7 +354,7 @@ class SectionFour extends Component {
                                     <span>结束日期(年/月/日)</span>
                                 </div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange7} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange7} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={secondRadicalEndDateDefault} value={secondRadicalEndDate}  />
                                 </div>
                             </div>
                             <div className="box-2">

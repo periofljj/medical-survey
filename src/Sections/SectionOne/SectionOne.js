@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SectionOne.css';
-import DateTimeField from "react-bootstrap-datetimepicker";
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
 
 class SectionOne extends Component {
@@ -19,10 +20,18 @@ class SectionOne extends Component {
             name: "date-of-diagnosis",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'date-of-diagnosis': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionOneChange(false, time);
     }
 
     render() {
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+        var dateOfDiagnosisDefault = states.hasOwnProperty('date-of-diagnosis') ? states['date-of-diagnosis'] : "";
+        var dateOfDiagnosis = this.states ? this.states['date-of-diagnosis'] : "";
+
         return (
             <div>
                 <div className="section section-one">
@@ -140,7 +149,7 @@ class SectionOne extends Component {
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
                                     <div style={{position: 'relative'}}>
-                                        <DateTimeField name="date-of-diagnosis" inputProps={{name: 'date-of-diagnosis', dateTime: '' }} onChange={this.timeSelectOnChange} inputFormat="YYYY-MM-DD" mode="date" />
+                                        <DateTimeField defaultValue={dateOfDiagnosisDefault} timeFormat={false} value={dateOfDiagnosis} onChange={this.timeSelectOnChange} dateFormat="YYYY-MM-DD" />
                                     </div>
                                 </div>
                                 <div className="space"></div>
