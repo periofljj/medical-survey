@@ -15,31 +15,31 @@ class SectionThree extends Component {
     chooseAllNotInspect(event) {
         var value = event.target.checked;
         var elements = document.getElementsByClassName('section-3-not-inspected');
-        var event;
+        var obj;
         if (value) {
             for (var i = 0; i < elements.length; i++) {
                 elements[i].checked = true;
-                event = {
+                obj = {
                     target: {
                         type: 'radio',
                         value: elements[i].value,
                         name: elements[i].name
                     }
                 }
-                this.props.sectionThreeChange(event);
+                this.props.sectionThreeChange(obj);
             }
         }
         else {
             for (var j = 0; j < elements.length; j++) {
                 elements[j].checked = false;
-                event = {
+                obj = {
                     target: {
                         type: 'radio',
                         value: elements[j].value,
                         name: elements[j].name
                     }
                 }
-                this.props.sectionThreeChange(event);
+                this.props.sectionThreeChange(obj);
             }
         }
     }
