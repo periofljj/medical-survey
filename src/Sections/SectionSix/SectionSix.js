@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SectionSix.css'
-import DateTimeField from "react-bootstrap-datetimepicker";
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
 
 class SectionSix extends Component {
@@ -22,70 +23,124 @@ class SectionSix extends Component {
     }
 
     timeSelectOnChange1(time) {
-        var time = {
+        var obj = {
             name: "growth-factor-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+
+        this.setState({
+            'growth-factor-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange2(time) {
-        var time = {
+        var obj = {
             name: "growth-factor-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'growth-factor-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange3(time) {
-        var time = {
+        var obj = {
             name: "erythropoietin-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'erythropoietin-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange4(time) {
-        var time = {
+        var obj = {
             name: "erythropoietin-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'erythropoietin-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange5(time) {
-        var time = {
+        var obj = {
             name: "bone-metastasis-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'bone-metastasis-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange6(time) {
-        var time = {
+        var obj = {
             name: "bone-metastasis-end-date-2",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'bone-metastasis-end-date-2': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
     timeSelectOnChange7(time) {
-        var time = {
+        var obj = {
             name: "growth-factor-start-date-2",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'growth-factor-start-date-2': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
     timeSelectOnChange8(time) {
-        var time = {
+        var obj = {
             name: "growth-factor-end-date-2",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionSixChange(false, time);
+        this.setState({
+            'growth-factor-end-date-2': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionSixChange(false, obj);
     }
 
 
     render() {
+
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+        
+        var growthFactorStartDateDefault = states.hasOwnProperty('growth-factor-start-date') ? states['growth-factor-start-date'] : "";
+        var growthFactorStartDate = this.states ? this.states['growth-factor-start-date'] : "";
+
+        var growthFactorEndDateDefault = states.hasOwnProperty('growth-factor-end-date') ? states['growth-factor-end-date'] : "";
+        var growthFactorEndDate = this.states ? this.states['growth-factor-end-date'] : "";
+        
+        var erythropoietinStartDateDefault = states.hasOwnProperty('erythropoietin-start-date') ? states['erythropoietin-start-date'] : "";
+        var erythropoietinStartDate = this.states ? this.states['erythropoietin-start-date'] : "";
+
+        var erythropoietinEndDateDefault = states.hasOwnProperty('erythropoietin-end-date') ? states['erythropoietin-end-date'] : "";
+        var erythropoietinEndDate = this.states ? this.states['erythropoietin-end-date'] : "";
+
+        var boneMetastasisStartDateDefault = states.hasOwnProperty('bone-metastasis-start-date') ? states['bone-metastasis-start-date'] : "";
+        var boneMetastasisStartDate = this.states ? this.states['bone-metastasis-start-date'] : "";
+
+        var boneMetastasisEndDate2Default = states.hasOwnProperty('bone-metastasis-end-date-2') ? states['bone-metastasis-end-date-2'] : "";
+        var boneMetastasisEndDate2 = this.states ? this.states['bone-metastasis-end-date-2'] : "";
+
+        var growthFactorStartDate2Default = states.hasOwnProperty('growth-factor-start-date-2') ? states['growth-factor-start-date-2'] : "";
+        var growthFactorStartDate2 = this.states ? this.states['growth-factor-start-date-2'] : "";
+
+        var growthFactorEndDate2Default = states.hasOwnProperty('growth-factor-end-date-2') ? states['growth-factor-end-date-2'] : "";
+        var growthFactorEndDate2 = this.states ? this.states['growth-factor-end-date-2'] : ""; 
+
+
         return (
             <div className="section section-six">
                 <div className="section-title">
@@ -105,14 +160,14 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange1} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={growthFactorStartDateDefault} value={growthFactorStartDate} />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange2} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={growthFactorEndDateDefault} value={growthFactorEndDate} />
                                 </div>
                             </div>
                         </div>
@@ -152,14 +207,14 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange7} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange7} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={erythropoietinStartDateDefault} value={erythropoietinStartDate} />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange8} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange8} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={erythropoietinEndDateDefault} value={erythropoietinEndDate} />
                                 </div>
                             </div>
                         </div>
@@ -202,14 +257,14 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange3} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={boneMetastasisStartDateDefault} value={boneMetastasisStartDate} />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange4} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={boneMetastasisEndDate2Default} value={boneMetastasisEndDate2} />
                                 </div>
                             </div>
                         </div>
@@ -252,14 +307,14 @@ class SectionSix extends Component {
                             <div className="box-2-1">
                                 <div className="box-title">开始日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange5} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange5} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={growthFactorStartDate2Default} value={growthFactorStartDate2} />
                                 </div>
                             </div>
                             <div className="space"></div>
                             <div className="box-2-1">
                                 <div className="box-title">结束日期</div>
                                 <div style={{position: 'relative'}}>
-                                    <DateTimeField onChange={this.timeSelectOnChange6} inputFormat="YYYY-MM-DD" mode="date" />
+                                    <DateTimeField onChange={this.timeSelectOnChange6} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={growthFactorEndDate2Default} value={growthFactorEndDate2} />
                                 </div>
                             </div>
                         </div>

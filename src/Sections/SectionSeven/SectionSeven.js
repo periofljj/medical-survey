@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SectionSeven.css';
-import DateTimeField from "react-bootstrap-datetimepicker";
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
 
 class SectionSeven extends Component {
@@ -21,6 +22,9 @@ class SectionSeven extends Component {
             name: "therapy-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'therapy-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionSevenChange(false, time);
     }
 
@@ -29,6 +33,9 @@ class SectionSeven extends Component {
             name: "therapy-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'therapy-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionSevenChange(false, time);
     }
     timeSelectOnChange3(time) {
@@ -36,6 +43,9 @@ class SectionSeven extends Component {
             name: "drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionSevenChange(false, time);
     }
 
@@ -44,10 +54,29 @@ class SectionSeven extends Component {
             name: "drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
+        this.setState({
+            'drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
         this.props.sectionSevenChange(false, time);
     }
 
     render() {
+
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+
+        var therapyStartDateDefault = states.hasOwnProperty('therapy-start-date') ? states['therapy-start-date'] : "";
+        var therapyStartDate = this.states ? this.states['therapy-start-date'] : "";
+
+        var therapyEndDateDefault = states.hasOwnProperty('therapy-end-date') ? states['therapy-end-date'] : "";
+        var therapyEndDate = this.states ? this.states['therapy-end-date'] : "";
+
+        var drugStartDateDefault = states.hasOwnProperty('drug-start-date') ? states['drug-start-date'] : "";
+        var drugStartDate = this.states ? this.states['drug-start-date'] : "";
+
+        var drugEndDateDefault = states.hasOwnProperty('drug-end-date') ? states['drug-end-date'] : "";
+        var drugEndDate = this.states ? this.states['drug-end-date'] : "";
+
         return (
             <div className="section section-seven">
                 <div className="section-title">
@@ -63,7 +92,7 @@ class SectionSeven extends Component {
                                 <div>(年/月/日)</div>
                             </div>
                             <div style={{position: 'relative'}}>
-                                <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
+                                <DateTimeField onChange={this.timeSelectOnChange1} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={therapyStartDateDefault} value={therapyStartDate} />
                             </div>
                         </div>
                         <div className="box width-15 box-2">
@@ -74,7 +103,7 @@ class SectionSeven extends Component {
                             <div className="box-content text-center">
                                 <div className="box-content">
                                    <div style={{position: 'relative'}}>
-                                        <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                        <DateTimeField onChange={this.timeSelectOnChange2} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={therapyEndDateDefault} value={therapyEndDate} />
                                     </div>
                                     <label>
                                         <input onChange={this.handleInputChange} type="checkbox" name="therapy-end-date" value="doing"/>
@@ -688,7 +717,7 @@ class SectionSeven extends Component {
                                             <span>开始日期 如果开始日期与上面的不同 年/月/日</span>
                                         </div>
                                         <div style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange3} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={drugStartDateDefault} value={drugStartDate} />
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-3">
@@ -784,7 +813,7 @@ class SectionSeven extends Component {
                                             <span>结束日期 如果结束日期与上面的不同 年/月/日</span>
                                         </div>
                                         <div style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange4} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={drugEndDateDefault} value={drugEndDate} />
                                         </div>
                                     </div>
                                     <div className="sub-box sub-box-5">

@@ -31,9 +31,9 @@ class App extends Component {
 
     componentDidMount() {
         var localStorage = window.localStorage;
-        if (localStorage.length === 0) {
-            return;
-        }
+        // if (localStorage.length === 0) {
+        //     return;
+        // }
         if (!localStorage['sectionFiveNum']) {
             localStorage.setItem('sectionFiveNum', 1);
         }

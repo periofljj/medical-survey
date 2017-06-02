@@ -3,20 +3,11 @@ $mdFont: 14px;
 $smFont: 12px;
 .section-eight {
     clear: both;
-    .sm-date-field {
-        .date{
-            input[type="text"] {
-                width: 100% !important;
-                font-size: 12px !important;
-                margin-top: 0px !important;
-            }
-
-            .input-group-addon{
-                padding: 3px !important;
-
-            }
-        }
+    
+    .date-input {
+        width: 100% !important;
     }
+
     .section-title {
         width: 100%;
         padding: 0;

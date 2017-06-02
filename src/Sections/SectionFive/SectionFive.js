@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './SectionFive.css';
-import DateTimeField from "react-bootstrap-datetimepicker";
 var moment = require('moment');
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 
 class SectionFive extends Component {
     constructor(props) {
@@ -15,23 +16,37 @@ class SectionFive extends Component {
         this.props.sectionFiveChange(event);
     }
     timeSelectOnChange1(time) {
-        var time = {
+        var obj = {
             name: this.props.sectionId + "-treatment-plan-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionFiveChange(false, time);
+        this.setState({
+            [this.props.sectionId + "-treatment-plan-start-date"]: moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionFiveChange(false, obj);
     }
 
     timeSelectOnChange2(time) {
-        var time = {
+        var obj = {
             name: this.props.sectionId + "-treatment-plan-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionFiveChange(false, time);
+        this.setState({
+            [this.props.sectionId + "-treatment-plan-end-date"]: moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionFiveChange(false, obj);
     }
 
     render() {
         var sectionKey = this.props.sectionId;
+
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+        var treatmentPlanStartDateDefault = states.hasOwnProperty(sectionKey + '-treatment-plan-start-date') ? states[sectionKey + '-treatment-plan-start-date'] : "";
+        var treatmentPlanStartDate = this.states ? this.states[sectionKey + '-treatment-plan-start-date'] : "";
+
+        var treatmentPlanEndDateDefault = states.hasOwnProperty(sectionKey + '-treatment-plan-end-date') ? states[sectionKey + '-treatment-plan-end-date'] : "";
+        var treatmentPlanEndDate = this.states ? this.states[sectionKey + '-treatment-plan-end-date'] : "";
 
         return (
             <div className="section section-five">
@@ -48,13 +63,13 @@ class SectionFive extends Component {
                                 <div className="box box-1-1-1">
                                     <div className="box-title">方案开始日期</div>
                                     <div className="sm-date-field" style={{position: 'relative'}}>
-                                        <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
+                                        <DateTimeField onChange={this.timeSelectOnChange1} inputProps={{'className': 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={treatmentPlanStartDateDefault} value={treatmentPlanStartDate} />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-2">
                                     <div className="box-title">方案结束日期</div>
                                     <div className="sm-date-field" style={{position: 'relative'}}>
-                                        <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                        <DateTimeField onChange={this.timeSelectOnChange2} inputProps={{'className': 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={treatmentPlanEndDateDefault} value={treatmentPlanEndDate} />
                                     </div>
                                 </div>
                                 <div className="box box-1-1-3">

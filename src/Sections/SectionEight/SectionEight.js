@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './SectionEight.css';
-import DateTimeField from "react-bootstrap-datetimepicker";
+import DateTimeField from "react-datetime";
+import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
 
 class SectionEight extends Component {
@@ -15,104 +16,186 @@ class SectionEight extends Component {
         this.timeSelectOnChange6 = this.timeSelectOnChange6.bind(this);
         this.timeSelectOnChange7 = this.timeSelectOnChange7.bind(this);
         this.timeSelectOnChange8 = this.timeSelectOnChange8.bind(this);
+        this.timeSelectOnChange9 = this.timeSelectOnChange9.bind(this);
+        this.timeSelectOnChange10 = this.timeSelectOnChange10.bind(this);
+        this.timeSelectOnChange11 = this.timeSelectOnChange11.bind(this);
+        this.timeSelectOnChange12 = this.timeSelectOnChange12.bind(this);
     }
 
     handleInputChange(event) {
         this.props.sectionEightChange(event);
     }
-timeSelectOnChange1(time) {
-        var time = {
+    
+    timeSelectOnChange1(time) {
+        var obj = {
             name: "GF-drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'GF-drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange2(time) {
-        var time = {
+        var obj = {
             name: "GF-drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'GF-drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange3(time) {
-        var time = {
+        var obj = {
             name: "EPO-drug-start-year",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'EPO-drug-start-year': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange4(time) {
-        var time = {
+        var obj = {
             name: "EPO-drug-end-year",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'EPO-drug-end-year': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange5(time) {
-        var time = {
+        var obj = {
             name: "acute-anti-emetic-drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'acute-anti-emetic-drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange6(time) {
-        var time = {
+        var obj = {
             name: "acute-anti-emetic-drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'acute-anti-emetic-drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
     timeSelectOnChange7(time) {
-        var time = {
+        var obj = {
             name: "delayed-anti-emetic-drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'delayed-anti-emetic-drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange8(time) {
-        var time = {
+        var obj = {
             name: "delayed-anti-emetic-drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'delayed-anti-emetic-drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
     timeSelectOnChange9(time) {
-        var time = {
+        var obj = {
             name: "bone-metastases-drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'bone-metastases-drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange10(time) {
-        var time = {
+        var obj = {
             name: "bone-metastases-drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'bone-metastases-drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
+
     timeSelectOnChange11(time) {
-        var time = {
+        var obj = {
             name: "other-drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'other-drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
 
     timeSelectOnChange12(time) {
-        var time = {
+        var obj = {
             name: "other-drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
-        this.props.sectionChange(false, time);
+        this.setState({
+            'other-drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
     }
     render() {
+
+        var localStorage = window.localStorage;
+        var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
+
+        var GFDrugStartDateDefault = states.hasOwnProperty('GF-drug-start-date') ? states['GF-drug-start-date'] : "";
+        var GFDrugStartDate = this.states ? this.states['GF-drug-start-date'] : "";
+
+        var GFDrugEndDateDefault = states.hasOwnProperty('GF-drug-end-date') ? states['GF-drug-end-date'] : "";
+        var GFDrugEndDate = this.states ? this.states['GF-drug-end-date'] : "";
+
+        var EPODrugStartYearDefault = states.hasOwnProperty('EPO-drug-start-year') ? states['EPO-drug-start-year'] : "";
+        var EPODrugStartYear = this.states ? this.states['EPO-drug-start-year'] : "";
+
+        var EPODrugEndYearDefault = states.hasOwnProperty('EPO-drug-end-year') ? states['EPO-drug-end-year'] : "";
+        var EPODrugEndYear = this.states ? this.states['EPO-drug-end-year'] : "";
+
+        var acuteAntiEmeticDrugStartDateDefault = states.hasOwnProperty('acute-anti-emetic-drug-start-date') ? states['acute-anti-emetic-drug-start-date'] : "";
+        var acuteAntiEmeticDrugStartDate = this.states ? this.states['acute-anti-emetic-drug-start-date'] : "";
+
+        var acuteAntiEmeticDrugEndDateDefault = states.hasOwnProperty('acute-anti-emetic-drug-end-date') ? states['acute-anti-emetic-drug-end-date'] : "";
+        var acuteAntiEmeticDrugEndDate = this.states ? this.states['acute-anti-emetic-drug-end-date'] : "";
+
+        var delayedAntiEmeticDrugStartDateDefault = states.hasOwnProperty('delayed-anti-emetic-drug-start-date') ? states['delayed-anti-emetic-drug-start-date'] : "";
+        var delayedAntiEmeticDrugStartDate = this.states ? this.states['delayed-anti-emetic-drug-start-date'] : "";
+
+        var delayedAntiEmeticDrugEndDateDefault = states.hasOwnProperty('delayed-anti-emetic-drug-end-date') ? states['delayed-anti-emetic-drug-end-date'] : "";
+        var delayedAntiEmeticDrugEndDate = this.states ? this.states['delayed-anti-emetic-drug-end-date'] : "";
+
+        var boneMetastasesDrugStartDateDefault = states.hasOwnProperty('bone-metastases-drug-start-date') ? states['bone-metastases-drug-start-date'] : "";
+        var boneMetastasesDrugStartDate = this.states ? this.states['bone-metastases-drug-start-date'] : "";
+
+        var boneMetastasesDrugEndDateDefault = states.hasOwnProperty('bone-metastases-drug-end-date') ? states['bone-metastases-drug-end-date'] : "";
+        var boneMetastasesDrugEndDate = this.states ? this.states['bone-metastases-drug-end-date'] : "";
+
+        var otherDrugStartDateDefault = states.hasOwnProperty('other-drug-start-date') ? states['other-drug-start-date'] : "";
+        var otherDrugStartDate = this.states ? this.states['other-drug-start-date'] : "";
+
+        var otherDrugEndDateDefault = states.hasOwnProperty('other-drug-end-date') ? states['other-drug-end-date'] : "";
+        var otherDrugEndDate = this.states ? this.states['other-drug-end-date'] : "";
+
         return (
             <div>
                 <div className="block"></div>
@@ -135,13 +218,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange1} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange1} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={GFDrugStartDateDefault} value={GFDrugStartDate} />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange2} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange2} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={GFDrugEndDateDefault} value={GFDrugEndDate} />
                                         </div>
                                     </div>
                                 </div>
@@ -184,13 +267,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange3} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange3}inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={EPODrugStartYearDefault} value={EPODrugStartYear} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange4} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange4} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={EPODrugEndYearDefault} value={EPODrugEndYear} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -240,13 +323,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange5} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange5} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={acuteAntiEmeticDrugStartDateDefault} value={acuteAntiEmeticDrugStartDate} />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
                                        <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange6} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange6} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={acuteAntiEmeticDrugEndDateDefault} value={acuteAntiEmeticDrugEndDate} />
                                         </div>
                                     </div>
                                 </div>
@@ -306,13 +389,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-1-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange7} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange7} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={delayedAntiEmeticDrugStartDateDefault} value={delayedAntiEmeticDrugStartDate} />
                                         </div>
                                     </div>
                                     <div className="box box-1-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange8} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange8} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={delayedAntiEmeticDrugEndDateDefault} value={delayedAntiEmeticDrugEndDate} />
                                         </div>
                                     </div>
                                 </div>
@@ -372,13 +455,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
                                        <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange9} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange9} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={boneMetastasesDrugStartDateDefault} value={boneMetastasesDrugStartDate} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
                                         <div className="box-title">结束日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange10} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange10} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={boneMetastasesDrugEndDateDefault} value={boneMetastasesDrugEndDate} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-4">
@@ -451,13 +534,13 @@ timeSelectOnChange1(time) {
                                     <div className="box box-3-1-2 box-4-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange11} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange11} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={otherDrugStartDateDefault} value={otherDrugStartDate} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3 box-4-3">
                                         <div className="box-title">结束日期</div>
                                        <div className="sm-date-field" style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange12} inputFormat="YYYY-MM-DD" mode="date" />
+                                            <DateTimeField onChange={this.timeSelectOnChange12} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={otherDrugEndDateDefault} value={otherDrugEndDate} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-5 box-4-4">
