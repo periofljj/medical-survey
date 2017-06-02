@@ -81,6 +81,51 @@ class App extends Component {
                 this.setState({
                     [name]: value
                 });
+                if(target.className.indexOf("drug-way")){
+                    if(target.value == "Cycles"){
+                        var arr = target.className.split(' ');
+                        var obj_cycle = document.getElementsByClassName(arr[0]+" cycle");
+                        for(var i=0; i<obj_cycle.length; i++){
+                            obj_cycle[i].value="";
+                            obj_cycle[i].checked=false;
+                            this.setState({
+                                [obj_cycle[i].name]:''
+                            });
+                            obj_cycle[i].disabled = true;
+                        }
+                        var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
+                        for(var i=0; i<obj_cycle.length; i++){
+                            this.setState({
+                                [obj_cycle[i].name]:''
+                            });
+                            obj_cycle[i].disabled = false;
+                        }
+                    }
+                    if(target.value == "Continued"){
+                        var arr = target.className.split(' ');
+                        var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
+                        for(var i=0; i<obj_cycle.length; i++){
+                            obj_cycle[i].value="";
+                            obj_cycle[i].checked=false;
+                            this.setState({
+                                [obj_cycle[i].name]:''
+                            });
+                            obj_cycle[i].disabled = true;
+                        }
+                        var obj_cycle = document.getElementsByClassName(arr[0]+" cycle");
+                        for(var i=0; i<obj_cycle.length; i++){
+                            this.setState({
+                                [obj_cycle[i].name]:''
+                            });
+                            obj_cycle[i].disabled = false;
+                        }
+                    }
+                    
+                    this.setState({
+                        [name]: value
+                    });
+                    return;
+                }
                 
             }
             else if (target.type === 'checkbox') {

@@ -690,11 +690,11 @@ class SectionSeven extends Component {
                                                 <div>
                                                     <span>给药方方式</span>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Cycles"/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Cycles" className="section-7-1 drug-way"/>
                                                         <span>周期</span>
                                                     </label>
                                                     <label>
-                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Continued"/>
+                                                        <input onChange={this.handleInputChange} type="radio" name="dosing-type" value="Continued" className="section-7-1 drug-way"/>
                                                         <span>持续</span>
                                                     </label>
                                                 </div>
@@ -723,11 +723,11 @@ class SectionSeven extends Component {
                                     <div className="sub-box sub-box-3">
                                         <div className="sub-box-3-row-1">
                                             <span>每周期给药天数</span>
-                                            <input onChange={this.handleInputChange} type="text" name="days-per-cycle"/>
+                                            <input onChange={this.handleInputChange} type="text" name="days-per-cycle" className="section-7-1 cycle"/>
                                         </div>
                                         <div className="sub-box-3-row-2">
                                             <span>周期总天数(含间歇期)</span>
-                                            <input onChange={this.handleInputChange} type="text" name="length-of-cycle" />
+                                            <input onChange={this.handleInputChange} type="text" name="length-of-cycle" className="section-7-1 cycle"/>
                                         </div>
                                     </div>
                                 </div>
@@ -819,17 +819,17 @@ class SectionSeven extends Component {
                                     <div className="sub-box sub-box-5">
                                         <div className="sub-box-5-row-1">
                                             <span>当前周期数</span>
-                                            <input onChange={this.handleInputChange} type="text" name="given-cycles"/>
+                                            <input onChange={this.handleInputChange} type="text" name="given-cycles" className="section-7-1 cycle"/>
                                         </div>
                                         <div className="sub-box-5-row-2">
                                             <span>计划周期数</span>
-                                            <input onChange={this.handleInputChange} type="text" name="cycles-planned"/>
+                                            <input onChange={this.handleInputChange} type="text" name="cycles-planned" className="section-7-1 cycle"/>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="unknown"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="unknown" className="section-7-1 cycle"/>
                                                 <span>不知道</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="至进展"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="至进展" className="section-7-1 cycle"s/>
                                                 <span>至进展</span>
                                             </label>
                                         </div>
