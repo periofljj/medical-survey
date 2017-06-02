@@ -467,8 +467,8 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-4">
                                         <div className="box-title">治疗目的</div>
                                         <div className="box-content">
-                                            <div><input onChange={this.handleInputChange} type="radio" name="treatment-intent" value="bone-metastases-drug-treatment-cause" value="治疗"/> 治疗</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="treatment-intent" value="bone-metastases-drug-treatment-cause" value="预防"/> 预防</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-intent" value="治疗"/> 治疗</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-treatment-intent" value="预防"/> 预防</div>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-5">

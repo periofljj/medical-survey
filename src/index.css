@@ -878,11 +878,8 @@
 
 .section-five {
   clear: both; }
-  .section-five .sm-date-field .date input[type="text"] {
-    width: 100% !important;
-    font-size: 12px !important; }
-  .section-five .sm-date-field .date .input-group-addon {
-    padding: 3px !important; }
+  .section-five .date-input {
+    width: 100% !important; }
   .section-five .section-title {
     width: 100%;
     padding: 0; }
@@ -1549,12 +1546,8 @@
 
 .section-eight {
   clear: both; }
-  .section-eight .sm-date-field .date input[type="text"] {
-    width: 100% !important;
-    font-size: 12px !important;
-    margin-top: 0px !important; }
-  .section-eight .sm-date-field .date .input-group-addon {
-    padding: 3px !important; }
+  .section-eight .date-input {
+    width: 100% !important; }
   .section-eight .section-title {
     width: 100%;
     padding: 0; }

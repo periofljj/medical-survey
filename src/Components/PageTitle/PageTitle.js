@@ -16,14 +16,14 @@ class PageTitle extends Component {
     }
 
     timeSelectOnChange(time) {
-        var time = {
+        var obj = {
             name: "finished-time",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'finished-time': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.pageTitleChange(false, time);
+        this.props.pageTitleChange(false, obj);
     }
 
 

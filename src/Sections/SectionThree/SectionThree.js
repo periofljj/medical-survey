@@ -30,13 +30,13 @@ class SectionThree extends Component {
             }
         }
         else {
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].checked = false;
+            for (var j = 0; j < elements.length; j++) {
+                elements[j].checked = false;
                 event = {
                     target: {
                         type: 'radio',
-                        value: elements[i].value,
-                        name: elements[i].name
+                        value: elements[j].value,
+                        name: elements[j].name
                     }
                 }
                 this.props.sectionThreeChange(event);

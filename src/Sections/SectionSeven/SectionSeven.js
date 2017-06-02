@@ -18,46 +18,46 @@ class SectionSeven extends Component {
         this.props.sectionSevenChange(event);
     }
     timeSelectOnChange1(time) {
-        var time = {
+        var obj = {
             name: "therapy-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'therapy-start-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionSevenChange(false, time);
+        this.props.sectionSevenChange(false, obj);
     }
 
     timeSelectOnChange2(time) {
-        var time = {
+        var obj = {
             name: "therapy-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'therapy-end-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionSevenChange(false, time);
+        this.props.sectionSevenChange(false, obj);
     }
     timeSelectOnChange3(time) {
-        var time = {
+        var obj = {
             name: "drug-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'drug-start-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionSevenChange(false, time);
+        this.props.sectionSevenChange(false, obj);
     }
 
     timeSelectOnChange4(time) {
-        var time = {
+        var obj = {
             name: "drug-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'drug-end-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionSevenChange(false, time);
+        this.props.sectionSevenChange(false, obj);
     }
 
     render() {
@@ -829,7 +829,7 @@ class SectionSeven extends Component {
                                                 <span>不知道</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="至进展" className="section-7-1 cycle"s/>
+                                                <input onChange={this.handleInputChange} type="radio" name="cycles-planned" value="至进展" className="section-7-1 cycle" />
                                                 <span>至进展</span>
                                             </label>
                                         </div>
