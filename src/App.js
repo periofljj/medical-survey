@@ -62,7 +62,6 @@ class App extends Component {
                 }
                 else {
                     if (multiplesChoiceName.hasOwnProperty(key)) {
-                        console.log(states[key]);
                         if (states[key].indexOf('None') !== -1) {
                             data = states[key];
                             for (var i = 0; i < elements.length; i++) {
