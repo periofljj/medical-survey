@@ -23,76 +23,76 @@ class SectionFour extends Component {
     }
 
     timeSelectOnChange1(time) {
-        var time = {
+        var obj = {
             name: "first-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'first-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
 
     timeSelectOnChange2(time) {
-        var time = {
+        var obj = {
             name: "second-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'second-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
 
     timeSelectOnChange3(time) {
-        var time = {
+        var obj = {
             name: "third-surgery-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'third-surgery-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
     timeSelectOnChange4(time) {
-        var time = {
+        var obj = {
             name: "first-radical-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'first-radical-start-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
     timeSelectOnChange5(time) {
-        var time = {
+        var obj = {
             name: "first-radical-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'first-radical-end-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
     timeSelectOnChange6(time) {
-        var time = {
+        var obj = {
             name: "second-radical-start-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'second-radical-start-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
     timeSelectOnChange7(time) {
-        var time = {
+        var obj = {
             name: "second-radical-end-date",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'second-radical-end-date': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionFourChange(false, time);
+        this.props.sectionFourChange(false, obj);
     }
 
     render() {

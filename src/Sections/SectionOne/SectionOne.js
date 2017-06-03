@@ -16,14 +16,14 @@ class SectionOne extends Component {
     }
 
     timeSelectOnChange(time) {
-        var time = {
+        var obj = {
             name: "date-of-diagnosis",
             value: moment(Number(time)).format('YYYY-MM-DD')
         };
         this.setState({
             'date-of-diagnosis': moment(Number(time)).format('YYYY-MM-DD')
         });
-        this.props.sectionOneChange(false, time);
+        this.props.sectionOneChange(false, obj);
     }
 
     render() {
