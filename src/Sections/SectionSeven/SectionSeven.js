@@ -921,14 +921,14 @@ class SectionSeven extends Component {
                                         </div>
                                         <div className="box-content">
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-day"/><span>天</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-day" className="section-7-1 continued"/><span>天</span>
                                             </div>
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-week"/><span>周</span>
-                                                <input onChange={this.handleInputChange} className="times" type="number" name="admin-frequency-time"/><span>次数</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-week" className="section-7-1 continued"/><span>周</span>
+                                                <input onChange={this.handleInputChange} className="times" type="number" name="admin-frequency-time" className="section-7-1 continued"/><span>次数</span>
                                             </div>
                                             <div>
-                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-month" /><span>个月</span>
+                                                <span>每几</span><input onChange={this.handleInputChange} type="number" name="admin-frequency-month" className="section-7-1 continued"/><span>个月</span>
                                             </div>
                                         </div>
                                     </div>
@@ -938,21 +938,21 @@ class SectionSeven extends Component {
                                         </div>
                                         <div className="box-content">
                                             <div>
-                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="weeks"/>
+                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="weeks" className="section-7-1 continued"/>
                                                 <span>周</span>
 
                                                 <span>或</span>
 
-                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="years"/>
+                                                <input onChange={this.handleInputChange} type="number" name="duration-planned" value="years" className="section-7-1 continued"/>
                                                 <span>年</span>
                                             </div>
                                             <div>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="doing"/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="doing" className="section-7-1 continued"/>
                                                     <span>直至进展</span>
                                                 </label>
                                                 <label>
-                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="unknown"/>
+                                                    <input onChange={this.handleInputChange} type="radio" name="duration-planned" value="unknown" className="section-7-1 continued"/>
                                                     <span>不知道</span>
                                                 </label>
                                             </div>

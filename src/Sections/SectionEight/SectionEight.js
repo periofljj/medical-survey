@@ -20,8 +20,11 @@ class SectionEight extends Component {
         this.timeSelectOnChange10 = this.timeSelectOnChange10.bind(this);
         this.timeSelectOnChange11 = this.timeSelectOnChange11.bind(this);
         this.timeSelectOnChange12 = this.timeSelectOnChange12.bind(this);
+        this.timeSelectOnChange13 = this.timeSelectOnChange13.bind(this);
+        this.timeSelectOnChange14 = this.timeSelectOnChange14.bind(this);
+        this.timeSelectOnChange15 = this.timeSelectOnChange15.bind(this);
+        this.timeSelectOnChange16 = this.timeSelectOnChange16.bind(this);
     }
-
     handleInputChange(event) {
         this.props.sectionEightChange(event);
     }
@@ -155,6 +158,49 @@ class SectionEight extends Component {
         });
         this.props.sectionEightChange(false, obj);
     }
+    
+    timeSelectOnChange13(time) {
+        var obj = {
+            name: "acute-anti-emetic-drug-2-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.setState({
+            'acute-anti-emetic-drug-start-date-2': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
+    }
+
+    timeSelectOnChange14(time) {
+        var obj = {
+            name: "acute-anti-emetic-drug-2-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.setState({
+            'acute-anti-emetic-drug-end-date-2': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
+    }
+    timeSelectOnChange15(time) {
+        var obj = {
+            name: "delayed-anti-emetic-drug-2-start-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.setState({
+            'delayed-anti-emetic-drug-2-start-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
+    }
+
+    timeSelectOnChange16(time) {
+        var obj = {
+            name: "delayed-anti-emetic-drug-2-end-date",
+            value: moment(Number(time)).format('YYYY-MM-DD')
+        };
+        this.setState({
+            'delayed-anti-emetic-drug-2-end-date': moment(Number(time)).format('YYYY-MM-DD')
+        });
+        this.props.sectionEightChange(false, obj);
+    }
     render() {
 
         var localStorage = window.localStorage;
@@ -178,11 +224,24 @@ class SectionEight extends Component {
         var acuteAntiEmeticDrugEndDateDefault = states.hasOwnProperty('acute-anti-emetic-drug-end-date') ? states['acute-anti-emetic-drug-end-date'] : "";
         var acuteAntiEmeticDrugEndDate = this.states ? this.states['acute-anti-emetic-drug-end-date'] : "";
 
+        var acuteAntiEmeticDrugStartDateDefault2 = states.hasOwnProperty('acute-anti-emetic-drug-2-start-date') ? states['acute-anti-emetic-drug-2-start-date'] : "";
+        var acuteAntiEmeticDrugStartDate2 = this.states ? this.states['acute-anti-emetic-drug-2-start-date'] : "";
+
+        var acuteAntiEmeticDrugEndDateDefault2 = states.hasOwnProperty('acute-anti-emetic-drug-2-end-date') ? states['acute-anti-emetic-drug-2-end-date'] : "";
+        var acuteAntiEmeticDrugEndDate2 = this.states ? this.states['acute-anti-emetic-drug-2-end-date'] : "";
+
+
         var delayedAntiEmeticDrugStartDateDefault = states.hasOwnProperty('delayed-anti-emetic-drug-start-date') ? states['delayed-anti-emetic-drug-start-date'] : "";
         var delayedAntiEmeticDrugStartDate = this.states ? this.states['delayed-anti-emetic-drug-start-date'] : "";
 
         var delayedAntiEmeticDrugEndDateDefault = states.hasOwnProperty('delayed-anti-emetic-drug-end-date') ? states['delayed-anti-emetic-drug-end-date'] : "";
         var delayedAntiEmeticDrugEndDate = this.states ? this.states['delayed-anti-emetic-drug-end-date'] : "";
+
+        var delayedAntiEmeticDrugStartDateDefault2 = states.hasOwnProperty('delayed-anti-emetic-drug-2-start-date') ? states['delayed-anti-emetic-drug-2-start-date'] : "";
+        var delayedAntiEmeticDrugStartDate2 = this.states ? this.states['delayed-anti-emetic-drug-2-start-date'] : "";
+
+        var delayedAntiEmeticDrugEndDateDefault2 = states.hasOwnProperty('delayed-anti-emetic-drug-2-end-date') ? states['delayed-anti-emetic-drug-2-end-date'] : "";
+        var delayedAntiEmeticDrugEndDate2 = this.states ? this.states['delayed-anti-emetic-drug-2-end-date'] : "";
 
         var boneMetastasesDrugStartDateDefault = states.hasOwnProperty('bone-metastases-drug-start-date') ? states['bone-metastases-drug-start-date'] : "";
         var boneMetastasesDrugStartDate = this.states ? this.states['bone-metastases-drug-start-date'] : "";
@@ -278,18 +337,18 @@ class SectionEight extends Component {
                                     </div>
                                     <div className="box box-3-1-4">
                                         <div className="box-content">
-                                           <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="持续给药"/> 持续给药</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-给药周期" value="周期给药"/> 周期给药</div>
+                                           <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-dosing-type" value="Continued" className="EPO drug-way"/> 持续给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-dosing-type" value="Cycles" className="EPO drug-way"/> 周期给药</div>
                                         </div>
 
                                     </div>
                                     <div className="box box-3-1-5">
                                         <div className="box-title">如果持续给药</div>
                                         <div className="box-content-1">
-                                            <div>每周 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周给药次数" /> 次</div>
-                                            <div>计划多少周 <input onChange={this.handleInputChange} type="text" name="-drug-EPO计划给药周数" /> 周</div>
-                                            <div>每几 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每几周给药一次" /> 周1次</div>
-                                            <div>不知道 <input onChange={this.handleInputChange} type="radio" name="EPO-drug-持续给药" value="unknown"/></div>
+                                            <div>每周 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周给药次数"  className="EPO continued"/> 次</div>
+                                            <div>计划多少周 <input onChange={this.handleInputChange} type="text" name="EPO-drug-计划给药周数"  className="EPO continued"/> 周</div>
+                                            <div>每几 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每几周给药一次"  className="EPO continued"/> 周1次</div>
+                                            <div>不知道 <input onChange={this.handleInputChange} type="radio" name="EPO-drug-持续给药" value="unknown" className="EPO continued"/></div>
                                         </div>
                                     </div>
                                 </div>
@@ -301,11 +360,11 @@ class SectionEight extends Component {
                                     </div>
                                     <div className="box box-3-1-7">
                                         <div>周期性给药: </div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周期给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="EPO-drug-周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-周期给药" value="unknown" />不知道</div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-每周期给药天数" className="EPO cycle"/></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="EPO-drug-周期总天数" className="EPO cycle"/></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-当前周期数" className="EPO cycle"/></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="EPO-drug-计划周期数" className="EPO cycle"/></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="EPO-drug-周期给药" value="unknown" className="EPO cycle"/>不知道</div>
                                     </div>
                                 </div>
                             </div>
@@ -381,6 +440,72 @@ class SectionEight extends Component {
                             <div className="box box-1">
                                 <div className="box box-1-1">
                                     <div className="box box-1-1-1">
+                                        <div className="box-title">急性止吐药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
+                                        <div className="box-content">
+                                            <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-name" placeholder="XXXXX"/>
+                                        </div>
+                                    </div>
+                                    <div className="box box-1-1-2">
+                                        <div className="box-title">开始日期</div>
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange13} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={acuteAntiEmeticDrugStartDateDefault2} value={acuteAntiEmeticDrugStartDate2} />
+                                        </div>
+                                    </div>
+                                    <div className="box box-1-1-3">
+                                        <div className="box-title">结束日期</div>
+                                       <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange14} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={acuteAntiEmeticDrugEndDateDefault2} value={acuteAntiEmeticDrugEndDate2} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="box box-1-2">
+                                    <div className="box box-1-2-1">
+                                        <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-doses-quantity" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="mcg"/> mcg微克</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="mg"/> mg</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="MU"/> MU</div>
+                                    </div>
+                                    <div className="box box-1-2-2">
+                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-周期给药" value="不知道"/>不知道</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="box box-2">
+                                <div className="box-title">给药途径</div>
+                                <div className="box-content">
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Oral"/>口服</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Topical"/>局部用药</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Intratumoural"/>瘤内注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="other"/>其他请指明</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="IV Bolus"/>静脉推注</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="IV  Infusion"/>静脉输液</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Intravesical"/>膀胱灌注</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Intramuscular"/>IM(肌肉注射)</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Cont Infusion"/>持续输液</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Intraperitoneal"/>腹膜/腹腔内注射</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Subcutaneous"/>皮下注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="Intrathecal"/>鞘内注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-route-of-administration" value="TACE"/>TACE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="section-row">
+                            <div className="box box-1">
+                                <div className="box box-1-1">
+                                    <div className="box box-1-1-1">
                                         <div className="box-title">迟发性止吐药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-name" placeholder="XXXXX"/>
@@ -438,6 +563,72 @@ class SectionEight extends Component {
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-route-of-administration" value="Subcutaneous"/>皮下注射</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-route-of-administration" value="Intrathecal"/>鞘内注射</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-route-of-administration" value="TACE"/>TACE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="section-row">
+                            <div className="box box-1">
+                                <div className="box box-1-1">
+                                    <div className="box box-1-1-1">
+                                        <div className="box-title">迟发性止吐药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
+                                        <div className="box-content">
+                                            <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-name" placeholder="XXXXX"/>
+                                        </div>
+                                    </div>
+                                    <div className="box box-1-1-2">
+                                        <div className="box-title">开始日期</div>
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange15} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={delayedAntiEmeticDrugStartDateDefault} value={delayedAntiEmeticDrugStartDate} />
+                                        </div>
+                                    </div>
+                                    <div className="box box-1-1-3">
+                                        <div className="box-title">结束日期</div>
+                                        <div className="sm-date-field"style={{position: 'relative'}}>
+                                            <DateTimeField onChange={this.timeSelectOnChange16} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={delayedAntiEmeticDrugEndDateDefault} value={delayedAntiEmeticDrugEndDate} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="box box-1-2">
+                                    <div className="box box-1-2-1">
+                                        <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-doses-quantity" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="mcg"/> mcg微克</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="mg"/> mg</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="MU"/> MU</div>
+                                    </div>
+                                    <div className="box box-1-2-2">
+                                        <div>给药天数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-给药天数" /></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-周期总天数" /></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-当前周期数" /></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-计划周期数" /></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-周期给药" value="unknown"/>不知道</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="box box-2">
+                                <div className="box-title">给药途径</div>
+                                <div className="box-content">
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Oral"/>口服</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Topical"/>局部用药</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Intratumoural"/>瘤内注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="other"/>其他请指明</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="IV Bolus"/>静脉推注</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="V  Infusion"/>静脉输液</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Intravesical"/>膀胱灌注</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Intramuscular"/>IM(肌肉注射)</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Cont IV Infusion"/>持续输液</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Intraperitoneal"/>腹膜/腹腔内注射</div>
+                                    </div>
+                                    <div className="box-col">
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Subcutaneous"/>皮下注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="Intrathecal"/>鞘内注射</div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-route-of-administration" value="TACE"/>TACE</div>
                                     </div>
                                 </div>
                             </div>
