@@ -1684,25 +1684,25 @@ class SectionThree extends Component {
                                         <td>
                                             <input onChange={this.handleInputChange} type="test" name="psa-level" />
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" className="section-3-not-inspected" name="psa-level" />
+                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="psa-level" />
                                                 <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" value="确诊时"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="psa-recent-inspection" value="确诊时"/>
                                                 <span> 确诊时</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" value="当前治疗期间"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="psa-recent-inspection" value="当前治疗期间"/>
                                                 <span> 当前治疗期间</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" value="当前治疗之前"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="psa-recent-inspection" value="当前治疗之前"/>
                                                 <span> 当前治疗之前</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="checkbox" name="psa-recent-inspection" value="前一次治疗之前"/>
+                                                <input onChange={this.handleInputChange} type="radio" name="psa-recent-inspection" value="前一次治疗之前"/>
                                                 <span> 前一次治疗之前</span>
                                             </label>
                                         </td>
