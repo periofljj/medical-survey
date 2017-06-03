@@ -81,7 +81,7 @@ class App extends Component {
                     [name]: value
                 });
 
-                if(target.className&&target.className.indexOf("drug-way")){
+                if(target.className && (target.className.indexOf("drug-way")!== -1)){
                     if(target.value === "Cycles"){
                         var arr = target.className.split(' ');
                         var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
@@ -163,7 +163,7 @@ class App extends Component {
                     });
                     hasSetState = true;
                 }
-                else if(target.className.indexOf("continued")){
+                else if(target.className.indexOf("continued")!== -1){
                     if(value === true){
                         var continued = target.className.split(' ');
                         var getCycle = document.getElementsByClassName(continued[0]+" cycle");
@@ -237,7 +237,7 @@ class App extends Component {
         if (!states) {
             states = {};
         }
-        states[name] = value;
+        //states[name] = value;
         console.log("save");
         if(!window.localStorage){
             alert("浏览器不支持localstorage");

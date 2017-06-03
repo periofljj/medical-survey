@@ -638,7 +638,7 @@ class SectionEight extends Component {
                             <div className="box box-3">
                                 <div>
                                     <div className="box box-3-1-1">
-                                        <div className="box-title">二磷酸盐类及其他治疗骨转移有关的药物 (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
+                                        <div className="box-title">二磷酸盐类及其他治疗骨转移有关的药物(如果知道请提供商品名否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-name" placeholder="XXXXX"/>
                                         </div>
@@ -684,28 +684,28 @@ class SectionEight extends Component {
                                     </div>
                                     <div className="box box-3-1-9">
                                         <div className="box-content">
-                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药方式" /> 持续给药</div>
-                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药方式" /> 周期给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-dosing-type" value="Continued" className="bone-metastases-drug drug-way"/> 持续给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-dosing-type" value="Cycles" className="bone-metastases-drug drug-way"/> 周期给药</div>
                                         </div>
                                     </div>
                                     <div className="box box-3-1-10">
                                         <div>如果周期性给药</div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-每周期给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药周期" value="unknown"/>不知道</div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-每周期给药天数"  className="bone-metastases-drug cycle"/></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-周期总天数"  className="bone-metastases-drug cycle"/></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-当前周期数"  className="bone-metastases-drug cycle"/></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划周期数"  className="bone-metastases-drug cycle"/></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-给药周期" value="unknown" className="bone-metastases-drug cycle"/>不知道</div>
                                     </div>
                                     <div className="box box-3-1-11">
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-每天给药次数" /> 每天给药</div>
-                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划给药月数" /> 月</div>
+                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-每天给药次数" className="bone-metastases-drug continued"/> 每天给药</div>
+                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划给药月数" className="bone-metastases-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-几周给药一次" /> 周1次</div>
-                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-持续给药" /></div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-几周给药一次" className="bone-metastases-drug continued"/> 周1次</div>
+                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-持续给药" className="bone-metastases-drug continued"/></div>
                                             </div>
                                         </div>
                                     </div>
@@ -734,6 +734,12 @@ class SectionEight extends Component {
                                             <DateTimeField onChange={this.timeSelectOnChange12} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={otherDrugEndDateDefault} value={otherDrugEndDate} />
                                         </div>
                                     </div>
+                                     <div className="box box-3-1-9 .box-4-3">
+                                        <div className="box-content">
+                                            <div><input onChange={this.handleInputChange} type="radio" name="other-drug-drug-dosing-type" value="Continued" className="other-drug drug-way"/> 持续给药</div>
+                                            <div><input onChange={this.handleInputChange} type="radio" name="other-drug-drug-dosing-type" value="Cycles" className="other-drug drug-way"/> 周期给药</div>
+                                        </div>
+                                    </div>
                                     <div className="box box-3-1-5 box-4-4">
                                         <div className="box-title">治疗原因</div>
                                         <div className="box-content">
@@ -748,18 +754,17 @@ class SectionEight extends Component {
                                                 <div><input onChange={this.handleInputChange} type="radio" name="other-drug-treatment-caus" value="other"/> 其他</div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div className="box box-3-1-11  box-4-5">
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="other-drug-" /> 每天给药</div>
-                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="other-drug-计划给药月数" /> 月</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="other-drug-每天给药"  className="other-drug continued"/> 每天给药</div>
+                                                <div>计划多少月<input onChange={this.handleInputChange} type="text" name="other-drug-计划给药月数"  className="other-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="other-drug-几周给药一次" /> 周1次</div>
-                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="other-drug-持续给药" value="unknown"/></div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="other-drug-几周给药一次"  className="other-drug continued"/> 周1次</div>
+                                                <div>不知道 <input onChange={this.handleInputChange} type="radio" name="other-drug-持续给药" value="unknown" className="other-drug continued"/></div>
                                             </div>
                                         </div>
                                     </div>
@@ -786,11 +791,11 @@ class SectionEight extends Component {
                                     </div>
                                     <div className="box box-3-1-10 box-4-7">
                                         <div>周期性给药: </div>
-                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="other-drug-每周期给药天数" /></div>
-                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="other-drug-周期总天数" /></div>
-                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-当前周期数" /></div>
-                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-计划周期数" /></div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="other-drug-周期给药" value="unknown"/>不知道</div>
+                                        <div>每周期给药天数 <input onChange={this.handleInputChange} type="text" name="other-drug-每周期给药天数"  className="other-drug cycle"/></div>
+                                        <div>周期总天数(含间歇期) <input onChange={this.handleInputChange} type="text" name="other-drug-周期总天数"  className="other-drug cycle"/></div>
+                                        <div>当前周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-当前周期数"  className="other-drug cycle"/></div>
+                                        <div>计划周期数 <input onChange={this.handleInputChange} type="text" name="other-drug-计划周期数"  className="other-drug cycle"/></div>
+                                        <div><input onChange={this.handleInputChange} type="radio" name="other-drug-周期给药" value="unknown" className="other-drug cycle"/>不知道</div>
                                     </div>
                                     <div className="box box-3-1-11 box-4-8">
                                         <div className="box-title">治疗途径</div>
