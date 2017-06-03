@@ -238,7 +238,7 @@ class SectionOne extends Component {
                                         </div>
                                         <div className="box-col">
                                             <div><input type="checkbox" name="site-of-mets" value="None" className="none" onChange={this.handleInputChange}/>无</div>
-                                            <div><input type="checkbox" name="site-of-mets" value="other" className="other"onChange={this.handleInputChange}/><span className="site-of-mets-text">其它</span></div>
+                                            <div><input type="checkbox" name="site-of-mets" value="Other" className="other"onChange={this.handleInputChange}/><span className="site-of-mets-text">其它</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -277,11 +277,11 @@ class SectionOne extends Component {
                                  <div className="box-col">
                                     <div><input type="checkbox" name="co-morbidities" value="Thrombocytopenia" onChange={this.handleInputChange}/>血小板减少症</div>
                                     <div><input type="checkbox" name="co-morbidities" value="Renal Insufficiency" onChange={this.handleInputChange}/>肾功不全</div>
-                                    <div><input type="checkbox" name="co-morbidities" className="other"onChange={this.handleInputChange} placeholder="其它请填写"/><span className="co-morbidities-text">其它</span></div>
+                                    <div><input type="checkbox" name="co-morbidities" value="Other" className="other" onChange={this.handleInputChange} placeholder="其它请填写"/><span className="co-morbidities-text">其它</span></div>
                                 </div>
                                  <div className="box-col">
                                     <div><input type="checkbox" name="co-morbidities" value="None" className="none" onChange={this.handleInputChange}/>无</div>
-                                    <div id="long"><input type="radio" name="co-morbidities" value="Gastrointestinal Dysfunction" onChange={this.handleInputChange} />肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)</div>
+                                    <div id="long"><input type="checkbox" name="co-morbidities" value="Gastrointestinal Dysfunction" onChange={this.handleInputChange} />肠胃功能紊乱(例如，结肠炎，既往腹泻史，肠穿孔)</div>
                                 </div>
                             </div>
                         </div>

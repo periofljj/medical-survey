@@ -12,7 +12,6 @@ import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
 
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -36,12 +35,23 @@ class App extends Component {
         if (!localStorage['sectionFiveNum']) {
             localStorage.setItem('sectionFiveNum', 1);
         }
+        var multiplesChoiceName = {
+            "site-of-mets": "",
+            "therapy-side-effects": "",
+            "co-morbidities": ""
+        };
+
+        for (var i = 1; i < localStorage['sectionFiveNum'] + 1; i++) {
+            multiplesChoiceName["5-" + i + "-side-effect"] = "";
+            multiplesChoiceName['5-' + i + '-reason-for-ending'] = '';
+        }
+
         var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
         this.state = states;
         this.setState({
             sectionFiveNum: localStorage['sectionFiveNum']
         });
-        var elements, target;
+        var elements, target, data;
         for (var key in states) {
             if (states[key]) {
                 elements = document.getElementsByName(key);
@@ -51,11 +61,40 @@ class App extends Component {
                     }
                 }
                 else {
-                    for (var i = 0; i < elements.length; i++) {
-                        if (elements[i].value === states[key]) {
-                            target = elements[i];
-                            if (target.type === 'radio' || target.type === 'checkbox') {
-                                target.checked = true;
+                    if (multiplesChoiceName.hasOwnProperty(key)) {
+                        console.log(states[key]);
+                        if (states[key].indexOf('None') !== -1) {
+                            data = states[key];
+                            for (var i = 0; i < elements.length; i++) {
+                                if (elements[i].value === data[0]) {
+                                    target = elements[i];
+                                    target.checked = true;
+                                }
+                                else {
+                                    target = elements[i];
+                                    target.disabled = true;
+                                }
+                            }
+                        }
+                        else {
+                            data = states[key];
+                            for (var j = 0; j < data.length; j++) {
+                                for (var k = 0; k < elements.length; k++) {
+                                    if (elements[k].value === data[j]) {
+                                        target = elements[k];
+                                        target.checked = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        for (var m = 0; m < elements.length; m++) {
+                            if (elements[m].value === states[key]) {
+                                target = elements[m];
+                                if (target.type === 'radio' || target.type === 'checkbox') {
+                                    target.checked = true;
+                                }
                             }
                         }
                     }
@@ -68,18 +107,19 @@ class App extends Component {
 
     handleInputChange(event, time) {
         var name, value, target, data, hasSetState = false;
+        var tempStates = this.state;
         if(!event) {
+            // 时间选择器
             name = time.name;
             value = time.value;
+            this.state[name] = value;
         }
         else {
             target = event.target;
             name = target.name;
             if (target.type === 'radio' || target.type === 'text' || target.type === 'number') {
                 value = target.value;
-                this.setState({
-                    [name]: value
-                });
+                this.state[name] = value;
 
                 if(target.className&&target.className.indexOf("drug-way")){
                     if(target.value === "Cycles"){
@@ -121,9 +161,7 @@ class App extends Component {
                         }
                     }
                     
-                    this.setState({
-                        [name]: value
-                    });
+                    this.state[name] = value;
                     return;
                 }
                 
@@ -131,7 +169,7 @@ class App extends Component {
             else if (target.type === 'checkbox') {
                 value = target.checked;
                 data = target.value;
-                if(target.className==="other"){
+                if(target.className === "other"){
                     if(value === true){
                         var obj_other = document.getElementsByClassName(target.name+"-text");
                         obj_other[0].innerHTML="<input type='text' placeholder='请填写' style='width:50px'>";
@@ -149,6 +187,7 @@ class App extends Component {
                                 obj[j].disabled = true;
                             } 
                         }
+                        this.state[name] = [data];
                     }
                     else {
                         for(var k=0; k<obj.length; k++){
@@ -156,14 +195,12 @@ class App extends Component {
                                 obj[k].disabled = false;
                             } 
                         }
+                        delete this.state[name];
                     }
 
-                    this.setState({
-                        [name]: [data]
-                    });
                     hasSetState = true;
                 }
-                else if(target.className.indexOf("continued")){
+                else if(target.className.indexOf("continued") !== -1){
                     if(value === true){
                         var continued = target.className.split(' ');
                         var getCycle = document.getElementsByClassName(continued[0]+" cycle");
@@ -183,9 +220,7 @@ class App extends Component {
                         }
                     }
                      
-                    this.setState({
-                        [name]: value
-                    });
+                    this.state[name] = value;
                     return;
                 }
                 else if(target.className==="cycle"){
@@ -214,9 +249,8 @@ class App extends Component {
                         var index = stateArr.indexOf(data);
                         stateArr.splice(index, 1);
                     }
-                    this.setState({
-                        [name]: stateArr
-                    });
+
+                    this.state[name] = stateArr;
                 }
             }
         }
@@ -237,13 +271,13 @@ class App extends Component {
         if (!states) {
             states = {};
         }
-        states[name] = value;
+        // states[name] = value;
         console.log("save");
         if(!window.localStorage){
             alert("浏览器不支持localstorage");
             return false;
         }else{
-            console.log(this.state);
+            console.log(states);
             var storage = window.localStorage;
             var result = JSON.stringify(states);
             storage.setItem('medical-survey', result);
