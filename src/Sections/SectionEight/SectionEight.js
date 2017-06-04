@@ -700,11 +700,11 @@ class SectionEight extends Component {
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-每天给药次数" className="bone-metastases-drug continued"/> 每天给药</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-每天给药次数" className="bone-metastases-drug continued byDay"/> 每天给药</div>
                                                 <div>计划多少月<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划给药月数" className="bone-metastases-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-几周给药一次" className="bone-metastases-drug continued"/> 周1次</div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-几周给药一次" className="bone-metastases-drug continued byWeek"/> 周1次</div>
                                                 <div>不知道 <input onChange={this.handleInputChange} type="radio" name="bone-metastases-drug-持续给药" className="bone-metastases-drug continued"/></div>
                                             </div>
                                         </div>
@@ -759,11 +759,11 @@ class SectionEight extends Component {
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="checkbox" name="other-drug-每天给药"  className="other-drug continued"/> 每天给药</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="other-drug-每天给药"  className="other-drug continued byDay"/> 每天给药</div>
                                                 <div>计划多少月<input onChange={this.handleInputChange} type="text" name="other-drug-计划给药月数"  className="other-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
-                                                <div>每<input onChange={this.handleInputChange} type="text" name="other-drug-几周给药一次"  className="other-drug continued"/> 周1次</div>
+                                                <div>每<input onChange={this.handleInputChange} type="text" name="other-drug-几周给药一次"  className="other-drug continued byWeek"/> 周1次</div>
                                                 <div>不知道 <input onChange={this.handleInputChange} type="radio" name="other-drug-持续给药" value="unknown" className="other-drug continued"/></div>
                                             </div>
                                         </div>

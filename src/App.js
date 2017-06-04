@@ -64,13 +64,13 @@ class App extends Component {
                     if (multiplesChoiceName.hasOwnProperty(key)) {
                         if (states[key].indexOf('None') !== -1) {
                             data = states[key];
-                            for (var i = 0; i < elements.length; i++) {
-                                if (elements[i].value === data[0]) {
-                                    target = elements[i];
+                            for (var s = 0; s < elements.length; s++) {
+                                if (elements[s].value === data[0]) {
+                                    target = elements[s];
                                     target.checked = true;
                                 }
                                 else {
-                                    target = elements[i];
+                                    target = elements[s];
                                     target.disabled = true;
                                 }
                             }
@@ -106,7 +106,6 @@ class App extends Component {
 
     handleInputChange(event, time) {
         var name, value, target, data, hasSetState = false;
-        var tempStates = this.state;
         if(!event) {
             // 时间选择器
             name = time.name;
@@ -121,8 +120,8 @@ class App extends Component {
                 this.state[name] = value;
 
                 if(target.className && (target.className.indexOf("drug-way")!== -1)){
+                    var arr = target.className.split(' ');
                     if(target.value === "Cycles"){
-                        var arr = target.className.split(' ');
                         var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
                         for(var i=0; i<obj_cycle.length; i++){
                             obj_cycle[i].value="";
@@ -133,15 +132,14 @@ class App extends Component {
                             obj_cycle[i].disabled = true;
                         }
                         var obj_continued = document.getElementsByClassName(arr[0]+" cycle");
-                        for(var i=0; i<obj_continued.length; i++){
+                        for(var b=0; b<obj_continued.length; b++){
                             this.setState({
-                                [obj_continued[i].name]:''
+                                [obj_continued[b].name]:''
                             });
-                            obj_continued[i].disabled = false;
+                            obj_continued[b].disabled = false;
                         }
                     }
                     if(target.value === "Continued"){
-                        var arr = target.className.split(' ');
                         var obj_cycle = document.getElementsByClassName(arr[0]+" cycle");
                         for(var i=0; i<obj_cycle.length; i++){
                             obj_cycle[i].value="";
@@ -151,15 +149,15 @@ class App extends Component {
                             });
                             obj_cycle[i].disabled = true;
                         }
-                        var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
-                        for(var i=0; i<obj_cycle.length; i++){
+                        var obj_continued = document.getElementsByClassName(arr[0]+" continued");
+                        for(var i=0; i<obj_continued.length; i++){
                             this.setState({
-                                [obj_cycle[i].name]:''
+                                [obj_continued[i].name]:''
                             });
-                            obj_cycle[i].disabled = false;
+                            obj_continued[i].disabled = false;
                         }
                     }
-                    
+
                     this.state[name] = value;
                     return;
                 }
@@ -168,6 +166,7 @@ class App extends Component {
             else if (target.type === 'checkbox') {
                 value = target.checked;
                 data = target.value;
+                console.log(target.className);
                 if(target.className === "other"){
                     if(value === true){
                         var obj_other = document.getElementsByClassName(target.name+"-text");
@@ -210,12 +209,24 @@ class App extends Component {
                             });
                             getCycle[m].disabled = true;
                         }
+                        if(continued[2]){
+                            var getByWeek = document.getElementsByClassName(continued[0]+" continued byWeek");
+                            for(var q=0; q<getByWeek.length; q++){
+                                getByWeek[q].disabled = true;
+                            }
+                        }
 
                     }else{
                         var continued2 = target.className.split(' ');
                         var getCycle2 = document.getElementsByClassName(continued2[0]+" cycle");
                         for(var n=0; n<getCycle2.length; n++){
                             getCycle2[n].disabled = false;
+                        }
+                        if(continued2[2]){
+                            var getByWeek = document.getElementsByClassName(continued2[0]+" continued byWeek");
+                            for(var q=0; q<getByWeek.length; q++){
+                                getByWeek[q].disabled = false;
+                            }
                         }
                     }
                      
@@ -229,6 +240,21 @@ class App extends Component {
                         getContinued[p].disabled = true;
                     }
                     return;
+                }
+
+                
+                if(arr[2] && arr[2]=="byDay"){
+                    
+                    if(value === true){
+                        console.log("222");
+                        for(var q=0; q<getByWeek.length; q++){
+                            getByWeek[q].disabled = true;
+                        }
+                    }else{
+                        for(var q=0; q<getByWeek.length; q++){
+                            getByWeek[q].disabled = false;
+                        }
+                    }
                 }
 
                 if (!hasSetState) {
