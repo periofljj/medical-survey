@@ -8,6 +8,7 @@ import SectionThree from './Sections/SectionThree/SectionThree';
 import SectionFour from './Sections/SectionFour/SectionFour';
 import SectionFive from './Sections/SectionFive/SectionFive';
 import SectionSix from './Sections/SectionSix/SectionSix';
+import SectionSevenDrug from './Sections/SectionSeven/SectionSevenDrug';
 import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
@@ -20,6 +21,7 @@ class App extends Component {
         this.load = this.load.bind(this);
         this.clearLocalStorage = this.clearLocalStorage.bind(this);
         this.addSectionFive = this.addSectionFive.bind(this);
+        this.addSectionSeven = this.addSectionSeven.bind(this);
         // this.setValue = this.setValue(this);
 
         // this.state = {
@@ -35,6 +37,11 @@ class App extends Component {
         if (!localStorage['sectionFiveNum']) {
             localStorage.setItem('sectionFiveNum', 1);
         }
+
+        if (!localStorage['sectionSevenNum']) {
+            localStorage.setItem('sectionSevenNum', 1);
+        }
+
         var multiplesChoiceName = {
             "site-of-mets": "",
             "therapy-side-effects": "",
@@ -49,7 +56,8 @@ class App extends Component {
         var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
         this.state = states;
         this.setState({
-            sectionFiveNum: localStorage['sectionFiveNum']
+            sectionFiveNum: localStorage['sectionFiveNum'],
+            sectionSevenNum: localStorage['sectionSevenNum']
         });
         var elements, target, data;
         for (var key in states) {
@@ -407,6 +415,7 @@ class App extends Component {
 
         localStorage.removeItem("medical-survey");
         localStorage.removeItem("sectionFiveNum");
+        localStorage.removeItem("sectionSevenNum");
     }
 
     setValue() {
@@ -438,6 +447,7 @@ class App extends Component {
         var localStorage = window.localStorage;
         localStorage.removeItem("medical-survey");
         localStorage.removeItem("sectionFiveNum");
+        localStorage.removeItem("sectionSevenNum");
         location.reload();
     }
 
@@ -482,7 +492,6 @@ class App extends Component {
 
     addSectionFive () {
         var storage = window.localStorage;
-        // var states = JSON.parse(localStorage['medical-survey']);
         var sectionFiveNum = Number(storage['sectionFiveNum']);
         storage.setItem('sectionFiveNum', sectionFiveNum + 1);
         this.setState({
@@ -491,17 +500,41 @@ class App extends Component {
 
     }
 
+    addSectionSeven () {
+        var storage = window.localStorage;
+        var sectionSevenNum = Number(storage['sectionSevenNum']);
+        storage.setItem('sectionSevenNum', sectionSevenNum + 1);
+        this.setState({
+            sectionSevenNum: sectionSevenNum
+        });
+    }
+
 	render() {
         var storage = window.localStorage;
         var sectionFiveNum = Number(storage['sectionFiveNum']) || 1;
+        var sectionSevenNum = Number(storage['sectionSevenNum']) || 1;
+
         var numbers = [];
+        var sectionId;
         for (var i = 1; i <= sectionFiveNum; i++) {
             numbers.push(i);
         }
         var sectionFiveItems = numbers.map((number) => {
-            var sectionId = "5-" + number;
+            sectionId = "5-" + number;
             return <SectionFive key={number} sectionId={sectionId} sectionFiveChange={this.handleInputChange}></SectionFive>
         });
+
+        numbers = [];
+        for (var i = 1; i <= sectionSevenNum; i++) {
+            numbers.push(i);
+        }
+        var SectionSevenDrugItems = numbers.map((number) => {
+            sectionId = "7-" + number;
+            return <SectionSevenDrug key={number} sectionId={sectionId} sectionSevenChange={this.handleInputChange}></SectionSevenDrug>
+        });
+
+
+        var sectionSevenNum = Number(storage['sectionSevenNum']);
 		return (
 			<div className="medical-survey">
                 <PageTitle pageTitleChange={this.handleInputChange}></PageTitle>
@@ -513,7 +546,9 @@ class App extends Component {
                 {sectionFiveItems}
                 <button className="continue" onClick={this.addSectionFive}>继续填写第五部分</button>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
-                <SectionSeven sectionSevenChange={this.handleInputChange}></SectionSeven>
+                <SectionSeven sectionSevenNum={sectionSevenNum} sectionSevenChange={this.handleInputChange}></SectionSeven>
+                {SectionSevenDrugItems}
+                <button className="continue" onClick={this.addSectionSeven}>继续填写第七部分</button>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
                 <SaveArea class="clear-button" saveSubmit={this.clearLocalStorage} buttonName='清空问卷'></SaveArea>
                 <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>
