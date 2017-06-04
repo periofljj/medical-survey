@@ -59,8 +59,48 @@ class App extends Component {
                     if (elements[0].type === 'text' || elements[0].type === 'number') {
                         elements[0].value = states[key];
                     }
+                    else if (elements[0].type === 'checkbox') {
+                        elements[0].checked = states[key];
+                        
+                        //恢复disabled的情况
+                        if(elements[0].className.indexOf("continued") !== -1){
+                            if(elements[0].value === "yes"){
+                                var continued = elements[0].className.split(' ');
+                                var getCycle = document.getElementsByClassName(continued[0]+" cycle");
+                                for(var m=0; m<getCycle.length; m++){
+                                    getCycle[m].value="";
+                                    // this.setState({
+                                    //     [getCycle[m].name]:''
+                                    // });
+
+                                    this.state[getCycle[m].name] = '';
+                                    getCycle[m].disabled = true;
+                                }
+                                if(continued[2]){
+                                    var getByWeek = document.getElementsByClassName(continued[0]+" continued byWeek");
+                                    for(var q=0; q<getByWeek.length; q++){
+                                        getByWeek[q].disabled = true;
+                                    }
+                                }
+
+                            }else{
+                                var continued2 = elements[0].className.split(' ');
+                                var getCycle2 = document.getElementsByClassName(continued2[0]+" cycle");
+                                for(var n=0; n<getCycle2.length; n++){
+                                    getCycle2[n].disabled = false;
+                                }
+                                if(continued2[2]){
+                                    var getByWeek = document.getElementsByClassName(continued2[0]+" continued byWeek");
+                                    for(var q=0; q<getByWeek.length; q++){
+                                        getByWeek[q].disabled = false;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 else {
+                    console.log(elements);
                     if (multiplesChoiceName.hasOwnProperty(key)) {
                         if (states[key].indexOf('None') !== -1) {
                             data = states[key];
@@ -88,11 +128,54 @@ class App extends Component {
                         }
                     }
                     else {
+                        //console.log();
                         for (var m = 0; m < elements.length; m++) {
                             if (elements[m].value === states[key]) {
                                 target = elements[m];
                                 if (target.type === 'radio' || target.type === 'checkbox') {
                                     target.checked = true;
+                                    if(elements[m].className && (elements[m].className.indexOf("drug-way")!== -1)){
+                                        var arr = elements[m].className.split(' ');
+                                        if(elements[m].value === "Cycles"){
+                                            var obj_cycle = document.getElementsByClassName(arr[0]+" continued");
+                                            for(var i=0; i<obj_cycle.length; i++){
+                                                obj_cycle[i].value="";
+                                                obj_cycle[i].checked=false;
+                                                this.setState({
+                                                    [obj_cycle[i].name]:''
+                                                });
+                                                obj_cycle[i].disabled = true;
+                                            }
+                                            var obj_continued = document.getElementsByClassName(arr[0]+" cycle");
+                                            for(var b=0; b<obj_continued.length; b++){
+                                                this.setState({
+                                                    [obj_continued[b].name]:''
+                                                });
+                                                obj_continued[b].disabled = false;
+                                            }
+                                        }
+                                        if(elements[m].value === "Continued"){
+                                            var obj_cycle = document.getElementsByClassName(arr[0]+" cycle");
+                                            for(var i=0; i<obj_cycle.length; i++){
+                                                obj_cycle[i].value="";
+                                                obj_cycle[i].checked=false;
+                                                this.setState({
+                                                    [obj_cycle[i].name]:''
+                                                });
+                                                obj_cycle[i].disabled = true;
+                                            }
+                                            var obj_continued = document.getElementsByClassName(arr[0]+" continued");
+                                            for(var i=0; i<obj_continued.length; i++){
+                                                this.setState({
+                                                    [obj_continued[i].name]:''
+                                                });
+                                                obj_continued[i].disabled = false;
+                                            }
+                                        }
+
+                                        // this.state[name] = value;
+                                        // hasSetState = true;
+                                    }
                                 }
                             }
                         }
@@ -111,6 +194,7 @@ class App extends Component {
             name = time.name;
             value = time.value;
             this.state[name] = value;
+            hasSetState = true;
         }
         else {
             target = event.target;
@@ -159,7 +243,7 @@ class App extends Component {
                     }
 
                     this.state[name] = value;
-                    return;
+                    hasSetState = true;
                 }
                 
             }
@@ -204,9 +288,11 @@ class App extends Component {
                         var getCycle = document.getElementsByClassName(continued[0]+" cycle");
                         for(var m=0; m<getCycle.length; m++){
                             getCycle[m].value="";
-                            this.setState({
-                                [getCycle[m].name]:''
-                            });
+                            // this.setState({
+                            //     [getCycle[m].name]:''
+                            // });
+
+                            this.state[getCycle[m].name] = '';
                             getCycle[m].disabled = true;
                         }
                         if(continued[2]){
@@ -231,31 +317,19 @@ class App extends Component {
                     }
                      
                     this.state[name] = value;
-                    return;
+                    hasSetState = true;
                 }
-                else if(target.className==="cycle"){
-                    var getContinued = document.getElementsByClassName("continued-"+target.name);
-                    for(var p=0; p<getContinued.length; p++){
-                        getContinued[p].checked = false;
-                        getContinued[p].disabled = true;
-                    }
-                    return;
-                }
+                //checkbox里不会出现cycle的情况
+                // else if(target.className==="cycle"){
+                //     var getContinued = document.getElementsByClassName("continued-"+target.name);
+                //     for(var p=0; p<getContinued.length; p++){
+                //         getContinued[p].checked = false;
+                //         getContinued[p].disabled = true;
+                //     }
+                //     return;
+                // }
 
                 
-                if(arr[2] && arr[2]=="byDay"){
-                    
-                    if(value === true){
-                        console.log("222");
-                        for(var q=0; q<getByWeek.length; q++){
-                            getByWeek[q].disabled = true;
-                        }
-                    }else{
-                        for(var q=0; q<getByWeek.length; q++){
-                            getByWeek[q].disabled = false;
-                        }
-                    }
-                }
 
                 if (!hasSetState) {
                     var state;

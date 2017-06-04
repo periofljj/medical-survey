@@ -319,7 +319,7 @@ class SectionSix extends Component {
                             </div>
                         </div>
                         <div className="box box-3">
-                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="bone-metastasis-continuing-drug" className="bone-metastasis-drug continued"/> 如果是持续用药请勾选</div>
+                            <div className="box-3-title"><input onChange={this.handleInputChange} type="checkbox" name="bone-metastasis-continuing-drug" value="yes" className="bone-metastasis-drug continued"/> 如果是持续用药请勾选</div>
                             <div className="space"></div>
                             <div className="box-3-content">
                                 <table>

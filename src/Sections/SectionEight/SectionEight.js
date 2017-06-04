@@ -700,7 +700,7 @@ class SectionEight extends Component {
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-每天给药次数" className="bone-metastases-drug continued byDay"/> 每天给药</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="bone-metastases-drug-eveyday" value="yes" className="bone-metastases-drug continued byDay"/> 每天给药</div>
                                                 <div>计划多少月<input onChange={this.handleInputChange} type="text" name="bone-metastases-drug-计划给药月数" className="bone-metastases-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
@@ -734,7 +734,7 @@ class SectionEight extends Component {
                                             <DateTimeField onChange={this.timeSelectOnChange12} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={otherDrugEndDateDefault} value={otherDrugEndDate} />
                                         </div>
                                     </div>
-                                     <div className="box box-3-1-9 .box-4-3">
+                                     <div className="box box-3-1-9 box-4-3">
                                         <div className="box-content">
                                             <div><input onChange={this.handleInputChange} type="radio" name="other-drug-drug-dosing-type" value="Continued" className="other-drug drug-way"/> 持续给药</div>
                                             <div><input onChange={this.handleInputChange} type="radio" name="other-drug-drug-dosing-type" value="Cycles" className="other-drug drug-way"/> 周期给药</div>
@@ -759,7 +759,7 @@ class SectionEight extends Component {
                                         <div className="box-title">如果持续性给药</div>
                                         <div className="box-content">
                                             <div className="box-col">
-                                                <div><input onChange={this.handleInputChange} type="checkbox" name="other-drug-每天给药"  className="other-drug continued byDay"/> 每天给药</div>
+                                                <div><input onChange={this.handleInputChange} type="checkbox" name="other-drug-everyday"  value="yes" className="other-drug continued byDay"/> 每天给药</div>
                                                 <div>计划多少月<input onChange={this.handleInputChange} type="text" name="other-drug-计划给药月数"  className="other-drug continued"/> 月</div>
                                             </div>
                                             <div className="box-col">
