@@ -548,7 +548,7 @@ class App extends Component {
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
                 <SectionSeven sectionSevenNum={sectionSevenNum} sectionSevenChange={this.handleInputChange}></SectionSeven>
                 {SectionSevenDrugItems}
-                <button className="continue" onClick={this.addSectionSeven}>继续填写第七部分</button>
+                <button className="continue" onClick={this.addSectionSeven}>继续添加药物</button>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
                 <SaveArea class="clear-button" saveSubmit={this.clearLocalStorage} buttonName='清空问卷'></SaveArea>
                 <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>
