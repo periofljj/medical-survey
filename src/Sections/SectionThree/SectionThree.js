@@ -1042,23 +1042,23 @@ class SectionThree extends Component {
                                 </div>
                                 <div className="box">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="L858R"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="EGFR-gene-mutation-locus" value="L858R"/>
                                         <span> L858R</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="T790M"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="EGFR-gene-mutation-locus" value="T790M"/>
                                         <span> T790M</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Lost Exon19"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="EGFR-gene-mutation-locus" value="Lost Exon19"/>
                                         <span> 外显子19缺失</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Other"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="EGFR-gene-mutation-locus" value="Other"/>
                                         <span> 其他</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="EGFR-gene-mutation-locus" value="Unknow"/>
+                                        <input onChange={this.handleInputChange} type="checkbox" name="EGFR-gene-mutation-locus" value="Unknow"/>
                                         <span>不知道</span>
                                     </label>
                                 </div>
@@ -1199,6 +1199,10 @@ class SectionThree extends Component {
                                     <label>
                                         <input onChange={this.handleInputChange} type="radio" name="asct" value="Not suitable"/>
                                         未做, 因为不适合
+                                    </label>
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="asct" value="Not suitable"/>
+                                        实体瘤不适用
                                     </label>
                                 </div>
                             </div>
@@ -1682,7 +1686,7 @@ class SectionThree extends Component {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input onChange={this.handleInputChange} type="test" name="psa-level" />
+                                            <input onChange={this.handleInputChange} type="test" name="psa-level" placeholder="精确到小数点后两位"/>
                                             <label>
                                                 <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="psa-level" />
                                                 <span> 未检测</span>

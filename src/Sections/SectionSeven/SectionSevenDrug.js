@@ -181,7 +181,7 @@ class SectionSevenDrug extends Component {
                                     <span>每次给药次数</span>
                                 </div>
                                 <div className="box-content">
-                                    <input onChange={this.handleInputChange} type="text" name={sectionKey + "-dose-per-day"}/>
+                                    <input onChange={this.handleInputChange} type="number" name={sectionKey + "-dose-per-day"} max="5" />
                                 </div>
                             </div>
                             <div className="sub-box sub-box-4">

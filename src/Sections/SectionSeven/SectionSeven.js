@@ -363,7 +363,7 @@ class SectionSeven extends Component {
                             <span>仅限前列列腺癌填写</span>
                             <span>本次治疗前PSA水平</span>
                             <span>(ng/ml)</span>
-                            <input onChange={this.handleInputChange} className="num-input" type="num" name="PSA-at-diag"/>
+                            <input onChange={this.handleInputChange} className="num-input" type="num" name="PSA-at-diag" placeholder="允许小数"/>
                             <label>
                                 <input onChange={this.handleInputChange} type="radio" name="PSA-at-diag"/>
                                 <span>不知道</span>
@@ -378,6 +378,10 @@ class SectionSeven extends Component {
                             <label>
                                 <input onChange={this.handleInputChange} type="radio" name="treatment-intent" value="姑息"/>
                                 <span>姑息</span>
+                            </label>
+                            <label>
+                                <input onChange={this.handleInputChange} type="radio" name="treatment-intent" value="不适用"/>
+                                <span>不适用</span>
                             </label>
                         </div>
                     </div>

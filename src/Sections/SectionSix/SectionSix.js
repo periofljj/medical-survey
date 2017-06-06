@@ -198,7 +198,7 @@ class SectionSix extends Component {
                     <div className="space"></div>
                     <div className="section-row">
                         <div className="box box-1">
-                            <div className="box-title">请列出生因子类药物(治疗中性粒细胞减少) 如果知道请提供商品名;否则请提供通用名及厂家/或产地</div>
+                            <div className="box-title">请列出生因子类药物2(治疗中性粒细胞减少) 如果知道请提供商品名;否则请提供通用名及厂家/或产地</div>
                             <div className="box-content">
                                 <input onChange={this.handleInputChange} type="text" name="growth-factor-name-2" placeholder="XXXXX"/>
                             </div>

@@ -280,7 +280,7 @@ class SectionFive extends Component {
                                     <div className="box-col bottom">
                                         <div> 仅限前列腺癌填写</div>
                                         <div> 本次治疗前PSA水平(ng/ml)</div>
-                                        <div><input onChange={this.handleInputChange} type="text" name={sectionKey + "-pas-current-state"} /></div>
+                                        <div><input onChange={this.handleInputChange} type="text" name={sectionKey + "-pas-current-state"} placeholder="允许小数"/></div>
                                         <div><input onChange={this.handleInputChange} type="radio" name={sectionKey + "-pas-current-state"} value="unknown"/> 不知道</div>
                                     </div>
                                 </div>
@@ -381,6 +381,7 @@ class SectionFive extends Component {
                                             </tr>
                                             <tr>
                                                 <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="Hypertension" /> 高血压</td>
+                                                <td><input onChange={this.handleInputChange} type="checkbox" name={sectionKey + "-side-effect"} value="血液肿瘤不适用" /> 血液肿瘤不适用</td>
                                                 <td><input onChange={this.handleInputChange} type="checkbox" className="none" name={sectionKey + "-side-effect"} value="None" /> 无</td>
                                             </tr>
                                         </tbody>

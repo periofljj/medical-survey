@@ -544,7 +544,7 @@ class App extends Component {
                 <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
                 <SectionFour sectionFourChange={this.handleInputChange}></SectionFour>
                 {sectionFiveItems}
-                <button className="continue" onClick={this.addSectionFive}>继续填写第五部分</button>
+                <button className="continue" onClick={this.addSectionFive}>继续添加药物</button>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
                 <SectionSeven sectionSevenNum={sectionSevenNum} sectionSevenChange={this.handleInputChange}></SectionSeven>
                 {SectionSevenDrugItems}
