@@ -185,6 +185,8 @@ class SectionFour extends Component {
                                     <input onChange={this.handleInputChange} type="text" name="first-surgery-name-2" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="first-surgery-name-3" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="first-surgery-name-4" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-5" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="first-surgery-name-6" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -207,6 +209,8 @@ class SectionFour extends Component {
                                     <input onChange={this.handleInputChange} type="text" name="second-surgery-name-2" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="second-surgery-name-3" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="second-surgery-name-4" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-5" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="second-surgery-name-6" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">
@@ -229,6 +233,8 @@ class SectionFour extends Component {
                                     <input onChange={this.handleInputChange} type="text" name="third-surgery-name-2" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="third-surgery-name-3" placeholder="XX.XX"/>
                                     <input onChange={this.handleInputChange} type="text" name="third-surgery-name-4" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-5" placeholder="XX.XX"/>
+                                    <input onChange={this.handleInputChange} type="text" name="third-surgery-name-6" placeholder="XX.XX"/>
                                 </div>
                             </div>
                             <div className="box-2">

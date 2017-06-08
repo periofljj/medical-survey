@@ -39,6 +39,7 @@ class SectionFive extends Component {
 
     render() {
         var sectionKey = this.props.sectionId;
+        var id = sectionKey.split('-')[1];
 
         var localStorage = window.localStorage;
         var states = localStorage['medical-survey'] ? JSON.parse(localStorage['medical-survey']) : {};
@@ -51,10 +52,11 @@ class SectionFive extends Component {
         return (
             <div className="section section-five">
                 <div className="section-title">
-                    <span className="title">第五部分</span>
-                    <span>请详细描述既往使用的抗肿瘤药物 包括与肿瘤治疗有关的所有细胞毒药物、内分 药物、免疫增强剂和靶向药物</span>
-                    <span>请列出从诊断开始，按照时间顺序，既往使用过的药物。当前正在使 的药物方案请直接填写在第7部分</span>
-                    <span>请给出所填药物的商品名，通用名药物请标注产地或者厂家/国产/进口/合资;同一方案，但治疗目的不同，请分开填写在不同栏里；</span>
+                    <span className="title">第五部分-{id}</span>
+                    <label><input type="checkbox"/> 既往使用过抗肿瘤药物</label>
+                    <span>请详细描述既往使用的抗肿瘤药物：包括与肿瘤治疗有关的所有细胞毒药物、内分泌药物、免疫增强剂和靶向药物</span>
+                    <span>请列出从诊断开始，按照时间顺序，既往使用过的药物。当前正在使用的药物方案请直接填写在第7部分</span>
+                    <span>请给出所填药物的商品名，通用名药物请标注产地或者厂家/国产/进口/合资;同一方案，但治疗目的不同，请分开填写在不同栏里</span>
                 </div>
                 <div className="section-content">
                     <div className="section-row">

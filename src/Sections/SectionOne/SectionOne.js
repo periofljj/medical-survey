@@ -3,6 +3,7 @@ import './SectionOne.css';
 import DateTimeField from "react-datetime";
 import 'react-datetime/css/react-datetime.css';
 var moment = require('moment');
+require('moment/locale/zh-cn')
 
 class SectionOne extends Component {
     constructor(props) {
@@ -149,7 +150,7 @@ class SectionOne extends Component {
                                 <div className="box-6-1">
                                     <div className="box-title">首次确诊日期(年/月/日)</div>
                                     <div style={{position: 'relative'}}>
-                                        <DateTimeField defaultValue={dateOfDiagnosisDefault} timeFormat={false} value={dateOfDiagnosis} onChange={this.timeSelectOnChange} dateFormat="YYYY-MM-DD" />
+                                        <DateTimeField defaultValue={dateOfDiagnosisDefault} locale="zh-cn" timeFormat={false} value={dateOfDiagnosis} onChange={this.timeSelectOnChange} dateFormat="YYYY-MM-DD" />
                                     </div>
                                 </div>
                                 <div className="space"></div>
@@ -237,7 +238,7 @@ class SectionOne extends Component {
 
                                         </div>
                                         <div className="box-col">
-                                            <div><input type="checkbox" name="site-of-mets" value="None" className="none" onChange={this.handleInputChange}/>无</div>
+                                            <div><input type="checkbox" name="site-of-mets" value="None"  className="none" onChange={this.handleInputChange}/>无</div>
                                             <div><input type="checkbox" name="site-of-mets" value="Other" className="other"onChange={this.handleInputChange}/><span className="site-of-mets-text">其它</span></div>
                                         </div>
                                     </div>

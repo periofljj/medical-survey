@@ -105,6 +105,17 @@ class App extends Component {
                                 }
                             }
                         }
+                        else if(elements[m].className && (elements[m].className === 'no-replace')){
+                                        var getReplace = document.getElementsByClassName('replace');
+                                        for(var i=0; i<getReplace.length; i++){
+                                            getReplace[i].value="";
+                                            getReplace[i].disabled=true;
+                                            this.setState({
+                                                [getReplace[i].name]:''
+                                            });
+                                        }
+
+                                    }
                     }
                 }
                 else {
@@ -181,9 +192,8 @@ class App extends Component {
                                             }
                                         }
 
-                                        // this.state[name] = value;
-                                        // hasSetState = true;
                                     }
+                                    
                                 }
                             }
                         }
@@ -253,6 +263,7 @@ class App extends Component {
                     this.state[name] = value;
                     hasSetState = true;
                 }
+
                 
             }
             else if (target.type === 'checkbox') {
@@ -324,6 +335,23 @@ class App extends Component {
                         }
                     }
                      
+                    this.state[name] = value;
+                    hasSetState = true;
+                }
+                else if(target.className === 'no-replace'){
+                    if(value === true){
+                        var getReplace = document.getElementsByClassName('replace');
+                            for(var n=0; n<getReplace.length; n++){
+                                getReplace[n].value='';
+                                this.state[getReplace[n].name] = '';
+                                getReplace[n].disabled = true;
+                            }
+                    }else{
+                        var getReplace2 = document.getElementsByClassName('replace');
+                            for(var n=0; n<getReplace2.length; n++){
+                                getReplace2[n].disabled = false;
+                            }
+                    }
                     this.state[name] = value;
                     hasSetState = true;
                 }

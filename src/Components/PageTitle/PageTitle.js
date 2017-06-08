@@ -36,6 +36,7 @@ class PageTitle extends Component {
         return (
             <div className="page-title">
                 <span>在完成此部分前，请先阅读前面的简介</span>
+                <span className="number">问卷编号 <input type="text" name="survey-number" onChange={this.handleInputChange}/></span>
                 <div className="finished-time">
                 	<span>问卷完成日期(年/月/日)</span>
                     <div style={{position: 'relative'}}>

@@ -261,6 +261,7 @@ class SectionEight extends Component {
                 <div className="section section-eight">
                     <div className="section-title">
                         <span className="title">第八部分</span>
+                        <label><input type="checkbox" className="history"/> 既往使用过与肿瘤治疗有关的支持药物</label>
                         <span>详细描述当前使用的与肿瘤治疗有关的支持药物</span>
                         <span>支持药物包括:双磷酸盐类药物，促红细胞生成素，生长因子，麻醉性镇痛药与 吐剂、辅助止吐的皮质醇类药物，以及治疗骨转移/骨损伤或因使用去势药物或芳 化酶抑制剂治疗癌症而诱发的骨质丢失(CTI BL) 的相关药物</span>
                     </div>
@@ -269,7 +270,7 @@ class SectionEight extends Component {
                             <div className="box box-1">
                                 <div className="box box-1-1">
                                     <div className="box box-1-1-1">
-                                        <div className="box-title">生长因子类药物(治疗中性粒细胞减少) (如果知道，请提供商品名;否则请提供通 名及厂家/或产地)</div>
+                                        <div className="box-title">生长因子类药物(治疗中性粒细胞减少) (如果知道，请提供商品名;否则请提供通用名及厂家/或产地)</div>
                                         <div className="box-content">
                                             <input onChange={this.handleInputChange} type="text" name="GF-Drug-name" placeholder="XXXXX"/>
                                         </div>

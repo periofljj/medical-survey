@@ -615,30 +615,51 @@ class SectionSeven extends Component {
                                     <tr>
                                         <td>
                                             <span>替换方案1</span>
-                                            <input onChange={this.handleInputChange} type="text" name="替换方案1"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-1" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-2" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-3" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-4" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-5" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-6" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-7" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案1-8" className="replace"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <span>替换方案2</span>
-                                            <input onChange={this.handleInputChange} type="text" name="替换方案2"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-1" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-2" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-3" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-4" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-5" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-6" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-7" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案2-8" className="replace"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <span>替换方案3</span>
-                                            <input onChange={this.handleInputChange} type="text" name="替换方案3"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-1" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-2" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-3" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-4" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-5" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-6" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-7" className="replace"/>
+                                            <input onChange={this.handleInputChange} type="text" name="替换方案3-8" className="replace"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="替换方案" value="unusable"/>
-                                                <span>没有可以替换的药物</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="没有替换方案" className="no-replace"/>
+                                                <span> 没有可以替换的药物</span>
                                             </label>
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" name="替换方案" value="Don't anwser"/>
-                                                <span>不予回答</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" name="替换方案不予回答" className="replace"/>
+                                                <span> 不予回答</span>
                                             </label>
                                         </td>
                                     </tr>
