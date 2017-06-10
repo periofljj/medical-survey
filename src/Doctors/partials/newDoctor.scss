@@ -1,0 +1,40 @@
+.reporter-info{
+	width:80%;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 30px;
+	.reporter-content{
+		padding-left: 20px;
+		.reporter-line{
+			li{
+				list-style: none;
+			}
+			padding:10px 5px;
+			label{
+				display: inline-block;
+				font-weight: normal;
+			}
+			.normal-label{
+				width: 135px;
+				margin-left: 20px;
+			}
+			.text-label{
+				input{
+					width: 300px;
+					margin-left: 20px;
+				}
+			}
+			.input-label{
+				margin-left: 20px;
+			}
+		}
+
+	}
+}
+.finish-survey{
+	padding-top:40px;
+	text-align:center;
+	height:20px;
+	clear:both;
+}

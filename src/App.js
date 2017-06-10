@@ -12,6 +12,7 @@ import SectionSevenDrug from './Sections/SectionSeven/SectionSevenDrug';
 import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
+import createHistory from 'history/createBrowserHistory';
 
 class App extends Component {
     constructor(props) {
@@ -444,6 +445,11 @@ class App extends Component {
         localStorage.removeItem("medical-survey");
         localStorage.removeItem("sectionFiveNum");
         localStorage.removeItem("sectionSevenNum");
+
+        const history = createHistory();
+        history.push('/doctorSurvey');
+        location.reload();
+
     }
 
     setValue() {
