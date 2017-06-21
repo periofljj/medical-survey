@@ -142,10 +142,8 @@ class SectionSix extends Component {
 
 
         return (
-            <div className="section section-six">
+            <div className="section section-six section-six-toggle" style={{display:'none'}}>
                 <div className="section-title">
-                    <span className="title">第六部分 既往支持药物</span>
-                    <label><input type="checkbox" className="history"/> 既往使用过支持药物</label>
                     <span>请填写最近期的既往支持药物，当前(2017. 1月-3月)仍在使用的支持药物请填写在第8部分</span>
                     <span>如果病人既往使用过治疗中性粒减少的生长因子类药物(升白药)，请完成下表:</span>
                 </div>

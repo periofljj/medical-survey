@@ -13,6 +13,10 @@ import SectionSeven from './Sections/SectionSeven/SectionSeven';
 import SectionEight from './Sections/SectionEight/SectionEight';
 import Papa from 'papaparse/papaparse';
 import createHistory from 'history/createBrowserHistory';
+var _ = require('lodash');
+
+var $ = window.$ = require('jquery');
+var jQuery = window.jQuery = require('jquery');
 
 class App extends Component {
     constructor(props) {
@@ -23,6 +27,9 @@ class App extends Component {
         this.clearLocalStorage = this.clearLocalStorage.bind(this);
         this.addSectionFive = this.addSectionFive.bind(this);
         this.addSectionSeven = this.addSectionSeven.bind(this);
+        this.toggleSectionEight = this.toggleSectionEight.bind(this);
+        this.toggleSectionFive = this.toggleSectionFive.bind(this);
+        this.toggleSectionSix = this.toggleSectionSix.bind(this);
         // this.setValue = this.setValue(this);
 
         // this.state = {
@@ -36,7 +43,7 @@ class App extends Component {
         //     return;
         // }
         if (!localStorage['sectionFiveNum']) {
-            localStorage.setItem('sectionFiveNum', 1);
+            localStorage.setItem('sectionFiveNum', 0);
         }
 
         if (!localStorage['sectionSevenNum']) {
@@ -529,7 +536,7 @@ class App extends Component {
         var sectionFiveNum = Number(storage['sectionFiveNum']);
         storage.setItem('sectionFiveNum', sectionFiveNum + 1);
         this.setState({
-            sectionFiveNum: sectionFiveNum
+            sectionFiveNum: sectionFiveNum + 1
         });
 
     }
@@ -539,13 +546,162 @@ class App extends Component {
         var sectionSevenNum = Number(storage['sectionSevenNum']);
         storage.setItem('sectionSevenNum', sectionSevenNum + 1);
         this.setState({
-            sectionSevenNum: sectionSevenNum
+            sectionSevenNum: sectionSevenNum + 1
         });
+    }
+
+    toggleSectionFive (event) {
+        var storage = window.localStorage;
+        this.state[event.target.name] = event.target.checked;
+        if (event.target.checked) {
+            document.getElementById('section-five-continue').style.display = 'block';
+            var sectionFiveNum = Number(storage['sectionFiveNum']);
+            storage.setItem('sectionFiveNum', 1);
+            this.setState({
+                sectionFiveNum: 1
+            });
+        }
+        else {
+            document.getElementById('section-five-continue').style.display = 'none';
+
+            var inputs = $('.section-five-toggle').find('input');
+            var input;
+            for (var i = 0; i < inputs.length; i++) {
+                input = inputs[i];
+                if (this.state.hasOwnProperty(input.name)) {
+                    delete this.state[input.name];
+                }
+
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    input.checked = false;
+                }
+                else if (input.type === 'text') {
+                    input.value = "";
+                }
+            }
+
+            _.forEach(this.state, function(item, key) {
+                if (key.indexOf('5-') !== -1) {
+                    delete this.state[key];
+                }
+            }.bind(this));
+
+            var sectionFiveNum = Number(storage['sectionFiveNum']);
+            storage.setItem('sectionFiveNum', 0);
+            this.setState({
+                sectionFiveNum: 0
+            });
+        }
+
+        var result = JSON.stringify(this.state);
+        storage.setItem('medical-survey', result);
+    }
+
+    toggleSectionSix (event) {
+        var storage = window.localStorage;
+        this.state[event.target.name] = event.target.checked;
+        var sectionSix = document.getElementsByClassName('section-six-toggle')[0];
+        if (event.target.checked) {
+            sectionSix.style.display = 'block';
+        }
+        else {
+            sectionSix.style.display = 'none';
+            var inputs = $('.section-six-toggle').find('input');
+            var input;
+            for (var i = 0; i < inputs.length; i++) {
+                input = inputs[i];
+                if (this.state.hasOwnProperty(input.name)) {
+                    delete this.state[input.name];
+                }
+
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    input.checked = false;
+                }
+                else if (input.type === 'text') {
+                    input.value = "";
+                }
+            }
+            
+            var dateSelectNames = [
+                'growth-factor-start-date',
+                'growth-factor-end-date',
+                'erythropoietin-start-date',
+                'erythropoietin-end-date',
+                'bone-metastasis-start-date',
+                'bone-metastasis-end-date-2',
+                'growth-factor-start-date-2',
+                'growth-factor-end-date-2'
+            ];
+            _.forEach(this.state, function(item, key) {
+                _.forEach(dateSelectNames, function(value) {
+                    if (key === value) {
+                        delete this.state[key];
+                    }
+                }.bind(this));
+            }.bind(this));
+        }
+        var result = JSON.stringify(this.state);
+        storage.setItem('medical-survey', result);
+    }
+
+    toggleSectionEight (event) {
+        var storage = window.localStorage;
+        this.state[event.target.name] = event.target.checked;
+        var sectionEight = document.getElementsByClassName('section-eight-toggle')[0];
+        if (event.target.checked) {
+            sectionEight.style.display = 'block';
+        }
+        else {
+            sectionEight.style.display = 'none';
+            var inputs = $('.section-eight-toggle').find('input');
+            var input;
+            for (var i = 0; i < inputs.length; i++) {
+                input = inputs[i];
+                if (this.state.hasOwnProperty(input.name)) {
+                    delete this.state[input.name];
+                }
+
+                if (input.type === 'radio' || input.type === 'checkbox') {
+                    input.checked = false;
+                }
+                else if (input.type === 'text') {
+                    input.value = "";
+                }
+            }
+            
+            var dateSelectNames = [
+                'GF-drug-start-date',
+                'GF-drug-end-date',
+                'EPO-drug-start-year',
+                'EPO-drug-end-year',
+                'acute-anti-emetic-drug-start-date',
+                'acute-anti-emetic-drug-end-date',
+                'delayed-anti-emetic-drug-start-date',
+                'delayed-anti-emetic-drug-end-date',
+                'bone-metastases-drug-start-date',
+                'bone-metastases-drug-end-date',
+                'other-drug-start-date',
+                'other-drug-end-date',
+                'acute-anti-emetic-drug-2-start-date',
+                'acute-anti-emetic-drug-2-end-date',
+                'delayed-anti-emetic-drug-2-start-date',
+                'delayed-anti-emetic-drug-2-end-date'
+            ];
+            _.forEach(this.state, function(item, key) {
+                _.forEach(dateSelectNames, function(value) {
+                    if (key === value) {
+                        delete this.state[key];
+                    }
+                }.bind(this));
+            }.bind(this));
+        }
+        var result = JSON.stringify(this.state);
+        storage.setItem('medical-survey', result);
     }
 
 	render() {
         var storage = window.localStorage;
-        var sectionFiveNum = Number(storage['sectionFiveNum']) || 1;
+        var sectionFiveNum = Number(storage['sectionFiveNum']) || 0;
         var sectionSevenNum = Number(storage['sectionSevenNum']) || 1;
 
         var numbers = [];
@@ -557,6 +713,8 @@ class App extends Component {
             sectionId = "5-" + number;
             return <SectionFive key={number} sectionId={sectionId} sectionFiveChange={this.handleInputChange}></SectionFive>
         });
+
+        // var isShowSectionFive = document.getElementsByClassName('history-5')[0].checked;
 
         numbers = [];
         for (var i = 1; i <= sectionSevenNum; i++) {
@@ -577,12 +735,34 @@ class App extends Component {
                 <SectionTwo sectionTwoChange={this.handleInputChange}></SectionTwo>
                 <SectionThree sectionThreeChange={this.handleInputChange}></SectionThree>
                 <SectionFour sectionFourChange={this.handleInputChange}></SectionFour>
+                <div className='section-five'>
+                    <div className="section-title">
+                        <span className="title">第五部分</span>
+                        <label><input type="checkbox" className="history-5" name="history-5-check" onChange={this.toggleSectionFive} /> 既往使用过抗肿瘤药物</label>
+                    </div>
+                </div>
                 {sectionFiveItems}
-                <button className="continue" onClick={this.addSectionFive}>继续添加药物</button>
+                <button className="continue" id="section-five-continue" onClick={this.addSectionFive} style={{display:'none'}} >继续添加药物</button>
+
+
+                <div className='section-six'>
+                    <div className="section-title">
+                        <span className="title">第六部分 既往支持药物</span>
+                        <label><input type="checkbox" className="history-6" name="history-6-check" onChange={this.toggleSectionSix} /> 既往使用过支持药物</label>
+                    </div>
+                </div>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
+
+
                 <SectionSeven sectionSevenNum={sectionSevenNum} sectionSevenChange={this.handleInputChange}></SectionSeven>
                 {SectionSevenDrugItems}
                 <button className="continue" onClick={this.addSectionSeven}>继续添加药物</button>
+                <div className='section-eight'>
+                    <div className="section-title">
+                        <span className="title">第八部分</span>
+                        <label><input type="checkbox" className="history-8" name="history-8-check" onChange={this.toggleSectionEight} /> 既往使用过与肿瘤治疗有关的支持药物</label>
+                    </div>
+                </div>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>
                 <SaveArea class="clear-button" saveSubmit={this.clearLocalStorage} buttonName='清空问卷'></SaveArea>
                 <SaveArea class="finish-button" saveSubmit={this.finish} buttonName='完成问卷'></SaveArea>

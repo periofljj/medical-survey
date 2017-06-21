@@ -257,15 +257,12 @@ class SectionEight extends Component {
 
         return (
             <div>
-                <div className="block"></div>
                 <div className="section section-eight">
                     <div className="section-title">
-                        <span className="title">第八部分</span>
-                        <label><input type="checkbox" className="history"/> 既往使用过与肿瘤治疗有关的支持药物</label>
                         <span>详细描述当前使用的与肿瘤治疗有关的支持药物</span>
                         <span>支持药物包括:双磷酸盐类药物，促红细胞生成素，生长因子，麻醉性镇痛药与 吐剂、辅助止吐的皮质醇类药物，以及治疗骨转移/骨损伤或因使用去势药物或芳 化酶抑制剂治疗癌症而诱发的骨质丢失(CTI BL) 的相关药物</span>
                     </div>
-                    <div className="section-content">
+                    <div className="section-content section-eight-toggle" style={{display: 'none'}}>
                         <div className="section-row">
                             <div className="box box-1">
                                 <div className="box box-1-1">
@@ -327,7 +324,7 @@ class SectionEight extends Component {
                                     <div className="box box-3-1-2">
                                         <div className="box-title">开始日期</div>
                                         <div className="sm-date-field"style={{position: 'relative'}}>
-                                            <DateTimeField onChange={this.timeSelectOnChange3}inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={EPODrugStartYearDefault} value={EPODrugStartYear} />
+                                            <DateTimeField onChange={this.timeSelectOnChange3} inputProps={{className: 'date-input'}} timeFormat={false} dateFormat="YYYY-MM-DD" defaultValue={EPODrugStartYearDefault} value={EPODrugStartYear} />
                                         </div>
                                     </div>
                                     <div className="box box-3-1-3">
