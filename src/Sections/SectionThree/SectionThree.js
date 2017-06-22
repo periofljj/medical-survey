@@ -967,8 +967,8 @@ class SectionThree extends Component {
                                             <span className="test-name">KI-67抗体水平</span>
                                             <input onChange={this.handleInputChange} className="input-test" type="test" name="KI-67-gene-mutation-test"/>&nbsp;&nbsp;
                                             <label>
-                                                <input onChange={this.handleInputChange} type="radio" className="section-3-not-inspected" name="KI-67-gene-mutation-test" value="Not detected"/>
-                                                <span>未检测</span>
+                                                <input onChange={this.handleInputChange} type="checkbox" className="section-3-not-inspected" name="KI-67-gene-mutation-test" value="Not detected"/>
+                                                <span> 未检测</span>
                                             </label>
                                         </td>
                                         <td>

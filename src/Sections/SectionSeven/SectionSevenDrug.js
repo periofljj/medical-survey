@@ -314,12 +314,12 @@ class SectionSevenDrug extends Component {
                                 </div>
                                 <div className="box-content">
                                     <div>
-                                        <input onChange={this.handleInputChange} type="number" name={sectionKey + "-duration-planned"} value="weeks" className="section-7-1 continued"/>
+                                        <input onChange={this.handleInputChange} type="number" name={sectionKey + "-duration-planned-weeks"}  className="section-7-1 continued"/>
                                         <span>周</span>
 
                                         <span>或</span>
 
-                                        <input onChange={this.handleInputChange} type="number" name={sectionKey + "-duration-planned"} value="years" className="section-7-1 continued"/>
+                                        <input onChange={this.handleInputChange} type="number" name={sectionKey + "-duration-planned-years"}  className="section-7-1 continued"/>
                                         <span>年</span>
                                     </div>
                                     <div>

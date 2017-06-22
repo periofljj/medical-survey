@@ -275,6 +275,10 @@ $smFont: 12px;
                         .sub-box-1 {
                             width: 50%;
                             float: left;
+                            label{
+                                width: 40%;
+                                font-weight: normal;
+                            }
                         }
 
                         .sub-box-2 {
@@ -282,7 +286,7 @@ $smFont: 12px;
                             float: left;
 
                             input {
-                                width: 80px;
+                                width: 60px;
                                 height: 28px;
                                 line-height: 28px;
                             }
@@ -317,7 +321,7 @@ $smFont: 12px;
 
                     td {
                         input[type="text"] {
-                            width: 60px;
+                            width: 50px;
                             margin-left: 10px;
                         }
 
