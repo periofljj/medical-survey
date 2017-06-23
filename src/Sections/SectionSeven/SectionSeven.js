@@ -116,7 +116,7 @@ class SectionSeven extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="box width-23 box-5">
+                        <div className="box width-18 box-5">
                             <div className="box-title">
                                 <span>仅限实体瘤——几线治疗药物(含血血液肿瘤)</span>
                             </div>
@@ -167,62 +167,64 @@ class SectionSeven extends Component {
                                         </label>
                                     </div>
                                 </div>
-                                <div className="sub-box">
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name=""/>
-                                        <span>治疗线同前更换药物</span>
-                                    </label>
-                                </div>
+
                             </div>
                         </div>
-                        <div className="box width-15 box-6">
+                        <div className="box width-10 box-5">
+                            <div className="box-title">
+                                <span>实体瘤/血液肿瘤</span>
+                            </div>
+                            <div className="box-content">
+                                <label>
+                                    <input onChange={this.handleInputChange} type="radio" name="治疗线同前"/>
+                                    <span>治疗线同前</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div className="box width-10 box-5">
                             <div className="box-title">
                                 <span>仅限血液肿瘤</span>
                             </div>
                             <div className="box-content text-center">
-                                <div>
+                                <div className="sub-box">
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="Induction"/>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-几线" value="1st"/>
+                                        <span>一线</span>
+                                    </label>
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-几线" value="2nd"/>
+                                        <span>二线</span>
+                                    </label>
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-几线" value="3rd"/>
+                                        <span>三线</span>
+                                    </label>
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-几线" value="4th"/>
+                                        <span>四线及以上</span>
+                                    </label>
+                                </div>
+                                <div className="sub-box">
+                                    <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-用途" value="Induction"/>
                                         <span>诱导</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="1st"/>
-                                        <span>一线</span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="Consolidation"/>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-用途" value="Consolidation"/>
                                         <span>巩固</span>
                                     </label>
                                     <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="2nd"/>
-                                        <span>二线</span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="Maintenance"/>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-用途" value="Maintenance"/>
                                         <span>维持</span>
                                     </label>
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="3rd"/>
-                                        <span>三线</span>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="Not suitable"/>
+                                     <label>
+                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤-用途" value="Not suitable"/>
                                         <span>不适用</span>
-                                    </label>
-                                    <label>
-                                        <input onChange={this.handleInputChange} type="radio" name="仅限血液肿瘤" value="4th"/>
-                                        <span>四线及以上</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div className="box width-10">
+                        <div className="box width-10 box-7">
                             <div className="box-title">
                                 <span>病人人医保状况</span>
                             </div>

@@ -1602,6 +1602,9 @@
 .section-seven .section-content .box-row .width-15 {
   width: 15%; }
 
+.section-seven .section-content .box-row .width-18 {
+  width: 18%; }
+
 .section-seven .section-content .box-row .width-23 {
   width: calc(25% - 21px); }
 
@@ -1661,8 +1664,11 @@
 .section-seven .section-content .box-row-1 .box-4 .box-content label {
   font-weight: normal; }
 
+.section-seven .section-content .box-row-1 .box-5 label {
+  font-weight: normal; }
+
 .section-seven .section-content .box-row-1 .box-5 .sub-box {
-  width: 35%;
+  width: 48%;
   border-right: 1px solid #ccc;
   float: left; }
 
@@ -1670,11 +1676,12 @@
   font-weight: normal; }
 
 .section-seven .section-content .box-row-1 .box-5 .sub-box:last-child {
-  width: 30%;
   border-right: none; }
 
+.section-seven .section-content .box-row-1 .box-7 label {
+  font-weight: normal; }
+
 .section-seven .section-content .box-row-1 .box-6 .box-content div label {
-  margin-right: 6px;
   font-weight: normal; }
 
 .section-seven .section-content .box-row-2 .box {
