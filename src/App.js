@@ -114,16 +114,34 @@ class App extends Component {
                             }
                         }
                         else if(elements[m].className && (elements[m].className === 'no-replace')){
-                                        var getReplace = document.getElementsByClassName('replace');
-                                        for(var i=0; i<getReplace.length; i++){
-                                            getReplace[i].value="";
-                                            getReplace[i].disabled=true;
-                                            this.setState({
-                                                [getReplace[i].name]:''
-                                            });
-                                        }
+                            var getReplace = document.getElementsByClassName('replace');
+                            for(var i=0; i<getReplace.length; i++){
+                                getReplace[i].value="";
+                                getReplace[i].disabled = true;
+                                this.setState({
+                                    [getReplace[i].name]:''
+                                });
+                            }
 
-                                    }
+                        }
+                        else if (elements[0].name === 'history-6-check') {
+                            var sectionSix = document.getElementsByClassName('section-six-toggle')[0];
+                            if (elements[0].checked) {
+                                sectionSix.style.display = 'block';
+                            }
+                            else {
+                                sectionSix.style.display = 'none';
+                            }
+                        }
+                        else if (elements[0].name === 'history-8-check') {
+                            var sectionEight = document.getElementsByClassName('section-eight-toggle')[0];
+                            if (elements[0].checked) {
+                                sectionEight.style.display = 'block';
+                            }
+                            else {
+                                sectionEight.style.display = 'none';
+                            }
+                        }
                     }
                 }
                 else {
