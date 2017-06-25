@@ -18,7 +18,7 @@ $smFont: 12px;
     }
     .section-content {
         .left-container {
-            width: 45%;
+            width: 52%;
             float: left;
 
             input[type="radio"] {
@@ -121,7 +121,7 @@ $smFont: 12px;
         }
 
         .right-container {
-            width: 53%;
+            width: 45%;
             float: left;
             input[type="radio"] {
                 vertical-align: sub;
@@ -226,7 +226,7 @@ $smFont: 12px;
 
                     .box-content {
                         height: 48px;
-                        line-height: 48px;
+                        line-height: 20px;
                         label{
                             font-weight: normal;
                         }

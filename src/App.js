@@ -470,10 +470,11 @@ class App extends Component {
         localStorage.removeItem("medical-survey");
         localStorage.removeItem("sectionFiveNum");
         localStorage.removeItem("sectionSevenNum");
-
-        const history = createHistory();
-        history.push('/doctorSurvey');
-        location.reload();
+        
+        //页面跳转
+        // const history = createHistory();
+        // history.push('/doctorSurvey');
+        // location.reload();
 
     }
 
@@ -756,7 +757,7 @@ class App extends Component {
                 <div className='section-five'>
                     <div className="section-title">
                         <span className="title">第五部分</span>
-                        <label><input type="checkbox" className="history-5" name="history-5-check" onChange={this.toggleSectionFive} /> 既往使用过抗肿瘤药物</label>
+                        <label><input type="checkbox" className="history-5" name="history-5-check" onChange={this.toggleSectionFive} /> 是否既往使用过抗肿瘤药物</label>
                     </div>
                 </div>
                 {sectionFiveItems}
@@ -766,7 +767,7 @@ class App extends Component {
                 <div className='section-six'>
                     <div className="section-title">
                         <span className="title">第六部分 既往支持药物</span>
-                        <label><input type="checkbox" className="history-6" name="history-6-check" onChange={this.toggleSectionSix} /> 既往使用过支持药物</label>
+                        <label><input type="checkbox" className="history-6" name="history-6-check" onChange={this.toggleSectionSix} /> 是否既往使用过支持药物</label>
                     </div>
                 </div>
                 <SectionSix sectionSixChange={this.handleInputChange}></SectionSix>
@@ -778,7 +779,7 @@ class App extends Component {
                 <div className='section-eight'>
                     <div className="section-title">
                         <span className="title">第八部分</span>
-                        <label><input type="checkbox" className="history-8" name="history-8-check" onChange={this.toggleSectionEight} /> 既往使用过与肿瘤治疗有关的支持药物</label>
+                        <label><input type="checkbox" className="history-8" name="history-8-check" onChange={this.toggleSectionEight} /> 是否既往使用过与肿瘤治疗有关的支持药物</label>
                     </div>
                 </div>
                 <SectionEight sectionEightChange={this.handleInputChange}></SectionEight>

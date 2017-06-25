@@ -395,7 +395,6 @@ class SectionEight extends Component {
                                         <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-doses-quantity" /></div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-doses-unit" value="mcg"/> mcg微克</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-doses-unit" value="mg"/> mg</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
                                         <div>给药天数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-给药天数" /></div>
@@ -461,7 +460,6 @@ class SectionEight extends Component {
                                         <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-doses-quantity" /></div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="mcg"/> mcg微克</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="mg"/> mg</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="acute-anti-emetic-drug-2-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
                                         <div>给药天数 <input onChange={this.handleInputChange} type="text" name="acute-anti-emetic-drug-2-给药天数" /></div>
@@ -527,7 +525,6 @@ class SectionEight extends Component {
                                         <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-doses-quantity" /></div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-doses-unit" value="mcg"/> mcg微克</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-doses-unit" value="mg"/> mg</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
                                         <div>给药天数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-给药天数" /></div>
@@ -593,7 +590,6 @@ class SectionEight extends Component {
                                         <div>每日给药总剂量  <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-doses-quantity" /></div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="mcg"/> mcg微克</div>
                                         <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="mg"/> mg</div>
-                                        <div><input onChange={this.handleInputChange} type="radio" name="delayed-anti-emetic-drug-2-doses-unit" value="MU"/> MU</div>
                                     </div>
                                     <div className="box box-1-2-2">
                                         <div>给药天数 <input onChange={this.handleInputChange} type="text" name="delayed-anti-emetic-drug-2-给药天数" /></div>
